@@ -10,43 +10,71 @@
   </head>
   <body>
     <!-- HEADER -->
-      <nav class="navbar navbar-dark navbar-expand-lg background fixed-top" id="navbar">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <img class="img-fluid" width="150" src="img/fritos_don_chalo_logo.png" alt="fritos_don_chalo_logo">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#fritos_don_chalo">Fritos Don Chalo</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#productos">Productos</a>
-              </li>
-            </ul>
-            <form class="d-flex me-3 ms-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Search</button>
-            </form>
-            <a class="link-light link-underline-light ms-4" href="views/views_users/login.html">
-              <div class="container text-center mt-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-                </svg>
-                <br>
-                <p>Iniciar sesión</p>
+    
+      <!-- NAVBAR -->
+        <nav class="navbar navbar-dark navbar-expand-lg background fixed-top" id="navbar">
+          <div class="container">
+            <!-- LOGO -->
+              <a class="navbar-brand" href="#">
+                <img class="img-fluid" width="150" src="img/fritos_don_chalo_logo.png" alt="fritos_don_chalo_logo">
+              </a>
+            <!-- LOGO -- Hasta aquí -->
+
+            <!-- BOTÓN NAVBAR RESPONSIVE -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <!-- BOTÓN NAVBAR RESPONSIVE -- Hasta aquí -->
+
+            <!-- CONTENIDO NAVBAR -->
+              <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+                <!-- ANCLAS CONTENIDO -->
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- ANCLA IMAGEN AVISO -->
+                    <li class="nav-item">
+                      <a class="nav-link text-light" href="#fritos_don_chalo">Fritos Don Chalo</a>
+                    </li>
+                    <!-- ANCLA IMAGEN AVISO -- Hasta aquí -->
+
+                    <!-- ANCLA IMAGEN FRITOS VENTA -->
+                    <li class="nav-item">
+                      <a class="nav-link text-light" href="#productos">Productos</a>
+                    </li>
+                    <!-- ANCLA IMAGEN FRITOS VENTA -- Hasta aquí -->
+                  </ul>
+                <!-- ANCLAS CONTENIDO -- Hasta aquí -->
+
+                <!-- BUSCAR -->
+                  <form class="d-flex me-3 ms-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                  </form>
+                <!-- BUSCAR -- Hasta aquí -->
+
+                <!-- ANCLA LOGIN -->
+                  <a class="link-light link-underline-light ms-4" href="views/views_users/login.html">
+                    <div class="container text-center mt-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                      </svg>
+                      <br>
+                      <p>Iniciar sesión</p>
+                    </div>
+                  </a>
+                <!-- ANCLA LOGIN -- Hasta aquí -->
+
+                <!-- ANCLA REGISTRO -->
+                  <div class="text-light text-center mt-2">
+                    ¿No está registrado?
+                    <p><a class="link-underline-light link-light" href="views/views_users/signup.html">Regístrese</a></p>
+                  </div>
+                <!-- ANCLA REGISTRO -- Hasta aquí -->
               </div>
-            </a>
-            <div class="text-light text-center mt-2">
-              ¿No está registrado?
-              <p><a class="link-underline-light link-light" href="#">Regístrese</a></p>
-            </div>
+            <!-- CONTENIDO NAVBAR -- Hasta aquí -->
           </div>
-        </div>
-      </nav>
+        </nav>
+      <!-- NAVBAR -- Hasta aquí -->
+
     <!-- HEADER -- Hasta aquí -->
 
     <!-- BODY -->
