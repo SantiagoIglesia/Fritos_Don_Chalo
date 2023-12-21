@@ -3,7 +3,7 @@
 }
 
 body{
-  background-image: url(../img/fritos_background.png);
+  background-image: url(../../img/fritos_background.png);
   background-size: cover;
   background-attachment: fixed;
 }
