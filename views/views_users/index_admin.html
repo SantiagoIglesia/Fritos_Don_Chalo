@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fritos Don Chalo</title>
-    <link rel="shortcut icon" href="img/fritos_don_chalo_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../img/fritos_don_chalo_logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index_css.css">
+    <link rel="stylesheet" href="../../css/index_admin_css.css">
   </head>
   <body>
     <!-- HEADER -->
     
       <!-- NAVBAR -->
         <nav class="navbar navbar-dark navbar-expand-lg background fixed-top" id="navbar">
-          <div class="container">
+          <div class="container-fluid">
             <!-- LOGO -->
               <a class="navbar-brand" href="#">
-                <img class="img-fluid" width="150" src="img/fritos_don_chalo_logo.png" alt="fritos_don_chalo_logo">
+                <img class="img-fluid" width="150" src="../../img/fritos_don_chalo_logo.png" alt="fritos_don_chalo_logo">
               </a>
             <!-- LOGO -- Hasta aquí -->
 
@@ -28,47 +28,270 @@
 
             <!-- CONTENIDO NAVBAR -->
               <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-                <!-- ANCLAS CONTENIDO -->
+                <!-- ANCLAS Y LISTAS DESPLEGABLES -->
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- ANCLA IMAGEN AVISO -->
-                    <li class="nav-item">
-                      <a class="nav-link text-light" href="#fritos_don_chalo">Fritos Don Chalo</a>
+                    <!-- ANCLA INICIO -->
+                    <li class="nav-item text-center">
+                      <a class="nav-link text-light me-2" href="#">Inicio</a>
                     </li>
-                    <!-- ANCLA IMAGEN AVISO -- Hasta aquí -->
+                    <!-- ANCLA INICIO -- Hasta aquí -->
 
-                    <!-- ANCLA IMAGEN FRITOS VENTA -->
-                    <li class="nav-item">
-                      <a class="nav-link text-light" href="#productos">Productos</a>
-                    </li>
-                    <!-- ANCLA IMAGEN FRITOS VENTA -- Hasta aquí -->
+                    <!-- LISTA DESPLEGABLE CATEGORÍAS -->
+                      <li class="nav-item dropdown text-center">
+                        <!-- TÍTULO Y DESPLEGABLE -->
+                          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorías
+                          </a>
+                        <!-- TÍTULO Y DESPLEGABLE -- Hasta aquí -->
+
+                        <!-- LISTA -->
+                          <ul class="dropdown-menu">
+                            <!-- LISTA ÍTEM: ANCLA CREAR CATEGORÍA -->
+                              <li><a class="dropdown-item" href="#">Crear</a></li>
+                            <!-- LISTA ÍTEM: ANCLA CREAR CATEGORÍA -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA EDITAR CATEGORÍA -->
+                              <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <!-- LISTA ÍTEM: ANCLA EDITAR CATEGORÍA -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA VER CATEGORÍA -->
+                              <li><a class="dropdown-item" href="#">Ver</a></li>
+                            <!-- LISTA ÍTEM: ANCLA VER CATEGORÍA -- Hasta aquí -->
+                          </ul>
+                        <!-- LISTA -- Hasta aquí -->                
+                      </li>
+                    <!-- LISTA DESPLEGABLE CATEGORÍAS -- Hasta aquí -->
+
+                    <!-- LISTA DESPLEGABLE DESTINOS -->
+                      <li class="nav-item dropdown text-center">
+                        <!-- TÍTULO Y DESPLEGABLE -->
+                          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Destinos
+                          </a>
+                        <!-- TÍTULO Y DESPLEGABLE -- Hasta aquí -->
+
+                        <!-- LISTA -->
+                          <ul class="dropdown-menu">
+                            <!-- LISTA ÍTEM: ANCLA CREAR DESTINO -->
+                              <li><a class="dropdown-item" href="#">Crear</a></li>
+                            <!-- LISTA ÍTEM: ANCLA CREAR DESTINO -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA EDITAR DESTINO -->
+                              <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <!-- LISTA ÍTEM: ANCLA EDITAR DESTINO -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA VER DESTINO -->
+                              <li><a class="dropdown-item" href="#">Ver</a></li>
+                            <!-- LISTA ÍTEM: ANCLA VER DESTINO -- Hasta aquí -->
+                          </ul>
+                        <!-- LISTA -- Hasta aquí -->                
+                      </li>
+                    <!-- LISTA DESPLEGABLE DESTINOS -- Hasta aquí -->
+
+                    <!-- LISTA DESPLEGABLE ENTREGAS -->
+                      <li class="nav-item dropdown text-center">
+                        <!-- TÍTULO Y DESPLEGABLE -->
+                          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Entregas
+                          </a>
+                        <!-- TÍTULO Y DESPLEGABLE -- Hasta aquí -->
+
+                        <!-- LISTA -->
+                          <ul class="dropdown-menu">
+                            <!-- LISTA ÍTEM: ANCLA CREAR ENTREGA -->
+                              <li><a class="dropdown-item" href="#">Registrar</a></li>
+                            <!-- LISTA ÍTEM: ANCLA CREAR ENTREGA -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA EDITAR ENTREGA -->
+                              <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <!-- LISTA ÍTEM: ANCLA EDITAR ENTREGA -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA VER ENTREGA -->
+                              <li><a class="dropdown-item" href="#">Ver</a></li>
+                            <!-- LISTA ÍTEM: ANCLA VER ENTREGA -- Hasta aquí -->
+                          </ul>
+                        <!-- LISTA -- Hasta aquí -->                
+                      </li>
+                    <!-- LISTA DESPLEGABLE ENTREGAS -- Hasta aquí -->
+
+                    <!-- LISTA DESPLEGABLE PEDIDOS -->
+                      <li class="nav-item dropdown text-center">
+                        <!-- TÍTULO Y DESPLEGABLE -->
+                          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pedidos
+                          </a>
+                        <!-- TÍTULO Y DESPLEGABLE -- Hasta aquí -->
+
+                        <!-- LISTA -->
+                          <ul class="dropdown-menu">
+                            <!-- LISTA ÍTEM: ANCLA CREAR PEDIDO -->
+                              <li><a class="dropdown-item" href="#">Detalles de pedidos</a></li>
+                            <!-- LISTA ÍTEM: ANCLA CREAR PEDIDO -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA EDITAR PEDIDO -->
+                              <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <!-- LISTA ÍTEM: ANCLA EDITAR PEDIDO -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA VER PEDIDO -->
+                              <li><a class="dropdown-item" href="#">Ver</a></li>
+                            <!-- LISTA ÍTEM: ANCLA VER PEDIDO -- Hasta aquí -->
+                          </ul>
+                        <!-- LISTA -- Hasta aquí -->                
+                      </li>
+                    <!-- LISTA DESPLEGABLE PEDIDOS -- Hasta aquí -->
+
+                    <!-- LISTA DESPLEGABLE PRODUCTOS -->
+                      <li class="nav-item dropdown text-center">
+                        <!-- TÍTULO Y DESPLEGABLE -->
+                          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                          </a>
+                        <!-- TÍTULO Y DESPLEGABLE -- Hasta aquí -->
+
+                        <!-- LISTA -->
+                          <ul class="dropdown-menu">
+                            <!-- LISTA ÍTEM: ANCLA CREAR PRODUCTO -->
+                              <li><a class="dropdown-item" href="#">Crear</a></li>
+                            <!-- LISTA ÍTEM: ANCLA CREAR PRODUCTO -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA EDITAR PRODUCTO -->
+                              <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <!-- LISTA ÍTEM: ANCLA EDITAR PRODUCTO -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA VER PRODUCTO -->
+                              <li><a class="dropdown-item" href="#">Ver</a></li>
+                            <!-- LISTA ÍTEM: ANCLA VER PRODUCTO -- Hasta aquí -->
+                          </ul>
+                        <!-- LISTA -- Hasta aquí -->                
+                      </li>
+                    <!-- LISTA DESPLEGABLE PRODUCTOS -- Hasta aquí -->
+
+                    <!-- LISTA DESPLEGABLE PROVEEDORES -->
+                      <li class="nav-item dropdown text-center">
+                        <!-- TÍTULO Y DESPLEGABLE -->
+                          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Proveedores
+                          </a>
+                        <!-- TÍTULO Y DESPLEGABLE -- Hasta aquí -->
+
+                        <!-- LISTA -->
+                          <ul class="dropdown-menu">
+                            <!-- LISTA ÍTEM: ANCLA CREAR PROVEEDOR -->
+                              <li><a class="dropdown-item" href="#">Crear</a></li>
+                            <!-- LISTA ÍTEM: ANCLA CREAR PROVEEDOR -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA EDITAR PROVEEDOR -->
+                              <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <!-- LISTA ÍTEM: ANCLA EDITAR PROVEEDOR -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA VER PROVEEDOR -->
+                              <li><a class="dropdown-item" href="#">Ver</a></li>
+                            <!-- LISTA ÍTEM: ANCLA VER PROVEEDOR -- Hasta aquí -->
+                          </ul>
+                        <!-- LISTA -- Hasta aquí -->                
+                      </li>
+                    <!-- LISTA DESPLEGABLE PROVEEDORES -- Hasta aquí -->
+
+                    <!-- LISTA DESPLEGABLE USUARIOS -->
+                      <li class="nav-item dropdown text-center">
+                        <!-- TÍTULO Y DESPLEGABLE -->
+                          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Usuarios
+                          </a>
+                        <!-- TÍTULO Y DESPLEGABLE -- Hasta aquí -->
+
+                        <!-- LISTA -->
+                          <ul class="dropdown-menu">
+                            <!-- LISTA ÍTEM: ANCLA CREAR USUARIO -->
+                              <li><a class="dropdown-item" href="#">Crear</a></li>
+                            <!-- LISTA ÍTEM: ANCLA CREAR USUARIO -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA EDITAR USUARIO -->
+                              <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <!-- LISTA ÍTEM: ANCLA EDITAR USUARIO -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA VER USUARIO -->
+                              <li><a class="dropdown-item" href="#">Ver</a></li>
+                            <!-- LISTA ÍTEM: ANCLA VER USUARIO -- Hasta aquí -->
+                          </ul>
+                        <!-- LISTA -- Hasta aquí -->                
+                      </li>
+                    <!-- LISTA DESPLEGABLE USUARIOS -- Hasta aquí -->
                   </ul>
-                <!-- ANCLAS CONTENIDO -- Hasta aquí -->
+                <!-- ANCLAS Y LISTAS DESPLEGABLES -- Hasta aquí -->
 
                 <!-- BUSCAR -->
-                  <form class="d-flex me-3 ms-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                  <form class="d-flex me-3 ms-3 my-auto" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
                   </form>
                 <!-- BUSCAR -- Hasta aquí -->
+                <br>
+                <!-- PERFIL USUARIO -->
+                  <div class="text-center text-light my-auto">
+                    <!-- ÍCONO -->
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                        </svg>
+                      </div>
+                    <!-- ÍCONO -- Hasta aquí -->
 
-                <!-- ANCLA LOGIN -->
-                  <a class="link-light link-underline-light ms-4 my-auto" href="views/views_users/login.html">
-                    <div class="container text-center mt-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-                      </svg>
-                      <br>
-                      <p>Iniciar sesión</p>
-                    </div>
-                  </a>
-                <!-- ANCLA LOGIN -- Hasta aquí -->
+                    <!-- INFORMACIÓN PERFIL LISTA DESPLEGABLE -->
+                      <div class="btn-group ms-3">
+                        <!-- NOMBRE -->
+                          <button type="button" class="btn text-light">Engie Urdaneta</button>
+                        <!-- NOMBRE -- Hasta aquí -->
 
-                <!-- ANCLA REGISTRO -->
-                  <div class="text-light text-center mt-2">
-                    ¿No está registrado?
-                    <p><a class="link-underline-light link-light" href="views/views_users/signup.html">Regístrese</a></p>
+                        <!-- DESPLEGABLE -->
+                          <button type="button" class="btn text-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                          </button>
+                        <!-- DESPLEGABLE -- Hasta aquí -->
+
+                        <!-- LISTA -->
+                          <ul class="dropdown-menu">
+                            <!-- USUARIO -->
+                              <li>
+                                <span class="dropdown-header fst-italic fw-bold text-center text-dark align-middle fs-6" href="#">EngieUrda</span>
+                              </li>
+                            <!-- USUARIO -- Hasta aquí -->
+
+                            <!-- DIVIDIDOR -->
+                              <li>
+                                <hr class="dropdown-divider">
+                              </li>
+                            <!-- DIVIDIDOR -- Hasta aquí -->
+
+                            <!-- OPCIÓN PERFIL -->
+                              <li>
+                                <a class="dropdown-item" href="#">Perfil</a>
+                              </li>
+                            <!-- OPCIÓN PERFIL -- Hasta aquí -->
+
+                            <!-- OPCIÓN CONFIGURACIÓN -->
+                              <li>
+                                <a class="dropdown-item" href="#">Configuración</a>
+                              </li>
+                            <!-- OPCIÓN CONFIGURACIÓN -- Hasta aquí -->
+
+                            <!-- DIVIDIDOR -->
+                              <li>
+                                <hr class="dropdown-divider">
+                              </li>
+                            <!-- DIVIDIDOR -- Hasta aquí -->
+
+                            <!-- OPCIÓN SALIR -->
+                              <li>
+                                <a class="dropdown-item" href="../../index.html">Salir</a>
+                              </li>
+                            <!-- OPCIÓN SALIR -- Hasta aquí -->
+                          </ul>
+                        <!-- LISTA -->
+                      </div>
+                    <!-- INFORMACIÓN PERFIL LISTA DESPLEGABLE -- Hasta aquí -->
                   </div>
-                <!-- ANCLA REGISTRO -- Hasta aquí -->
+                <!-- PERFIL USUARIO -- Hasta aquí -->
               </div>
             <!-- CONTENIDO NAVBAR -- Hasta aquí -->
           </div>
@@ -79,13 +302,16 @@
 
     <!-- BODY -->
       <div id="contenedor" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true">
+        <div class="text-center fw-bold fs-1 mb-2 administrador">
+          Bievenido, administrador(a) Engie.<br>Es un gusto tenerlo(a) por acá ;).
+        </div>
         <!-- IMAGENES AVISO -->
           <div class="text-center" id="fritos_don_chalo">
             <div class="bg-warning">
-              <img class="img-fluid" src="img/aviso.png" alt="aviso">
+              <img class="img-fluid" src="../../img/aviso.png" alt="aviso">
             </div>
             <div class="background">
-              <img class="img-fluid" src="img/fritos_venta.png" alt="fritos_venta">
+              <img class="img-fluid" src="../../img/fritos_venta.png" alt="fritos_venta">
             </div>
           </div>
         <!-- IMAGENES AVISO -- Hasta aquí -->
@@ -96,7 +322,7 @@
             <!-- EMPANADAS -->
               <div class="col">
                 <div class="card">
-                  <img class="card-img-top border border-3 border-dark" src="img/productos/empanadas.jpg" alt="empanadas">
+                  <img class="card-img-top border border-3 border-dark" src="../../img/productos/empanadas.jpg" alt="empanadas">
                   <div class="card-body text-center text-warning border border-3 border-warning background">
                     <h4 class="card-title">Empanadas</h4>
                     <p class="card-text">
@@ -114,7 +340,7 @@
             <!-- PALITOS DE QUESO -->
               <div class="col">
                 <div class="card">
-                  <img class="card-img-top border border-3 border-dark" src="img/productos/palitos_de_queso.jpg" alt="palitos_de_queso">
+                  <img class="card-img-top border border-3 border-dark" src="../../img/productos/palitos_de_queso.jpg" alt="palitos_de_queso">
                   <div class="card-body text-center text-warning border border-3 border-warning background">
                     <h4 class="card-title">Palitos de Queso</h4>
                     <p class="card-text">
@@ -132,7 +358,7 @@
             <!-- PAPAS RELLENAS -->
               <div class="col">
                 <div class="card">
-                  <img class="card-img-top border border-3 border-dark" src="img/productos/papas_rellenas.jpg" alt="papas_rellenas">
+                  <img class="card-img-top border border-3 border-dark" src="../../img/productos/papas_rellenas.jpg" alt="papas_rellenas">
                   <div class="card-body text-center text-warning border border-3 border-warning background">
                     <h4 class="card-title">Papas Rellenas</h4>
                     <p class="card-text">
@@ -150,7 +376,7 @@
             <!-- CARIMAÑOLAS -->
               <div class="col">
                 <div class="card">
-                  <img class="card-img-top border border-3 border-dark" src="img/productos/carimanolas.jpg" alt="carimanolas">
+                  <img class="card-img-top border border-3 border-dark" src="../../img/productos/carimanolas.jpg" alt="carimanolas">
                   <div class="card-body text-center text-warning border border-3 border-warning background">
                     <h4 class="card-title">Carimañolas</h4>
                     <p class="card-text">
@@ -168,7 +394,7 @@
             <!-- AREPAS DE HUEVO -->
               <div class="col">
                 <div class="card">
-                  <img class="card-img-top border border-3 border-dark" src="img/productos/arepas_de_huevo.jpg" alt="arepas_de_huevo">
+                  <img class="card-img-top border border-3 border-dark" src="../../img/productos/arepas_de_huevo.jpg" alt="arepas_de_huevo">
                   <div class="card-body text-center text-warning border border-3 border-warning background">
                     <h4 class="card-title">Arepas de Huevo</h4>
                     <p class="card-text">
@@ -186,7 +412,7 @@
             <!-- JUGOS NATURALES -->
               <div class="col">
                 <div class="card">
-                  <img class="card-img-top border border-3 border-dark" src="img/productos/jugos_naturales.jpg" alt="jugos_naturales">
+                  <img class="card-img-top border border-3 border-dark" src="../../img/productos/jugos_naturales.jpg" alt="jugos_naturales">
                   <div class="card-body text-center text-warning border border-3 border-warning background">
                     <h4 class="card-title">Jugos Naturales</h4>
                     <p class="card-text">
@@ -212,7 +438,7 @@
                           <li class="list-group-item bg-warning border-0 letra"><b>-</b> Maracuyá</li>
                           <li class="list-group-item bg-warning border-0 letra"><b>-</b> Mora</li>
                         </ul>
-                      </div>  
+                      </div>
                     <!-- LISTA JUGOS NATURALES -- Hasta aquí -->
 
                     <!-- SEGUNDA OPCIÓN LISTA -->
@@ -245,7 +471,7 @@
             <div class="row justify-content-center align-items-center">
               <!-- LOGO -->
                 <div class="col-6 text-center">
-                  <img class="img-fluid" width="250" src="img/fritos_don_chalo_logo.png" alt="fritos_don_chalo_logo">
+                  <img class="img-fluid" width="250" src="../../img/fritos_don_chalo_logo.png" alt="fritos_don_chalo_logo">
                 </div>
               <!-- LOGO -- Hasta aquí -->
             </div>
