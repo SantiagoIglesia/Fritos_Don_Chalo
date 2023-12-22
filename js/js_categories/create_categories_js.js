@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var nombreInput = document.getElementById('nombre');
     var descripcionValue = document.getElementById('descripcion').value;
     var descripcionInput = document.getElementById('descripcion');
-    var validacionLetras = /^[a-zA-Z]+$/;
+    var validacionLetras = /^[a-zA-Z ]+$/;
         
     if(nombreValue.length == 0) {
       alert('Por favor, digite el nombre.');
