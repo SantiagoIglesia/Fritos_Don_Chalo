@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fritos Don Chalo</title>
-    <link rel="shortcut icon" href="../../img/fritos_don_chalo_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../img/fritos_don_chalo_logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/css_users/index_admin_css.css">
+    <link rel="stylesheet" href="../../../css/css_errors/views_empty_css.css">
   </head>
   <body>
     <!-- HEADER -->
@@ -15,8 +15,8 @@
         <nav class="navbar navbar-dark navbar-expand-lg background fixed-top" id="navbar_principal">
           <div class="container-fluid">
             <!-- LOGO -->
-              <a class="navbar-brand" href="index_admin.html">
-                <img class="img-fluid" width="150" src="../../img/fritos_don_chalo_logo.png" alt="fritos_don_chalo_logo">
+              <a class="navbar-brand" href="../../views_users/index_admin.html">
+                <img class="img-fluid" width="150" src="../../../img/fritos_don_chalo_logo.png" alt="fritos_don_chalo_logo">
               </a>
             <!-- LOGO -- Hasta aquí -->
 
@@ -32,7 +32,7 @@
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!-- ANCLA INICIO -->
                     <li class="nav-item text-center">
-                      <a class="nav-link text-light me-2" href="#fritos_don_chalo">Inicio</a>
+                      <a class="nav-link text-light me-2" href="../../views_users/index_admin.html">Inicio</a>
                     </li>
                     <!-- ANCLA INICIO -- Hasta aquí -->
 
@@ -47,15 +47,15 @@
                         <!-- LISTA -->
                           <ul class="dropdown-menu">
                             <!-- LISTA ÍTEM: ANCLA CREAR CATEGORÍA -->
-                              <li><a class="dropdown-item" href="../views_categories/create_categories.html">Crear</a></li>
+                              <li><a class="dropdown-item" href="../../views_categories/create_categories.html">Crear</a></li>
                             <!-- LISTA ÍTEM: ANCLA CREAR CATEGORÍA -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA EDITAR CATEGORÍA -->
-                              <li><a class="dropdown-item" href="../views_categories/edit_categories.html">Editar</a></li>
+                              <li><a class="dropdown-item" href="../../views_categories/edit_categories.html">Editar</a></li>
                             <!-- LISTA ÍTEM: ANCLA EDITAR CATEGORÍA -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA VER CATEGORÍA -->
-                              <li><a class="dropdown-item" href="../views_categories/view_categories.html">Ver</a></li>
+                              <li><a class="dropdown-item" href="../../views_categories/view_categories.html">Ver</a></li>
                             <!-- LISTA ÍTEM: ANCLA VER CATEGORÍA -- Hasta aquí -->
                           </ul>
                         <!-- LISTA -- Hasta aquí -->                
@@ -283,7 +283,7 @@
 
                             <!-- OPCIÓN SALIR -->
                               <li>
-                                <a class="dropdown-item" href="../../index.html">Salir</a>
+                                <a class="dropdown-item" href="../../../index.html">Salir</a>
                               </li>
                             <!-- OPCIÓN SALIR -- Hasta aquí -->
                           </ul>
@@ -301,169 +301,20 @@
     <!-- HEADER -- Hasta aquí -->
 
     <!-- BODY -->
-      <div id="contenedor" data-bs-spy="scroll" data-bs-target="#navbar_principal" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true">
-        <div class="text-center fw-bold fs-1 mb-3 administrador" id="fritos_don_chalo">
-          Bievenido, administrador(a) Engie.<br>Es un gusto tenerlo(a) por acá ;).
+      <div id="contenedor">
+        <div class="text-center mt-4 mb-5 text-warning titulo">
+          <img src="../../../img/error_404.png" class="img-fluid rounded-top" width="1100" alt="error_404">
+          <br>
+          <h1 class="fw-bold mt-4">
+            ¡OOOPS!<br>
+            El recurso de Categoría solicitado no fue encontrado o no existe todavía.<br>
+            Pero no te preocupes, vuelve con nosotros.<br><br>
+            Ir a <a class="link-underline link-underline-opacity-0 fw-bold fs-1 letra" href="../../views_categories/create_categories.html">Crear categorías</a>
+          </h1>
         </div>
-        <!-- IMAGENES AVISO -->
-          <div class="text-center">
-            <div class="bg-warning">
-              <img class="img-fluid" src="../../img/aviso.png" alt="aviso">
-            </div>
-            <div class="background">
-              <img class="img-fluid" src="../../img/fritos_venta.png" alt="fritos_venta">
-            </div>
-          </div>
-        <!-- IMAGENES AVISO -- Hasta aquí -->
-
-        <!-- PRODUCTOS -->
-          <div class="text-center mt-4 fw-bold fs-1 titulo" id="productos">PRODUCTOS</div>
-          <div class="row row-cols-1 row-cols-md-3 g-4 mt-2 ms-4 me-4 mb-4 justify-content-center">
-            <!-- EMPANADAS -->
-              <div class="col">
-                <div class="card">
-                  <img class="card-img-top border border-3 border-dark" src="../../img/productos/empanadas.jpg" alt="empanadas">
-                  <div class="card-body text-center text-warning border border-3 border-warning background">
-                    <h4 class="card-title">Empanadas</h4>
-                    <p class="card-text">
-                      Las empanadas de maíz amarillo con relleno de pollo o carne son una deliciosa mezcla de sabores y texturas. La masa, hecha de maíz amarillo, es suave y ligeramente crujiente. El relleno jugoso de pollo o carne, con especias auténticas, ofrece una experiencia gastronómica única. Perfectas como aperitivo o para cualquier ocasión, estas empanadas son una delicia artesanal que combina tradición y placer culinario. ¡Disfruta de esta auténtica delicia!
-                    </p>
-                  </div>
-                  <div class="card-footer text-center bg-warning borde-producto letra">
-                    <h4 class="card-title">Precio</h4>
-                    <p class="card-text">$ 2000 COP / $ 0,51 USD</p>
-                  </div>
-                </div>
-              </div>
-            <!-- EMPANADAS -- Hasta aquí -->
-
-            <!-- PALITOS DE QUESO -->
-              <div class="col">
-                <div class="card">
-                  <img class="card-img-top border border-3 border-dark" src="../../img/productos/palitos_de_queso.jpg" alt="palitos_de_queso">
-                  <div class="card-body text-center text-warning border border-3 border-warning background">
-                    <h4 class="card-title">Palitos de Queso</h4>
-                    <p class="card-text">
-                      Los palitos de queso son una deliciosa mezcla de queso mozzarella derretido y masa de harina de trigo crujiente. Con su sabor irresistible y textura perfecta, son ideales para satisfacer los antojos salados. Estos aperitivos alargados son geniales para compartir en cualquier ocasión o disfrutar en solitario. ¡Disfruta de la combinación clásica de queso y masa en cada bocado!
-                    </p>
-                  </div>
-                  <div class="card-footer text-center bg-warning borde-producto letra">
-                    <h4 class="card-title">Precio</h4>
-                    <p class="card-text">$ 2500 COP / $ 0,63 USD</p>
-                  </div>
-                </div>
-              </div>
-            <!-- PALITOS DE QUESO -- Hasta aquí -->
-
-            <!-- PAPAS RELLENAS -->
-              <div class="col">
-                <div class="card">
-                  <img class="card-img-top border border-3 border-dark" src="../../img/productos/papas_rellenas.jpg" alt="papas_rellenas">
-                  <div class="card-body text-center text-warning border border-3 border-warning background">
-                    <h4 class="card-title">Papas Rellenas</h4>
-                    <p class="card-text">
-                      Las papas rellenas con carne o pollo son un placer reconfortante. Con una capa exterior de papa dorada y crujiente, el relleno jugoso de carne o pollo en su interior crea una combinación irresistible de sabores y texturas. Estas delicias son perfectas para satisfacer el hambre y son ideales como aperitivo o plato principal. ¡Disfruta de la calidez y la satisfacción de las papas rellenas en cada bocado!
-                    </p>
-                  </div>
-                  <div class="card-footer text-center bg-warning borde-producto letra">
-                    <h4 class="card-title">Precio</h4>
-                    <p class="card-text">$ 3000 COP / $ 0,76 USD</p>
-                  </div>
-                </div>
-              </div>
-            <!-- PAPAS RELLENAS -- Hasta aquí -->
-
-            <!-- CARIMAÑOLAS -->
-              <div class="col">
-                <div class="card">
-                  <img class="card-img-top border border-3 border-dark" src="../../img/productos/carimanolas.jpg" alt="carimanolas">
-                  <div class="card-body text-center text-warning border border-3 border-warning background">
-                    <h4 class="card-title">Carimañolas</h4>
-                    <p class="card-text">
-                      Las carimañolas son una deliciosa mezcla de masa suave de yuca con un relleno jugoso de carne, pollo y queso. Estas delicias ofrecen una experiencia única de sabores y texturas. Perfectas como bocado o aperitivo, las carimañolas son una opción satisfactoria que combina la suavidad de la masa de yuca con el sabor sabroso del relleno. ¡Disfruta de esta combinación irresistible en cada bocado!
-                    </p>
-                  </div>
-                  <div class="card-footer text-center bg-warning borde-producto letra">
-                    <h4 class="card-title">Precio</h4>
-                    <p class="card-text">$ 2000 COP / $ 0,51 USD</p>
-                  </div>
-                </div>
-              </div>
-            <!-- CARIMAÑOLAS -- Hasta aquí -->
-
-            <!-- AREPAS DE HUEVO -->
-              <div class="col">
-                <div class="card">
-                  <img class="card-img-top border border-3 border-dark" src="../../img/productos/arepas_de_huevo.jpg" alt="arepas_de_huevo">
-                  <div class="card-body text-center text-warning border border-3 border-warning background">
-                    <h4 class="card-title">Arepas de Huevo</h4>
-                    <p class="card-text">
-                      Las arepas de huevo son una deliciosa combinación de masa y huevo. Con una masa dorada y esponjosa que envuelve un huevo cocido, estas arepas ofrecen una experiencia sabrosa y satisfactoria. Perfectas como opción rápida y deliciosa, son ideales para disfrutar en cualquier momento. ¡Sumérgete en la mezcla irresistible de masa y huevo con cada bocado de estas arepas!
-                    </p>
-                  </div>
-                  <div class="card-footer text-center bg-warning borde-producto letra">
-                    <h4 class="card-title">Precio</h4>
-                    <p class="card-text">$ 3000 COP / $ 0,76 USD</p>
-                  </div>
-                </div>
-              </div>
-            <!-- AREPAS DE HUEVO -- Hasta aquí -->
-
-            <!-- JUGOS NATURALES -->
-              <div class="col">
-                <div class="card">
-                  <img class="card-img-top border border-3 border-dark" src="../../img/productos/jugos_naturales.jpg" alt="jugos_naturales">
-                  <div class="card-body text-center text-warning border border-3 border-warning background">
-                    <h4 class="card-title">Jugos Naturales</h4>
-                    <p class="card-text">
-                      Los jugos naturales ofrecen una amplia variedad de sabores refrescantes, desde la explosión tropical del maracuyá hasta la dulzura clásica de la naranja, pasando por la frescura exótica de la piña y la deliciosa combinación de fresa. Además, la opción nutritiva y reconfortante del jugo de avena proporciona una experiencia sustanciosa y llena de sabor. Estos jugos son ideales para satisfacer la sed y disfrutar de la riqueza de los sabores naturales.
-                    </p>
-                  </div>
-                  <div class="card-footer text-center bg-warning borde-producto letra">
-                    <h4 class="card-title">Precios</h4>
-                    <p class="card-text"><span class="fw-bold">Grande:</span> $ 3500 COP / $ 0,89 USD</p>
-                    <p class="card-text"><span class="fw-bold">Mediano:</span> $ 2500 COP / $ 0,63 USD</p>
-                    <!-- LISTA JUGOS NATURALES -->
-                      <a class="icon-link letra link-underline link-underline-opacity-0" data-bs-toggle="collapse" href="#lista_de_jugos" role="button" aria-expanded="false" aria-controls="lista_de_jugos">
-                        <span class="fs-5 fw-bold">Lista de jugos</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                          <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                        </svg>
-                      </a>
-                      <div class="collapse" id="lista_de_jugos">
-                        <ul class="d-flex flex-column align-items-center mt-2 mb-0">
-                          <li class="letra">Agua de arroz</li>
-                          <li class="letra">Avena</li>
-                          <li class="letra">Fresa</li>
-                          <li class="letra">Maracuyá</li>
-                          <li class="letra">Mora</li>
-                        </ul>
-                      </div>
-                    <!-- LISTA JUGOS NATURALES -- Hasta aquí -->
-
-                    <!-- SEGUNDA OPCIÓN LISTA -->
-
-                      <!--<div class="dropdown-center">
-                        <a class="btn btn-outline-dark btn-sm dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lista de jugos</a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><span class="dropdown-item-text">Agua de arroz</span></li>
-                          <li><span class="dropdown-item-text">Avena</span></li>
-                          <li><span class="dropdown-item-text">Fresa</span></li>
-                          <li><span class="dropdown-item-text">Maracuyá</span></li>
-                          <li><span class="dropdown-item-text">Mora</span></li>
-                        </ul>
-                      </div>-->
-
-                    <!-- SEGUNDA OPCIÓN LISTA -- Hasta aquí -->                  
-                  </div>
-                </div>
-              </div>
-            <!-- JUGOS NATURALES -- Hasta aquí -->
-          </div>
-        <!-- PRODUCTOS -- Hasta aquí -->
       </div>
     <!-- BODY -- Hasta aquí -->
-
+    
     <!-- FOOTER -->
       <div class="bg-warning">
         <div class="container">
@@ -471,7 +322,7 @@
             <div class="row justify-content-center align-items-center">
               <!-- LOGO -->
                 <div class="col-6 text-center">
-                  <img class="img-fluid" width="250" src="../../img/fritos_don_chalo_logo.png" alt="fritos_don_chalo_logo">
+                  <img class="img-fluid" width="250" src="../../../img/fritos_don_chalo_logo.png" alt="fritos_don_chalo_logo">
                 </div>
               <!-- LOGO -- Hasta aquí -->
             </div>
