@@ -1,0 +1,15 @@
+.background{
+  background-color: #610a0e;
+}
+
+#contenedor{
+  margin-top: 125px;
+}
+
+.letra, .titulo{
+  color: #610a0e;
+}
+
+.titulo, .titulo-form{
+  font-family: cursive;
+}
