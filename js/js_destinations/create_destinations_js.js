@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
       alert('Por favor, digite un nombre correcto.');
       nombreInput.focus();
     } else {
-      alert('Destino creada satisfactoriamente');
+      alert('Destino creado satisfactoriamente.');
       window.location.href = "../../views/views_users/index_admin.html";
     }
   });
