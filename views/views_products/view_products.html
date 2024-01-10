@@ -6,11 +6,11 @@
     <title>Fritos Don Chalo</title>
     <link rel="shortcut icon" href="../../img/fritos_don_chalo_logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/css_destinations/create_destinations_css.css">
+    <link rel="stylesheet" href="../../css/css_products/view_products_css.css">
   </head>
   <body>
     <!-- HEADER -->
-
+    
       <!-- NAVBAR -->
         <nav class="navbar navbar-dark navbar-expand-lg background fixed-top" id="navbar_principal">
           <div class="container-fluid">
@@ -73,15 +73,15 @@
                         <!-- LISTA -->
                           <ul class="dropdown-menu">
                             <!-- LISTA ÍTEM: ANCLA CREAR DESTINO -->
-                              <li><a class="dropdown-item" href="create_destinations.html">Crear</a></li>
+                              <li><a class="dropdown-item" href="../views_destinations/create_destinations.html">Crear</a></li>
                             <!-- LISTA ÍTEM: ANCLA CREAR DESTINO -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA EDITAR DESTINO -->
-                              <li><a class="dropdown-item" href="edit_destinations.html">Editar</a></li>
+                              <li><a class="dropdown-item" href="../views_destinations/edit_destinations.html">Editar</a></li>
                             <!-- LISTA ÍTEM: ANCLA EDITAR DESTINO -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA VER DESTINO -->
-                              <li><a class="dropdown-item" href="view_destinations.html">Ver</a></li>
+                              <li><a class="dropdown-item" href="../views_destinations/view_destinations.html">Ver</a></li>
                             <!-- LISTA ÍTEM: ANCLA VER DESTINO -- Hasta aquí -->
                           </ul>
                         <!-- LISTA -- Hasta aquí -->                
@@ -151,15 +151,15 @@
                         <!-- LISTA -->
                           <ul class="dropdown-menu">
                             <!-- LISTA ÍTEM: ANCLA CREAR PRODUCTO -->
-                              <li><a class="dropdown-item" href="../views_products/create_products.html">Crear</a></li>
+                              <li><a class="dropdown-item" href="create_products.html">Crear</a></li>
                             <!-- LISTA ÍTEM: ANCLA CREAR PRODUCTO -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA EDITAR PRODUCTO -->
-                              <li><a class="dropdown-item" href="../views_products/edit_products.html">Editar</a></li>
+                              <li><a class="dropdown-item" href="edit_products.html">Editar</a></li>
                             <!-- LISTA ÍTEM: ANCLA EDITAR PRODUCTO -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA VER PRODUCTO -->
-                              <li><a class="dropdown-item" href="../views_products/view_products.html">Ver</a></li>
+                              <li><a class="dropdown-item" href="view_products.html">Ver</a></li>
                             <!-- LISTA ÍTEM: ANCLA VER PRODUCTO -- Hasta aquí -->
                           </ul>
                         <!-- LISTA -- Hasta aquí -->                
@@ -302,52 +302,251 @@
 
     <!-- BODY -->
       <div id="contenedor">
-        <div class="container col-lg-4 mb-3">
-          <div class="card">
-            <!-- TÍTULO -->
-              <div class="card-header border border-dark border-3">
-                <p class="fs-1 text-center fw-bold mb-0 titulo">CREACIÓN DE DESTINOS</p>
-              </div>
-            <!-- TÍTULO -- Hasta aquí -->
-            <div class="card-body border border-3 border-warning background">
-              <!-- FORMULARIO -->
-                <form action="" method="post" id="crear_destino_formulario">
-                  <!-- FILA NOMBRE -->
-                    <div class="row justify-content-center align-items-center g-2 grid gap-2 ms-3 me-3">
-                      <!-- INPUT NOMBRE -->
-                        <div class="col">
-                          <div class="text-light">Nombre:</div>
-                          <input class="form-control form-control-sm" type="text" name="nombre" id="nombre">
-                        </div>
-                      <!-- INPUT NOMBRE -- Hasta aquí -->
-                    </div>
-                  <!-- FILA NOMBRE -- Hasta aquí -->
-                  <br>
-                  <!-- BOTÓN CREAR -->
-                    <div class="text-center mb-3">
-                      <!--<input type="submit" value="Crear" class="btn btn-warning fw-bold" name="accion">-->
-                      <a class="btn btn-warning fw-bold" id="crearDestinoBoton">Crear</a>
-                    </div>
-                  <!-- BOTÓN CREAR -- Hasta aquí -->
-                </form>
-              <!-- FORMULARIO -- Hasta aquí -->
-            </div>
-          </div>
-        </div>
-        <!-- ANCLAS VISTAS DESTINOS -->
-          <div class="text-center mb-4">
-            <!-- ANCLA EDITAR DESTINOS -->
-              <a class="link-underline link-underline-opacity-0 fw-bold fs-5 me-5 titulo letra" href="edit_destinations.html">Editar destinos</a>
-            <!-- ANCLA EDITAR DESTINOS -- Hasta aquí -->
+        <!-- CONTENEDOR TÍTULO -->
+          <div class="text-center mt-4 mb-4 fw-bold fs-1 titulo">
+            <!-- ANCLA VISTA EMPTY -->
+              <a href="../views_errors/products/view_empty.html" class="icon-link fw-bold titulo">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                </svg>
+              </a>
+            <!-- ANCLA VISTA EMPTY -- Hasta aquí -->
 
-            <!-- ANCLA VER DESTINOS -->
-              <a class="link-underline link-underline-opacity-0 fw-bold fs-5 titulo letra" href="view_destinations.html">Ver destinos</a>
-            <!-- ANCLA VER DESTINOS -- Hasta aquí -->
+            <!-- TÍTULO -->
+              LISTADO DE PRODUCTOS
+            <!-- TÍTULO -- Hasta aquí -->
+
+            <!-- ANCLA VISTA ERROR -->
+              <a href="../views_errors/products/view_error.html" class="icon-link fw-bold titulo">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                </svg>
+              </a>
+            <!-- ANCLA VISTA ERROR -- Hasta aquí -->
           </div>
-        <!-- ANCLAS VISTAS DESTINOS -- Hasta aquí -->
+        <!-- CONTENEDOR TÍTULO -- Hasta aquí -->
+      </div>
+      <!-- TABLA PRODUCTOS -->
+        <div class="table-responsive ms-5 me-5">
+          <table class="table table-sm table-hover table-bordered border-black align-middle">
+            <!-- CABECERA -->
+              <thead>
+                <tr class="text-center align-middle">
+                  <th scope="col">ID</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Precio 1</th>
+                  <th scope="col">Precio 2</th>
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Stock</th>
+                  <th scope="col">ID Categoria</th>
+                  <th scope="col">Categoria</th>
+                  <th scope="col">ID Destino</th>
+                  <th scope="col">Destino</th>
+                  <th scope="col">ID Proveedor</th>
+                  <th scope="col">Proveedor</th>
+                </tr>
+              </thead>
+            <!-- CABECERA -- Hasta aquí -->
+
+            <!-- CUERPO -->
+              <tbody>
+                <!-- FILA PRODUCTO 1 -->
+                  <tr class="text-center">
+                    <!-- ID -->
+                      <th id="id_1">1</th>
+                    <!-- ID -- Hasta aquí -->
+
+                    <!-- NOMBRE -->
+                      <th id="nombre_1">Empanadas</th>
+                    <!-- NOMBRE -- Hasta aquí -->
+
+                    <!-- DESCRIPCIÓN -->
+                      <th id="descripción_1">
+                        Las empanadas de maíz amarillo con relleno de pollo o carne son una deliciosa mezcla de sabores y texturas. La masa, hecha de maíz amarillo, es suave y ligeramente crujiente. El relleno jugoso de pollo o carne, con especias auténticas, ofrece una experiencia gastronómica única. Perfectas como aperitivo o para cualquier ocasión, estas empanadas son una delicia artesanal que combina tradición y placer culinario. ¡Disfruta de esta auténtica delicia!
+                      </th>
+                    <!-- DESCRIPCIÓN -- Hasta aquí -->
+
+                    <!-- PRECIO 1 -->
+                      <th id="precio_1_1">$2000</th>
+                    <!-- PRECIO 1 -- Hasta aquí -->
+
+                    <!-- PRECIO 2 -->
+                      <th id="precio_2_1">$0</th>
+                    <!-- PRECIO 2 -- Hasta aquí -->
+
+                    <!-- IMÁGEN -->
+                      <th id="imagen_1">
+                        <img src="../../img/productos/empanadas.jpg" class="border border-2 border-dark" alt="empanadas" width="100">
+                        <br>
+                        1703194045_Empanadas.jpg
+                      </th>
+                    <!-- IMÁGEN -- Hasta aquí -->
+                    
+                    <!-- STOCK -->
+                      <th id="stock_1">10</th>
+                    <!-- STOCK -- Hasta aquí -->
+
+                    <!-- ID CATEGORÍA -->
+                      <th id="id_categoria_1">1</th>
+                    <!-- ID CATEGORÍA -- Hasta aquí -->
+
+                    <!-- CATEGORÍA -->
+                      <th id="categoria_1">Fritos</th>
+                    <!-- CATEGORÍA -- Hasta aquí -->
+                    
+                    <!-- ID DESTINO -->
+                      <th id="id_destino_1">1</th>
+                    <!-- ID DESTINO -- Hasta aquí -->
+
+                    <!-- DESTINO -->
+                      <th id="destino_1">Venta</th>
+                    <!-- DESTINO -- Hasta aquí -->
+                    
+                    <!-- ID PROVEEDOR -->
+                      <th id="id_proveedor_1">1</th>
+                    <!-- ID PROVEEDOR -- Hasta aquí -->
+                    
+                    <!-- PROVEEDOR -->
+                      <th id="proveedor_1">Sin proveedor</th>
+                    <!-- PROVEEDOR -- Hasta aquí -->
+                  </tr>
+                <!-- FILA PRODUCTO 1 -- Hasta aquí -->
+
+                <!-- FILA PRODUCTO 2 -->
+                  <tr class="text-center">
+                    <!-- ID -->
+                      <th id="id_2">2</th>
+                    <!-- ID -- Hasta aquí -->
+
+                    <!-- NOMBRE -->
+                      <th id="nombre_2">Jugos Naturales</th>
+                    <!-- NOMBRE -- Hasta aquí -->
+
+                    <!-- DESCRIPCIÓN -->
+                      <th id="descripción_2">
+                        Los jugos naturales ofrecen una amplia variedad de sabores refrescantes, desde la explosión tropical del maracuyá hasta la dulzura clásica de la naranja, pasando por la frescura exótica de la piña y la deliciosa combinación de fresa. Además, la opción nutritiva y reconfortante del jugo de avena proporciona una experiencia sustanciosa y llena de sabor. Estos jugos son ideales para satisfacer la sed y disfrutar de la riqueza de los sabores naturales.
+                      </th>
+                    <!-- DESCRIPCIÓN -- Hasta aquí -->
+
+                    <!-- PRECIO 1 -->
+                      <th id="precio_1_2">$2500</th>
+                    <!-- PRECIO 1 -- Hasta aquí -->
+
+                    <!-- PRECIO 2 -->
+                    <th id="precio_2_2">$3500</th>
+                    <!-- PRECIO 2 -- Hasta aquí -->
+
+                    <!-- IMÁGEN -->
+                      <th id="imagen_2">
+                        <img src="../../img/productos/jugos_naturales.jpg" class="border border-2 border-dark" alt="jugos_naturales" width="100">
+                        <br>
+                        1703194045_Jugos_Naturales.jpg
+                      </th>
+                    <!-- IMÁGEN -- Hasta aquí -->
+                    
+                    <!-- STOCK -->
+                      <th id="stock_2">10</th>
+                    <!-- STOCK -- Hasta aquí -->
+
+                    <!-- ID CATEGORÍA -->
+                      <th id="id_categoria_2">2</th>
+                    <!-- ID CATEGORÍA -- Hasta aquí -->
+
+                    <!-- CATEGORÍA -->
+                      <th id="categoria_2">Jugos</th>
+                    <!-- CATEGORÍA -- Hasta aquí -->
+                    
+                    <!-- ID DESTINO -->
+                      <th id="id_destino_2">1</th>
+                    <!-- ID DESTINO -- Hasta aquí -->
+
+                    <!-- DESTINO -->
+                      <th id="destino_2">Venta</th>
+                    <!-- DESTINO -- Hasta aquí -->
+                    
+                    <!-- ID PROVEEDOR -->
+                      <th id="id_proveedor_2">1</th>
+                    <!-- ID PROVEEDOR -- Hasta aquí -->
+                    
+                    <!-- PROVEEDOR -->
+                      <th id="proveedor_2">Sin proveedor</th>
+                    <!-- PROVEEDOR -- Hasta aquí -->
+                  </tr>
+                <!-- FILA PRODUCTO 2 -- Hasta aquí -->
+
+                <!-- FILA PRODUCTO 3 -->
+                  <tr class="text-center">
+                    <!-- ID -->
+                      <th id="id_3">3</th>
+                    <!-- ID -- Hasta aquí -->
+
+                    <!-- NOMBRE -->
+                      <th id="nombre_3">Coca Cola</th>
+                    <!-- NOMBRE -- Hasta aquí -->
+
+                    <!-- DESCRIPCIÓN -->
+                      <th id="descripción_3">
+                        Coca-Cola, la icónica gaseosa que ha cautivado a consumidores de todo el mundo, se presenta como la opción refrescante por excelencia. Con su fórmula única y burbujeante, esta bebida efervescente ofrece una experiencia de sabor inigualable. La Coca-Cola es la elección preferida para momentos de disfrute y celebración, brindando un impulso de energía y satisfacción. Su reconocible marca y calidad constante la convierten en un producto confiable para cualquier establecimiento que busque ofrecer a sus clientes una bebida refrescante y deliciosa.
+                      </th>
+                    <!-- DESCRIPCIÓN -- Hasta aquí -->
+
+                    <!-- PRECIO 1 -->
+                      <th id="precio_1_3">$2000</th>
+                    <!-- PRECIO 1 -- Hasta aquí -->
+
+                    <!-- PRECIO 2 -->
+                      <th id="precio_2_3">$0</th>
+                    <!-- PRECIO 2 -- Hasta aquí -->
+
+                    <!-- IMÁGEN -->
+                      <th id="imagen_3">
+                        <img src="../../img/productos/coca_cola.jpg" class="border border-2 border-dark" alt="coca_cola" width="100">
+                        <br>
+                        1703194045_Coca_Cola.jpg
+                      </th>
+                    <!-- IMÁGEN -- Hasta aquí -->
+                    
+                    <!-- STOCK -->
+                      <th id="stock_3">8</th>
+                    <!-- STOCK -- Hasta aquí -->
+
+                    <!-- ID CATEGORÍA -->
+                      <th id="id_categoria_3">3</th>
+                    <!-- ID CATEGORÍA -- Hasta aquí -->
+
+                    <!-- CATEGORÍA -->
+                      <th id="categoria_3">Gaseosass</th>
+                    <!-- CATEGORÍA -- Hasta aquí -->
+                    
+                    <!-- ID DESTINO -->
+                      <th id="id_destino_3">1</th>
+                    <!-- ID DESTINO -- Hasta aquí -->
+
+                    <!-- DESTINO -->
+                      <th id="destino_3">Venta</th>
+                    <!-- DESTINO -- Hasta aquí -->
+                    
+                    <!-- ID PROVEEDOR -->
+                      <th id="id_proveedor_3">3</th>
+                    <!-- ID PROVEEDOR -- Hasta aquí -->
+                    
+                    <!-- PROVEEDOR -->
+                      <th id="proveedor_3">Coca Cola</th>
+                    <!-- PROVEEDOR -- Hasta aquí -->
+                  </tr>
+                <!-- FILA PRODUCTO 3 -- Hasta aquí -->
+              </tbody>
+            <!-- CUERPO -- Hasta aquí -->
+          </table>
+        </div>
+      <!-- TABLA PRODUCTOS -- Hasta aquí -->
+      <div class="text-center mb-4">
+        <a class="link-underline link-underline-opacity-0 me-5 fw-bold fs-5 titulo" href="create_products.html">Crear productos</a>
+        <a class="link-underline link-underline-opacity-0 fw-bold fs-5 titulo" href="edit_products.html">Editar productos</a>
       </div>
     <!-- BODY -- Hasta aquí -->
-
+    
     <!-- FOOTER -->
       <div class="bg-warning">
         <div class="container">
@@ -498,6 +697,6 @@
       </div>
     <!-- FOOTER -- Hasta aquí -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="../../js/js_destinations/create_destinations_js.js"></script>
+    <script src="../../js/js_destinations/edit_destinations_js.js"></script>
   </body>
 </html>

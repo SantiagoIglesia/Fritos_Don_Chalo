@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var validacionLetras = /^[a-zA-Z ]+$/;
     var validacionCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     var validacionTelefono = /^\d{10}$/;
-    var validacionUsuario = /^[a-zA-Z1-9.-_ ]+$/
+    var validacionUsuario = /^[a-zA-Z1-9.-_ ]+$/;
     if(nombreValue.length == 0) {
       alert('Por favor, digite el nombre.');
       nombreInput.focus();

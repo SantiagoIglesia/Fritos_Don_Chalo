@@ -31,11 +31,14 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+var descripcion = "";
+
 function clearDescripcion(){
+  descripcion = document.getElementById('descripcion').value;
   document.getElementById('descripcion').value = "";
   document.getElementById('descripcion').focus();
 }
 
 function defaultDescripcion(){
-  document.getElementById('descripcion').value = "Sin descripción.";
+  document.getElementById('descripcion').value = descripcion;
 }
