@@ -6,11 +6,11 @@
     <title>Fritos Don Chalo</title>
     <link rel="shortcut icon" href="../../img/fritos_don_chalo_logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/css_destinations/edit_destinations_css.css">
+    <link rel="stylesheet" href="../../css/css_products/create_products_css.css">
   </head>
   <body>
     <!-- HEADER -->
-    
+
       <!-- NAVBAR -->
         <nav class="navbar navbar-dark navbar-expand-lg background fixed-top" id="navbar_principal">
           <div class="container-fluid">
@@ -73,15 +73,15 @@
                         <!-- LISTA -->
                           <ul class="dropdown-menu">
                             <!-- LISTA ÍTEM: ANCLA CREAR DESTINO -->
-                              <li><a class="dropdown-item" href="create_destinations.html">Crear</a></li>
+                              <li><a class="dropdown-item" href="../views_destinations/create_destinations.html">Crear</a></li>
                             <!-- LISTA ÍTEM: ANCLA CREAR DESTINO -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA EDITAR DESTINO -->
-                              <li><a class="dropdown-item" href="edit_destinations.html">Editar</a></li>
+                              <li><a class="dropdown-item" href="../views_destinations/edit_destinations.html">Editar</a></li>
                             <!-- LISTA ÍTEM: ANCLA EDITAR DESTINO -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA VER DESTINO -->
-                              <li><a class="dropdown-item" href="view_destinations.html">Ver</a></li>
+                              <li><a class="dropdown-item" href="../views_destinations/view_destinations.html">Ver</a></li>
                             <!-- LISTA ÍTEM: ANCLA VER DESTINO -- Hasta aquí -->
                           </ul>
                         <!-- LISTA -- Hasta aquí -->                
@@ -98,13 +98,13 @@
 
                         <!-- LISTA -->
                           <ul class="dropdown-menu">
-                            <!-- LISTA ÍTEM: ANCLA EDITAR ENTREGA -->
-                              <li><a class="dropdown-item" href="#">Editar</a></li>
-                            <!-- LISTA ÍTEM: ANCLA EDITAR ENTREGA -- Hasta aquí -->
-
                             <!-- LISTA ÍTEM: ANCLA CREAR ENTREGA -->
                               <li><a class="dropdown-item" href="#">Registrar</a></li>
                             <!-- LISTA ÍTEM: ANCLA CREAR ENTREGA -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA EDITAR ENTREGA -->
+                              <li><a class="dropdown-item" href="#">Editar</a></li>
+                            <!-- LISTA ÍTEM: ANCLA EDITAR ENTREGA -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA VER ENTREGA -->
                               <li><a class="dropdown-item" href="#">Ver</a></li>
@@ -151,15 +151,15 @@
                         <!-- LISTA -->
                           <ul class="dropdown-menu">
                             <!-- LISTA ÍTEM: ANCLA CREAR PRODUCTO -->
-                              <li><a class="dropdown-item" href="../views_products/create_products.html">Crear</a></li>
+                              <li><a class="dropdown-item" href="create_products.html">Crear</a></li>
                             <!-- LISTA ÍTEM: ANCLA CREAR PRODUCTO -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA EDITAR PRODUCTO -->
-                              <li><a class="dropdown-item" href="../views_products/edit_products.html">Editar</a></li>
+                              <li><a class="dropdown-item" href="edit_products.html">Editar</a></li>
                             <!-- LISTA ÍTEM: ANCLA EDITAR PRODUCTO -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA VER PRODUCTO -->
-                              <li><a class="dropdown-item" href="../views_products/view_products.html">Ver</a></li>
+                              <li><a class="dropdown-item" href="view_products.html">Ver</a></li>
                             <!-- LISTA ÍTEM: ANCLA VER PRODUCTO -- Hasta aquí -->
                           </ul>
                         <!-- LISTA -- Hasta aquí -->                
@@ -302,74 +302,165 @@
 
     <!-- BODY -->
       <div id="contenedor">
-        <div class="container mt-4 col-lg-4 mb-3">
+        <div class="container col-lg-6 mb-3">
           <div class="card">
             <!-- TÍTULO -->
               <div class="card-header border border-dark border-3">
-                <p class="fs-1 text-center fw-bold mb-0 titulo-form">EDICIÓN DE DESTINOS</p>
+                <p class="fs-1 text-center fw-bold mb-0 titulo">CREACIÓN DE PRODUCTOS</p>
               </div>
             <!-- TÍTULO -- Hasta aquí -->
             <div class="card-body border border-3 border-warning background">
               <!-- FORMULARIO -->
-                <form action="" method="post" id="editar_destino_formulario">
-                  <!-- FILA ID -->
-                    <div class="row justify-content-center align-items-center g-2 grid gap-2 ms-3 me-3">
-                      <!-- INPUT ID -->
-                        <div class="col">
-                          <div class="text-light">ID:</div>
-                          <input class="form-control form-control-sm" type="text" name="id" id="id_input" value="" readonly disabled>
-                        </div>
-                      <!-- INPUT ID -- Hasta aquí -->
-                    </div>
-                  <!-- FILA ID -- Hasta aquí -->
-                  <br>
-                  <!-- FILA NOMBRE -->
-                    <div class="row justify-content-center align-items-center g-2 grid gap-2 ms-3 me-3">
+                <form action="" method="post" enctype="multipart/form-data" id="crear_producto_proveedor_formulario">
+                  <!-- FILA NOMBRE Y PRECIO 1 -->
+                    <div class="row justify-content-center align-items-center g-2 grid gap-2">
                       <!-- INPUT NOMBRE -->
                         <div class="col">
                           <div class="text-light">Nombre:</div>
-                          <input class="form-control form-control-sm" type="text" name="nombre" id="nombre_input" value="">
+                          <input class="form-control form-control-sm" type="text" name="nombre" id="nombre">
                         </div>
                       <!-- INPUT NOMBRE -- Hasta aquí -->
+                      
+                      <!-- INPUT PRECIO 1 -->
+                        <div class="col">
+                          <div class="text-light">Precio 1:</div>
+                          <input class="form-control form-control-sm" type="text" name="precio_1" id="precio_1">
+                        </div>
+                      <!-- INPUT PRECIO 1 -- Hasta aquí -->
                     </div>
-                  <!-- FILA NOMBRE -- Hasta aquí -->
+                  <!-- FILA NOMBRE Y PRECIO 1 -- Hasta aquí -->
                   <br>
-                  <!-- BOTONES Y ANCLAS -->
-                    <div class="text-center mb-3">
-                      <!-- BOTÓN EDITAR -->
-                        <!--<input type="submit" value="Actualizar" class="btn btn-warning fw-bold" name="accion">-->
-                        <a class="btn btn-warning fw-bold mb-3" id="editarDestinoBoton">Editar</a>
-                      <!-- BOTÓN EDITAR -- Hasta aquí -->
-                      <br>
-                      <!-- ANCLA LISTADO DE DESTINOS -->
-                        <a href="edit_destinations.html" class="icon-link link-light">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
-                          </svg>
-                          Volver a la lista de destinos
-                        </a>
-                      <!-- ANCLA LISTADO DE DESTINOS -- Hasta aquí -->
+                  <!-- FILA PRECIO 2 Y STOCK -->
+                    <div class="row justify-content-center align-items-center g-2 grid gap-2">
+                      <!-- INPUT PRECIO 2 -->
+                        <div class="col">
+                          <div class="text-light">Precio 2: (Opcional)</div>
+                          <input class="form-control form-control-sm" type="text" name="precio_2" id="precio_2">
+                        </div>
+                      <!-- INPUT PRECIO 2 -- Hasta aquí -->
+                    
+                      <!-- SELECT STOCK -->
+                        <div class="col">
+                          <div class="text-light">Stock:</div>
+                          <input class="form-control form-control-sm" type="number" name="stock" id="stock">
+                        </div>
+                      <!-- SELECT STOCK -- Hasta aquí -->
                     </div>
-                  <!-- BOTONES Y ANCLAS -- Hasta aquí -->
+                  <!-- FILA PRECIO 2 Y STOCK -- Hasta aquí -->
+                  <br>
+                  <!-- FILA CATEGORÍA Y DESTINO -->
+                    <div class="row justify-content-center align-items-center g-2 grid gap-2">
+                      <!-- SELECT CATEGORÍA -->
+                        <div class="col">
+                          <div class="text-light">Categoria:</div>
+                          <select class="form-select form-select-sm" name="id_categoria" id="id_categoria" aria-label="Small select example">
+                            <option value="0" selected>Seccione una categoría:</option>
+                              <option value="1">Fritos</option>
+                              <option value="2">Frutas</option>
+                              <option value="3">Gaseosas</option>
+                          </select>
+                        </div>
+                      <!-- SELECT CATEGORÍA -- Hasta aquí -->
+
+                      <!-- SELECT DESTINO -->
+                        <div class="col">
+                          <div class="text-light">Destino:</div>
+                          <select class="form-select form-select-sm" name="id_destino" id="id_destino" aria-label="Small select example">
+                            <option value="0" selected>Seccione un destino:</option>
+                              <option value="1">Venta</option>
+                              <option value="2">Fabricación</option>
+                              <option value="3">Otros</option>
+                          </select>
+                        </div>
+                      <!-- SELECT DESTINO -- Hasta aquí -->
+                    </div>
+                  <!-- FILA CATEGORÍA Y DESTINO -- Hasta aquí -->
+                  <br>
+                  <!-- FILA PROVEEDOR -->
+                    <div class="row justify-content-center align-items-start g-2 grid gap-2 mb-2">
+                      <!-- INPUT ID PROVEEDOR -->
+                        <div class="col">
+                          <div class="text-light">ID Proveedor:</div>
+                          <input class="form-control form-control-sm" type="text" name="id_proveedor" id="id_proveedor" readonly>
+                        </div>
+                      <!-- INPUT ID PROVEEDOR -- Hasta aquí -->
+
+                      <!-- INPUT NOMBRE PROVEEDOR -->
+                        <div class="col">
+                          <div class="text-light">Proveedor:</div>
+                          <input class="form-control form-control-sm" type="text" name="nombre_proveedor" id="nombre_proveedor" readonly>
+                        </div>
+                      <!-- INPUT NOMBRE PROVEEDOR -- Hasta aquí -->
+                    </div>
+                  <!-- FILA PROVEEDOR -- Hasta aquí -->
+                  <br>
+                  <!-- FILA IMÁGEN Y DESCRIPCIÓN -- Hasta aquí -->
+                    <div class="row justify-content-center align-items-start g-2 grid gap-2 mb-2">
+                      <!-- INPUT IMÁGEN -->
+                        <div class="col">
+                          <div class="text-light">Imágen:</div>
+                          <input class="form-control form-control-sm" type="file" name="imagen" id="imagen">
+                        </div>
+                      <!-- INPUT IMÁGEN -- Hasta aquí -->
+
+                      <!-- TEXTAREA DESCRIPCIÓN Y BOTONES -->
+                        <div class="col">
+                          <div class="text-light">Descripción:</div>
+                          <div class="input-group input-group-sm">
+                            <!-- TEXTAREA DESCRIPCIÓN -->
+                              <textarea class="form-control form-control-sm" type="text" name="descripcion" id="descripcion" rows="4">Sin descripción.</textarea>
+                            <!-- TEXTAREA DESCRIPCIÓN -- Hasta aquí -->
+
+                            <!-- BOTONES -->
+
+                              <!-- BOTÓN LIMPIAR DESCRIPCIÓN -->
+                                <button type="button" class="btn btn-dark fw-bold" onclick="clearDescripcion()">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eraser" viewBox="0 0 16 16">
+                                    <path d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414l-3.879-3.879zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z"/>
+                                  </svg>
+                                </button>
+                              <!-- BOTÓN LIMPIAR DESCRIPCIÓN -- Hasta aquí -->
+
+                              <!-- BOTÓN DEFAULT DESCRIPCIÓN -->
+                                <button type="button" class="btn btn-light fw-bold" onclick="defaultDescripcion()">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
+                                  </svg>
+                                </button>
+                              <!-- BOTÓN DEFAULT DESCRIPCIÓN -- Hasta aquí -->
+
+                            <!-- BOTONES -- Hasta aquí -->
+                          </div>
+                        </div>
+                      <!-- TEXTAREA DESCRIPCIÓN Y BOTONES -- Hasta aquí -->
+                    </div>
+                  <!-- FILA DESCRIPCIÓN Y IMÁGEN -- Hasta aquí -->
+                  <br>
+                  <!-- BOTÓN CREAR -->
+                    <div class="text-center mb-3">
+                      <!--<input type="submit" value="Crear" class="btn btn-warning fw-bold" name="accion">-->
+                      <a class="btn btn-warning fw-bold" id="crearProductoProveedorBoton">Crear</a>
+                    </div>
+                  <!-- BOTÓN CREAR -- Hasta aquí -->
                 </form>
               <!-- FORMULARIO -- Hasta aquí -->
             </div>
           </div>
         </div>
-        <!-- ANCLAS VISTAS DESTINOS -->
+        <!-- ANCLAS VISTAS PRODUCTOS -->
           <div class="text-center mb-4">
-            <!-- ANCLA CREAR DESTINOS -->
-              <a class="link-underline link-underline-opacity-0 fw-bold fs-5 me-5 titulo" href="create_destinations.html">Crear destinos</a>
-            <!-- ANCLA CREAR DESTINOS -- Hasta aquí -->
+            <!-- ANCLA EDITAR PRODUCTOS -->
+              <a class="link-underline link-underline-opacity-0 fw-bold fs-5 me-5 titulo letra" href="edit_products.html">Editar productos</a>
+            <!-- ANCLA EDITAR PRODUCTOS -- Hasta aquí -->
 
-            <!-- ANCLA VER DESTINOS -->
-              <a class="link-underline link-underline-opacity-0 fw-bold fs-5 titulo" href="view_destinations.html">Ver destinos</a>
-            <!-- ANCLA VER DESTINOS -- Hasta aquí -->
+            <!-- ANCLA VER PRODUCTOS -->
+              <a class="link-underline link-underline-opacity-0 fw-bold fs-5 titulo letra" href="view_products.html">Ver productos</a>
+            <!-- ANCLA VER PRODUCTOS -- Hasta aquí -->
           </div>
-        <!-- ANCLAS VISTAS DESTINOS -- Hasta aquí -->
+        <!-- ANCLAS VISTAS PRODUCTOS -- Hasta aquí -->
       </div>
     <!-- BODY -- Hasta aquí -->
-    
+
     <!-- FOOTER -->
       <div class="bg-warning">
         <div class="container">
@@ -520,6 +611,6 @@
       </div>
     <!-- FOOTER -- Hasta aquí -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="../../js/js_destinations/edit_destinations_js.js"></script>
+    <script src="../../js/js_products/create_product_with_provider_js.js"></script>
   </body>
 </html>

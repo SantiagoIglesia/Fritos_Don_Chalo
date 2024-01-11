@@ -239,11 +239,11 @@ document.addEventListener("DOMContentLoaded", function() {
 var descripcion = "";
 
 function clearDescripcion(){
-  descripcion = document.getElementById('descripcion').value;
-  document.getElementById('descripcion').value = "";
-  document.getElementById('descripcion').focus();
+  descripcion = document.getElementById('descripcion_input').value;
+  document.getElementById('descripcion_input').value = "";
+  document.getElementById('descripcion_input').focus();
 }
 
 function defaultDescripcion(){
-  document.getElementById('descripcion').value = descripcion;
+  document.getElementById('descripcion_input').value = descripcion;
 }

@@ -40,3 +40,15 @@ document.addEventListener("DOMContentLoaded", function() {
     window.location.href = "edit_categories.html";
   });
 });
+
+var descripcion = "";
+
+function clearDescripcion(){
+  descripcion = document.getElementById('descripcion_input').value;
+  document.getElementById('descripcion_input').value = "";
+  document.getElementById('descripcion_input').focus();
+}
+
+function defaultDescripcion(){
+  document.getElementById('descripcion_input').value = descripcion;
+}

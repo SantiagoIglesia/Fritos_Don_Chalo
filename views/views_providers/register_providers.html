@@ -6,11 +6,11 @@
     <title>Fritos Don Chalo</title>
     <link rel="shortcut icon" href="../../img/fritos_don_chalo_logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/css_destinations/edit_destinations_css.css">
+    <link rel="stylesheet" href="../../css/css_providers/register_providers_css.css">
   </head>
   <body>
     <!-- HEADER -->
-    
+
       <!-- NAVBAR -->
         <nav class="navbar navbar-dark navbar-expand-lg background fixed-top" id="navbar_principal">
           <div class="container-fluid">
@@ -73,15 +73,15 @@
                         <!-- LISTA -->
                           <ul class="dropdown-menu">
                             <!-- LISTA ÍTEM: ANCLA CREAR DESTINO -->
-                              <li><a class="dropdown-item" href="create_destinations.html">Crear</a></li>
+                              <li><a class="dropdown-item" href="../views_destinations/create_destinations.html">Crear</a></li>
                             <!-- LISTA ÍTEM: ANCLA CREAR DESTINO -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA EDITAR DESTINO -->
-                              <li><a class="dropdown-item" href="edit_destinations.html">Editar</a></li>
+                              <li><a class="dropdown-item" href="../views_destinations/edit_destinations.html">Editar</a></li>
                             <!-- LISTA ÍTEM: ANCLA EDITAR DESTINO -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA VER DESTINO -->
-                              <li><a class="dropdown-item" href="view_destinations.html">Ver</a></li>
+                              <li><a class="dropdown-item" href="../views_destinations/view_destinations.html">Ver</a></li>
                             <!-- LISTA ÍTEM: ANCLA VER DESTINO -- Hasta aquí -->
                           </ul>
                         <!-- LISTA -- Hasta aquí -->                
@@ -177,15 +177,15 @@
                         <!-- LISTA -->
                           <ul class="dropdown-menu">
                             <!-- LISTA ÍTEM: ANCLA EDITAR PROVEEDOR -->
-                              <li><a class="dropdown-item" href="../views_providers/edit_providers.html">Editar</a></li>
+                              <li><a class="dropdown-item" href="edit_providers.html">Editar</a></li>
                             <!-- LISTA ÍTEM: ANCLA EDITAR PROVEEDOR -- Hasta aquí -->
                             
                             <!-- LISTA ÍTEM: ANCLA CREAR PROVEEDOR -->
-                              <li><a class="dropdown-item" href="../views_providers/register_providers.html">Registrar</a></li>
+                              <li><a class="dropdown-item" href="register_providers.html">Registrar</a></li>
                             <!-- LISTA ÍTEM: ANCLA CREAR PROVEEDOR -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA VER PROVEEDOR -->
-                              <li><a class="dropdown-item" href="../views_providers/view_providers.html">Ver</a></li>
+                              <li><a class="dropdown-item" href="view_providers.html">Ver</a></li>
                             <!-- LISTA ÍTEM: ANCLA VER PROVEEDOR -- Hasta aquí -->
                           </ul>
                         <!-- LISTA -- Hasta aquí -->                
@@ -302,74 +302,75 @@
 
     <!-- BODY -->
       <div id="contenedor">
-        <div class="container mt-4 col-lg-4 mb-3">
+        <div class="container col-lg-4 mb-3">
           <div class="card">
             <!-- TÍTULO -->
               <div class="card-header border border-dark border-3">
-                <p class="fs-1 text-center fw-bold mb-0 titulo-form">EDICIÓN DE DESTINOS</p>
+                <p class="fs-1 text-center fw-bold mb-0 titulo">REGISTRO DE PROVEEDORES</p>
               </div>
             <!-- TÍTULO -- Hasta aquí -->
             <div class="card-body border border-3 border-warning background">
               <!-- FORMULARIO -->
-                <form action="" method="post" id="editar_destino_formulario">
-                  <!-- FILA ID -->
-                    <div class="row justify-content-center align-items-center g-2 grid gap-2 ms-3 me-3">
-                      <!-- INPUT ID -->
-                        <div class="col">
-                          <div class="text-light">ID:</div>
-                          <input class="form-control form-control-sm" type="text" name="id" id="id_input" value="" readonly disabled>
-                        </div>
-                      <!-- INPUT ID -- Hasta aquí -->
-                    </div>
-                  <!-- FILA ID -- Hasta aquí -->
-                  <br>
+                <form action="" method="post" id="crear_proveedor_formulario">
                   <!-- FILA NOMBRE -->
                     <div class="row justify-content-center align-items-center g-2 grid gap-2 ms-3 me-3">
                       <!-- INPUT NOMBRE -->
                         <div class="col">
                           <div class="text-light">Nombre:</div>
-                          <input class="form-control form-control-sm" type="text" name="nombre" id="nombre_input" value="">
+                          <input class="form-control form-control-sm" type="text" name="nombre" id="nombre">
                         </div>
                       <!-- INPUT NOMBRE -- Hasta aquí -->
                     </div>
                   <!-- FILA NOMBRE -- Hasta aquí -->
                   <br>
-                  <!-- BOTONES Y ANCLAS -->
-                    <div class="text-center mb-3">
-                      <!-- BOTÓN EDITAR -->
-                        <!--<input type="submit" value="Actualizar" class="btn btn-warning fw-bold" name="accion">-->
-                        <a class="btn btn-warning fw-bold mb-3" id="editarDestinoBoton">Editar</a>
-                      <!-- BOTÓN EDITAR -- Hasta aquí -->
+                  <div class="row justify-content-center align-items-center g-2 grid gap-2 ms-3 me-3">
+                    <div class="col">
+                      <div class="text-light">¿Desea crear un producto con este proveedor? (Opcional)</div>
                       <br>
-                      <!-- ANCLA LISTADO DE DESTINOS -->
-                        <a href="edit_destinations.html" class="icon-link link-light">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
-                          </svg>
-                          Volver a la lista de destinos
-                        </a>
-                      <!-- ANCLA LISTADO DE DESTINOS -- Hasta aquí -->
+                      <div class="form-check text-light">
+                        <input class="form-check-input" type="radio" name="createProductRadio" value="1" id="siRadio">
+                        <label class="form-check-label" for="siRadio">
+                          Sí
+                        </label>
+                      </div>
+                      <div class="form-check text-light">
+                        <input class="form-check-input" type="radio" name="createProductRadio" value="2" id="noRadio" checked>
+                        <label class="form-check-label" for="noRadio">
+                          No
+                        </label>
+                      </div>
                     </div>
-                  <!-- BOTONES Y ANCLAS -- Hasta aquí -->
+                  </div>
+                  <br>
+                  <!-- BOTONES CREAR Y CREAR PRODUCTO CON PROVEEDOR -->
+                    <div class="text-center mb-3">
+                      <!--<input type="submit" value="Crear" class="btn btn-warning fw-bold" name="accion">-->
+                      <a class="btn btn-warning fw-bold" id="crearProveedorBoton">Crear</a>
+                      <!--<input type="submit" value="Crear Producto con Proveedor" class="btn btn-light fw-bold" name="accion">-->
+                      <!-- BOTÓN CREAR PRODUCTO DE PROVEEDOR -->
+                        <!--<button class="btn btn-light fw-bold" id="crearProductoBoton">Crear Producto con Proveedor</button>-->
+                      <!-- BOTÓN CREAR PRODUCTO DE PROVEEDOR -- Hasta aquí -->
+                    </div>
+                  <!-- BOTONES CREAR Y CREAR PRODUCTO CON PROVEEDOR -- Hasta aquí -->
                 </form>
               <!-- FORMULARIO -- Hasta aquí -->
             </div>
           </div>
         </div>
-        <!-- ANCLAS VISTAS DESTINOS -->
+        <!-- ANCLAS VISTAS PROVEEDORES -->
           <div class="text-center mb-4">
-            <!-- ANCLA CREAR DESTINOS -->
-              <a class="link-underline link-underline-opacity-0 fw-bold fs-5 me-5 titulo" href="create_destinations.html">Crear destinos</a>
-            <!-- ANCLA CREAR DESTINOS -- Hasta aquí -->
+            <!-- ANCLA EDITAR PROVEEDORES -->
+              <a class="link-underline link-underline-opacity-0 fw-bold fs-5 me-5 titulo letra" href="edit_providers.html">Editar proveedores</a>
+            <!-- ANCLA EDITAR PROVEEDORES -- Hasta aquí -->
 
-            <!-- ANCLA VER DESTINOS -->
-              <a class="link-underline link-underline-opacity-0 fw-bold fs-5 titulo" href="view_destinations.html">Ver destinos</a>
-            <!-- ANCLA VER DESTINOS -- Hasta aquí -->
+            <!-- ANCLA VER PROVEEDORES -->
+              <a class="link-underline link-underline-opacity-0 fw-bold fs-5 titulo letra" href="view_providers.html">Ver proveedores</a>
+            <!-- ANCLA VER PROVEEDORES -- Hasta aquí -->
           </div>
-        <!-- ANCLAS VISTAS DESTINOS -- Hasta aquí -->
+        <!-- ANCLAS VISTAS PROVEEDORES -- Hasta aquí -->
       </div>
     <!-- BODY -- Hasta aquí -->
-    
+
     <!-- FOOTER -->
       <div class="bg-warning">
         <div class="container">
@@ -520,6 +521,6 @@
       </div>
     <!-- FOOTER -- Hasta aquí -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="../../js/js_destinations/edit_destinations_js.js"></script>
+    <script src="../../js/js_providers/register_providers_js.js"></script>
   </body>
 </html>

@@ -98,13 +98,13 @@
 
                         <!-- LISTA -->
                           <ul class="dropdown-menu">
-                            <!-- LISTA ÍTEM: ANCLA CREAR ENTREGA -->
-                              <li><a class="dropdown-item" href="#">Registrar</a></li>
-                            <!-- LISTA ÍTEM: ANCLA CREAR ENTREGA -- Hasta aquí -->
-
                             <!-- LISTA ÍTEM: ANCLA EDITAR ENTREGA -->
                               <li><a class="dropdown-item" href="#">Editar</a></li>
                             <!-- LISTA ÍTEM: ANCLA EDITAR ENTREGA -- Hasta aquí -->
+
+                            <!-- LISTA ÍTEM: ANCLA CREAR ENTREGA -->
+                              <li><a class="dropdown-item" href="#">Registrar</a></li>
+                            <!-- LISTA ÍTEM: ANCLA CREAR ENTREGA -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA VER ENTREGA -->
                               <li><a class="dropdown-item" href="#">Ver</a></li>
@@ -169,23 +169,23 @@
                     <!-- LISTA DESPLEGABLE PROVEEDORES -->
                       <li class="nav-item dropdown text-center">
                         <!-- TÍTULO Y DESPLEGABLE -->
-                          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <a class="nav-link dropdown-toggle text-light" href="views_providers" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Proveedores
                           </a>
                         <!-- TÍTULO Y DESPLEGABLE -- Hasta aquí -->
 
                         <!-- LISTA -->
                           <ul class="dropdown-menu">
+                            <!-- LISTA ÍTEM: ANCLA EDITAR PROVEEDOR -->
+                              <li><a class="dropdown-item" href="../views_providers/edit_providers.html">Editar</a></li>
+                            <!-- LISTA ÍTEM: ANCLA EDITAR PROVEEDOR -- Hasta aquí -->
+                            
                             <!-- LISTA ÍTEM: ANCLA CREAR PROVEEDOR -->
-                              <li><a class="dropdown-item" href="#">Crear</a></li>
+                              <li><a class="dropdown-item" href="../views_providers/register_providers.html">Registrar</a></li>
                             <!-- LISTA ÍTEM: ANCLA CREAR PROVEEDOR -- Hasta aquí -->
 
-                            <!-- LISTA ÍTEM: ANCLA EDITAR PROVEEDOR -->
-                              <li><a class="dropdown-item" href="#">Editar</a></li>
-                            <!-- LISTA ÍTEM: ANCLA EDITAR PROVEEDOR -- Hasta aquí -->
-
                             <!-- LISTA ÍTEM: ANCLA VER PROVEEDOR -->
-                              <li><a class="dropdown-item" href="#">Ver</a></li>
+                              <li><a class="dropdown-item" href="../views_providers/view_providers.html">Ver</a></li>
                             <!-- LISTA ÍTEM: ANCLA VER PROVEEDOR -- Hasta aquí -->
                           </ul>
                         <!-- LISTA -- Hasta aquí -->                
@@ -336,12 +336,36 @@
                   <br>
                   <!-- FILA DESCRIPCIÓN -->
                     <div class="row justify-content-center align-items-center g-2 grid gap-2 ms-3 me-3 mb-2">
-                      <!-- INPUT DESCRIPCIÓN -->
+                      <!-- TEXTAREA DESCRIPCIÓN Y BOTONES -->
                         <div class="col">
                           <div class="text-light">Descripción:</div>
-                          <textarea class="form-control form-control-sm" type="text" name="descripcion" id="descripcion_input" rows="4"></textarea>
+                          <div class="input-group input-group-sm">
+                            <!-- TEXTAREA DESCRIPCIÓN -- Hasta aquí -->
+                              <textarea class="form-control form-control-sm" type="text" name="descripcion" id="descripcion_input" rows="4"></textarea>
+                            <!-- TEXTAREA DESCRIPCIÓN -- Hasta aquí -->
+
+                            <!-- BOTONES -->
+
+                              <!-- BOTÓN LIMPIAR DESCRIPCIÓN -->
+                                <button type="button" class="btn btn-dark fw-bold" onclick="clearDescripcion()">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eraser" viewBox="0 0 16 16">
+                                    <path d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414l-3.879-3.879zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z"/>
+                                  </svg>
+                                </button>
+                              <!-- BOTÓN LIMPIAR DESCRIPCIÓN -- Hasta aquí -->
+
+                              <!-- BOTÓN DEFAULT DESCRIPCIÓN -->
+                                <button type="button" class="btn btn-light fw-bold" onclick="defaultDescripcion()">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
+                                  </svg>
+                                </button>
+                              <!-- BOTÓN DEFAULT DESCRIPCIÓN -- Hasta aquí -->
+                              
+                            <!-- BOTONES -- Hasta aquí -->
+                          </div>
                         </div>
-                      <!-- INPUT DESCRIPCIÓN -- Hasta aquí -->
+                      <!-- TEXTAREA DESCRIPCIÓN Y BOTONES -- Hasta aquí -->
                     </div>
                   <!-- FILA DESCRIPCIÓN -- Hasta aquí -->
                   <br>
