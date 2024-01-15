@@ -78,11 +78,15 @@
               <!-- FILA USUARIO -- Hasta aquí -->
               <br>
               <!-- FILA CONTRASEÑA -->
-                <div class="row justify-content-center align-items-center g-2 grid gap-2">
+                <div class="row justify-content-center align-items-center g-2 grid gap-2 mb-2">
                   <!-- INPUT CONTRASEÑA -->
                     <div class="col">
                       <div class="text-light">Contraseña:</div>
                       <input class="form-control form-control-sm" type="password" name="contrasena" id="contrasena">
+                      <div class="text-light">
+                        <input class="form-check-input me-1" type="checkbox" value="mostrar_contrasena" id="mostrar_contrasena">
+                        <label class="form-check-label" for="mostrar_contrasena">Mostrar contraseña</label>
+                      </div>
                     </div>
                   <!-- INPUT CONTRASEÑA -- Hasta aquí -->
 
@@ -90,13 +94,17 @@
                     <div class="col">
                       <div class="text-light">Confirmar:</div>
                       <input class="form-control form-control-sm" type="password" name="confirmar" id="confirmar">
+                      <div class="text-light">
+                        <input class="form-check-input me-1" type="checkbox" value="mostrar_confirmar" id="mostrar_confirmar">
+                        <label class="form-check-label" for="mostrar_confirmar">Mostrar contraseña</label>
+                      </div>
                     </div>
                   <!-- INPUT CONFIRMAR CONTRASEÑA -- Hasta aquí -->
                 </div>
               <!-- FILA CONTRASEÑA -- Hasta aquí -->
               <br>
               <!-- BOTONES Y ANCLAS -->
-                <div class="text-center mt-3">
+                <div class="text-center">
                   <!-- BOTÓN REGISTRAR -->
                     <!--<input type="submit" value="Registrar" class="btn btn-warning fw-bold" name="accion">-->
                     <a class="btn btn-warning fw-bold" id="signupBoton">Registrar</a>

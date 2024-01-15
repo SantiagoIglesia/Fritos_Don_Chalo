@@ -41,4 +41,17 @@ document.addEventListener("DOMContentLoaded", function() {
       intentos = 0;
     }
   });
+  document.getElementById("mostrar_contrasena").addEventListener('change', function(event){
+    event.preventDefault();
+    var contrasenaInput = document.getElementById('contrasena');
+    var mostrar = document.getElementById('mostrar_contrasena');
+    if (mostrar.checked == true){
+      contrasenaInput.type = "text";
+    } else {
+      contrasenaInput.type = "password";
+    }
+  });
+  document.getElementById("contrasena").addEventListener("focus", function() {
+    this.setAttribute("autocomplete", "off");
+ });
 });

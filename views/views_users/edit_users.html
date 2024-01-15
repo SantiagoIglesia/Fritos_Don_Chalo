@@ -6,7 +6,7 @@
     <title>Fritos Don Chalo</title>
     <link rel="shortcut icon" href="../../img/fritos_don_chalo_logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/css_providers/register_providers_css.css">
+    <link rel="stylesheet" href="../../css/css_users/edit_users_css.css">
   </head>
   <body>
     <!-- HEADER -->
@@ -177,15 +177,15 @@
                         <!-- LISTA -->
                           <ul class="dropdown-menu">
                             <!-- LISTA ÍTEM: ANCLA EDITAR PROVEEDOR -->
-                              <li><a class="dropdown-item" href="edit_providers.html">Editar</a></li>
+                              <li><a class="dropdown-item" href="../views_providers/edit_providers.html">Editar</a></li>
                             <!-- LISTA ÍTEM: ANCLA EDITAR PROVEEDOR -- Hasta aquí -->
                             
                             <!-- LISTA ÍTEM: ANCLA CREAR PROVEEDOR -->
-                              <li><a class="dropdown-item" href="register_providers.html">Registrar</a></li>
+                              <li><a class="dropdown-item" href="../views_providers/register_providers.html">Registrar</a></li>
                             <!-- LISTA ÍTEM: ANCLA CREAR PROVEEDOR -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA VER PROVEEDOR -->
-                              <li><a class="dropdown-item" href="view_providers.html">Ver</a></li>
+                              <li><a class="dropdown-item" href="../views_providers/view_providers.html">Ver</a></li>
                             <!-- LISTA ÍTEM: ANCLA VER PROVEEDOR -- Hasta aquí -->
                           </ul>
                         <!-- LISTA -- Hasta aquí -->                
@@ -203,15 +203,15 @@
                         <!-- LISTA -->
                           <ul class="dropdown-menu">
                             <!-- LISTA ÍTEM: ANCLA CREAR USUARIO -->
-                              <li><a class="dropdown-item" href="../views_users/create_users.html">Crear</a></li>
+                              <li><a class="dropdown-item" href="create_users.html">Crear</a></li>
                             <!-- LISTA ÍTEM: ANCLA CREAR USUARIO -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA EDITAR USUARIO -->
-                              <li><a class="dropdown-item" href="../views_users/edit_users.html">Editar</a></li>
+                              <li><a class="dropdown-item" href="edit_users.html">Editar</a></li>
                             <!-- LISTA ÍTEM: ANCLA EDITAR USUARIO -- Hasta aquí -->
 
                             <!-- LISTA ÍTEM: ANCLA VER USUARIO -->
-                              <li><a class="dropdown-item" href="../views_users/view_users.html">Ver</a></li>
+                              <li><a class="dropdown-item" href="view_users.html">Ver</a></li>
                             <!-- LISTA ÍTEM: ANCLA VER USUARIO -- Hasta aquí -->
                           </ul>
                         <!-- LISTA -- Hasta aquí -->                
@@ -302,75 +302,219 @@
 
     <!-- BODY -->
       <div id="contenedor">
-        <div class="container col-lg-4 mb-3">
-          <div class="card">
-            <!-- TÍTULO -->
-              <div class="card-header border border-dark border-3">
-                <p class="fs-1 text-center fw-bold mb-0 titulo">REGISTRO DE PROVEEDORES</p>
-              </div>
-            <!-- TÍTULO -- Hasta aquí -->
-            <div class="card-body border border-3 border-warning background">
-              <!-- FORMULARIO -->
-                <form action="" method="post" id="crear_proveedor_formulario">
-                  <!-- FILA NOMBRE -->
-                    <div class="row justify-content-center align-items-center g-2 grid gap-2 ms-3 me-3">
-                      <!-- INPUT NOMBRE -->
-                        <div class="col">
-                          <div class="text-light">Nombre:</div>
-                          <input class="form-control form-control-sm" type="text" name="nombre" id="nombre">
-                        </div>
-                      <!-- INPUT NOMBRE -- Hasta aquí -->
-                    </div>
-                  <!-- FILA NOMBRE -- Hasta aquí -->
-                  <br>
-                  <div class="row justify-content-center align-items-center g-2 grid gap-2 ms-3 me-3">
-                    <div class="col">
-                      <div class="text-light">¿Desea crear un producto con este proveedor? (Opcional)</div>
-                      <br>
-                      <div class="form-check text-light">
-                        <input class="form-check-input" type="radio" name="createProductRadio" value="1" id="siRadio">
-                        <label class="form-check-label" for="siRadio">
-                          Sí
-                        </label>
-                      </div>
-                      <div class="form-check text-light">
-                        <input class="form-check-input" type="radio" name="createProductRadio" value="2" id="noRadio" checked>
-                        <label class="form-check-label" for="noRadio">
-                          No
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <!-- BOTONES CREAR Y CREAR PRODUCTO CON PROVEEDOR -->
-                    <div class="text-center mb-3">
-                      <!--<input type="submit" value="Crear" class="btn btn-warning fw-bold" name="accion">-->
-                      <a class="btn btn-warning fw-bold" id="crearProveedorBoton">Crear</a>
-                      <!--<input type="submit" value="Crear Producto con Proveedor" class="btn btn-light fw-bold" name="accion">-->
-                      <!-- BOTÓN CREAR PRODUCTO DE PROVEEDOR -->
-                        <!--<button class="btn btn-light fw-bold" id="crearProductoBoton">Crear Producto con Proveedor</button>-->
-                      <!-- BOTÓN CREAR PRODUCTO DE PROVEEDOR -- Hasta aquí -->
-                    </div>
-                  <!-- BOTONES CREAR Y CREAR PRODUCTO CON PROVEEDOR -- Hasta aquí -->
-                </form>
-              <!-- FORMULARIO -- Hasta aquí -->
-            </div>
-          </div>
-        </div>
-        <!-- ANCLAS VISTAS PROVEEDORES -->
-          <div class="text-center mb-4">
-            <!-- ANCLA EDITAR PROVEEDORES -->
-              <a class="link-underline link-underline-opacity-0 fw-bold fs-5 me-5 titulo letra" href="edit_providers.html">Editar proveedores</a>
-            <!-- ANCLA EDITAR PROVEEDORES -- Hasta aquí -->
+        <!-- CONTENEDOR TÍTULO -->
+          <div class="text-center mt-4 mb-4 fw-bold fs-1 titulo">
+            <!-- ANCLA VISTA EMPTY -->
+              <a href="../views_errors/destinations/view_empty.html" class="icon-link fw-bold titulo">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                </svg>
+              </a>
+            <!-- ANCLA VISTA EMPTY -- Hasta aquí -->
 
-            <!-- ANCLA VER PROVEEDORES -->
-              <a class="link-underline link-underline-opacity-0 fw-bold fs-5 titulo letra" href="view_providers.html">Ver proveedores</a>
-            <!-- ANCLA VER PROVEEDORES -- Hasta aquí -->
+            <!-- TÍTULO -->
+              LISTADO DE USUARIOS
+            <!-- TÍTULO -- Hasta aquí -->
+
+            <!-- ANCLA VISTA ERROR -->
+              <a href="../views_errors/destinations/view_error.html" class="icon-link fw-bold titulo">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                </svg>
+              </a>
+            <!-- ANCLA VISTA ERROR -- Hasta aquí -->
           </div>
-        <!-- ANCLAS VISTAS PROVEEDORES -- Hasta aquí -->
+        <!-- CONTENEDOR TÍTULO -- Hasta aquí -->
+      </div>
+      <!-- TABLA USUARIOS -->
+        <div class="table-responsive ms-5 me-5">
+          <table class="table table-sm table-hover table-bordered border-black align-middle">
+            <!-- CABECERA -->
+              <thead>
+                <tr class="text-center align-middle">
+                  <th scope="col">ID</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellido</th>
+                  <th scope="col">Correo</th>
+                  <th scope="col">Teléfono</th>
+                  <th scope="col">Rol</th>
+                  <th scope="col">Usuario</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+            <!-- CABECERA -- Hasta aquí -->
+
+            <!-- CUERPO -->
+              <tbody>
+                <!-- FILA DESTINO 1 -->
+                  <tr>
+                    <!-- ID -->
+                      <th id="id_1">1</th>
+                    <!-- ID -- Hasta aquí -->
+
+                    <!-- NOMBRE -->
+                      <th id="nombre_1">Engie</th>
+                    <!-- NOMBRE -- Hasta aquí -->
+
+                    <!-- APELLIDO -->
+                      <th id="apellido_1">Urdaneta</th>
+                    <!-- APELLIDO -- Hasta aquí -->
+
+                    <!-- CORREO -->
+                      <th id="correo_1">engieurda123@gmail.com</th>
+                    <!-- CORREO -- Hasta aquí -->
+
+                    <!-- TELÉFONO -->
+                      <th id="telefono_1">3214567890</th>
+                    <!-- TELÉFONO -- Hasta aquí -->
+
+                    <!-- ROL -->
+                      <th id="rol_1">Administrador</th>
+                    <!-- ROL -- Hasta aquí -->
+
+                    <!-- USUARIO -->
+                      <th id="usuario_1">EngieUrda</th>
+                    <!-- USUARIO -- Hasta aquí -->
+
+                    <!-- ACCIONES -->
+                      <th class="text-center">
+                        <!-- BOTÓN FORMULARIO DE EDICIÓN -->
+                          <a class="btn btn-warning mt-1" onclick="editForm(1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg>
+                          </a>
+                        <!-- BOTÓN FORMULARIO DE EDICIÓN -- Hasta aquí -->
+
+                        <!-- BOTÓN BORRAR USUARIO -->
+                          <a class="btn btn-danger mt-2 mb-1" onclick="deleteUser(1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                              <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                            </svg>
+                          </a>
+                        <!-- BOTÓN BORRAR USUARIO -- Hasta aquí -->
+                      </th>
+                    <!-- ACCIONES -- Hasta aquí -->
+                  </tr>
+                <!-- FILA DESTINO 1 -- Hasta aquí -->
+
+                <!-- FILA DESTINO 2 -->
+                  <tr>
+                    <!-- ID -->
+                      <th id="id_2">2</th>
+                    <!-- ID -- Hasta aquí -->
+
+                    <!-- NOMBRE -->
+                      <th id="nombre_2">Angélica</th>
+                    <!-- NOMBRE -- Hasta aquí -->
+
+                    <!-- APELLIDO -->
+                      <th id="apellido_2">Urdaneta</th>
+                    <!-- APELLIDO -- Hasta aquí -->
+
+                    <!-- CORREO -->
+                      <th id="correo_2">urdanetaangelica321@gmail.com</th>
+                    <!-- CORREO -- Hasta aquí -->
+
+                    <!-- TELÉFONO -->
+                      <th id="telefono_2">3098765421</th>
+                    <!-- TELÉFONO -- Hasta aquí -->
+
+                    <!-- ROL -->
+                      <th id="rol_2">Cliente</th>
+                    <!-- ROL -- Hasta aquí -->
+
+                    <!-- USUARIO -->
+                      <th id="usuario_2">UrdanetaAnge01</th>
+                    <!-- USUARIO -- Hasta aquí -->
+
+                    <!-- ACCIONES -->
+                      <th class="text-center">
+                        <!-- BOTÓN FORMULARIO DE EDICIÓN -->
+                          <a class="btn btn-warning mt-1" onclick="editForm(2)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg>
+                          </a>
+                        <!-- BOTÓN FORMULARIO DE EDICIÓN -- Hasta aquí -->
+
+                        <!-- BOTÓN BORRAR USUARIO -->
+                          <a class="btn btn-danger mt-2 mb-1" onclick="deleteUser(2)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                              <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                            </svg>
+                          </a>
+                        <!-- BOTÓN BORRAR USUARIO -- Hasta aquí -->
+                      </th>
+                    <!-- ACCIONES -- Hasta aquí -->
+                  </tr>
+                <!-- FILA DESTINO 2 -- Hasta aquí -->
+
+                <!-- FILA DESTINO 3 -->
+                  <tr>
+                    <!-- ID -->
+                      <th id="id_3">3</th>
+                    <!-- ID -- Hasta aquí -->
+
+                    <!-- NOMBRE -->
+                      <th id="nombre_3">Santiago</th>
+                    <!-- NOMBRE -- Hasta aquí -->
+
+                    <!-- APELLIDO -->
+                      <th id="apellido_3">de la Iglesia</th>
+                    <!-- APELLIDO -- Hasta aquí -->
+
+                    <!-- CORREO -->
+                      <th id="correo_3">santiagodelaiglesia27@gmail.com</th>
+                    <!-- CORREO -- Hasta aquí -->
+
+                    <!-- TELÉFONO -->
+                      <th id="telefono_3">32222222</th>
+                    <!-- TELÉFONO -- Hasta aquí -->
+
+                    <!-- ROL -->
+                      <th id="rol_3">Cliente</th>
+                    <!-- ROL -- Hasta aquí -->
+
+                    <!-- USUARIO -->
+                      <th id="usuario_3">EarthCrusher66</th>
+                    <!-- USUARIO -- Hasta aquí -->
+
+                    <!-- ACCIONES -->
+                      <th class="text-center">
+                        <!-- BOTÓN FORMULARIO DE EDICIÓN -->
+                          <a class="btn btn-warning mt-1" onclick="editForm(3)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg>
+                          </a>
+                        <!-- BOTÓN FORMULARIO DE EDICIÓN -- Hasta aquí -->
+
+                        <!-- BOTÓN BORRAR USUARIO -->
+                          <a class="btn btn-danger mt-2 mb-1" onclick="deleteUser(3)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                              <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                            </svg>
+                          </a>
+                        <!-- BOTÓN BORRAR USUARIO -- Hasta aquí -->
+                      </th>
+                    <!-- ACCIONES -- Hasta aquí -->
+                  </tr>
+                <!-- FILA DESTINO 3 -- Hasta aquí -->
+              </tbody>
+            <!-- CUERPO -- Hasta aquí -->
+          </table>
+        </div>
+      <!-- TABLA USUARIOS -- Hasta aquí -->
+      <div class="text-center mb-4">
+        <a class="link-underline link-underline-opacity-0 me-5 fw-bold fs-5 titulo" href="create_users.html">Crear usuarios</a>
+        <a class="link-underline link-underline-opacity-0 fw-bold fs-5 titulo" href="edit_users.html">Editar usuarios</a>
       </div>
     <!-- BODY -- Hasta aquí -->
-
+    
     <!-- FOOTER -->
       <div class="bg-warning">
         <div class="container">
@@ -521,6 +665,6 @@
       </div>
     <!-- FOOTER -- Hasta aquí -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="../../js/js_providers/register_providers_js.js"></script>
+    <script src="../../js/js_users/edit_users_js.js"></script>
   </body>
 </html>
