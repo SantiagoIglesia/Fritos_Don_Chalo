@@ -3,7 +3,7 @@ function validarFormulario(){
   var nombre_input = document.getElementById('nombre');
   var descripcion_value = document.getElementById('descripcion').value;
   var descripcion_textarea = document.getElementById('descripcion');
-  var validacion_letras = /^[a-zA-Z ]+$/;
+  var validacion_letras = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$/;
         
   if(nombre_value.length == 0) {
     alert('Por favor, digite el nombre.');

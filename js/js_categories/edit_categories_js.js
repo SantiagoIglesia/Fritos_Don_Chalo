@@ -31,7 +31,7 @@ function validarFormulario(id){
   var nombre_input = document.getElementById('nombre');
   var descripcion_value = document.getElementById('descripcion').value;
   var descripcion_input = document.getElementById('descripcion');
-  var validacion_letras = /^[a-zA-Z ]+$/;
+  var validacion_letras = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$/;
 
   if(id_value.length == 0 || id_value != id) {
     alert('ID inválido.');
@@ -60,8 +60,8 @@ function validarFormulario(id){
 };
 
 document.addEventListener("DOMContentLoaded", function() {
-  var urlParams = new URLSearchParams(window.location.search);
-  var id = urlParams.get('id');
+  var url_parametro = new URLSearchParams(window.location.search);
+  var id = url_parametro.get('id');
   var nombre = localStorage.getItem('nombre');
   var descripcion = localStorage.getItem('descripcion');
   localStorage.removeItem('nombre');

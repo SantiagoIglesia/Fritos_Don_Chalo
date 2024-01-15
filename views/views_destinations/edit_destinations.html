@@ -302,29 +302,27 @@
 
     <!-- BODY -->
       <div id="contenedor">
-        <!-- CONTENEDOR TÍTULO -->
-          <div class="text-center mt-4 mb-4 fw-bold fs-1 titulo">
-            <!-- ANCLA VISTA EMPTY -->
-              <a href="../views_errors/destinations/view_empty.html" class="icon-link fw-bold titulo">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-                </svg>
-              </a>
-            <!-- ANCLA VISTA EMPTY -- Hasta aquí -->
+        <div class="text-center mt-4 mb-4 fw-bold fs-1 titulo">
+          <!-- ANCLA VISTA EMPTY -->
+            <a href="../views_errors/destinations/view_empty.html" class="icon-link fw-bold titulo">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+              </svg>
+            </a>
+          <!-- ANCLA VISTA EMPTY -- Hasta aquí -->
 
-            <!-- TÍTULO -->
-              LISTADO DE DESTINOS
-            <!-- TÍTULO -- Hasta aquí -->
+          <!-- TÍTULO -->
+            LISTADO DE DESTINOS
+          <!-- TÍTULO -- Hasta aquí -->
 
-            <!-- ANCLA VISTA ERROR -->
-              <a href="../views_errors/destinations/view_error.html" class="icon-link fw-bold titulo">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                </svg>
-              </a>
-            <!-- ANCLA VISTA ERROR -- Hasta aquí -->
-          </div>
-        <!-- CONTENEDOR TÍTULO -- Hasta aquí -->
+          <!-- ANCLA VISTA ERROR -->
+            <a href="../views_errors/destinations/view_error.html" class="icon-link fw-bold titulo">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+              </svg>
+            </a>
+          <!-- ANCLA VISTA ERROR -- Hasta aquí -->
+        </div>
       </div>
       <!-- TABLA DESTINOS -->
         <div class="table-responsive ms-5 me-5">
@@ -350,19 +348,27 @@
                     <!-- NOMBRE -->
                       <th id="nombre_1">Venta</th>
                     <!-- NOMBRE -- Hasta aquí -->
-                    <th class="text-center">
-                      <a class="btn btn-warning mt-1 mb-1" onclick="editForm(1)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                          <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                          <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                        </svg>
-                      </a>
-                      <a class="btn btn-danger" onclick="deleteDestination(1)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                          <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
-                        </svg>
-                      </a>
-                    </th>
+
+                    <!-- ACCIONES -->
+                      <th class="text-center">
+                        <!-- BOTÓN FORMULARIO DE EDICIÓN -->
+                          <a class="btn btn-warning mt-1 mb-1" onclick="editForm(1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg>
+                          </a>
+                        <!-- BOTÓN FORMULARIO DE EDICIÓN -- Hasta aquí -->
+
+                        <!-- BOTÓN BORRAR DESTINO -->
+                          <a class="btn btn-danger" onclick="deleteDestination(1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                              <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                            </svg>
+                          </a>
+                        <!-- BOTÓN BORRAR DESTINO -- Hasta aquí -->
+                      </th>
+                    <!-- ACCIONES -- Hasta aquí -->
                   </tr>
                 <!-- FILA DESTINO 1 -- Hasta aquí -->
 
@@ -375,19 +381,27 @@
                     <!-- NOMBRE -->
                       <th id="nombre_2">Fabricación</th>
                     <!-- NOMBRE -- Hasta aquí -->
-                    <th class="text-center">
-                      <a class="btn btn-warning mt-1 mb-1" onclick="editForm(2)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                          <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                          <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                        </svg>
-                      </a>
-                      <a class="btn btn-danger" onclick="deleteDestination(2)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                          <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
-                        </svg>
-                      </a>
-                    </th>
+
+                    <!-- ACCIONES -->
+                      <th class="text-center">
+                        <!-- BOTÓN FORMULARIO DE EDICIÓN -->
+                          <a class="btn btn-warning mt-1 mb-1" onclick="editForm(2)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg>
+                          </a>
+                        <!-- BOTÓN FORMULARIO DE EDICIÓN -- Hasta aquí -->
+
+                        <!-- BOTÓN BORRAR DESTINO -->
+                          <a class="btn btn-danger" onclick="deleteDestination(2)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                              <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                            </svg>
+                          </a>
+                        <!-- BOTÓN BORRAR DESTINO -- Hasta aquí -->
+                      </th>
+                    <!-- ACCIONES -- Hasta aquí -->
                   </tr>
                 <!-- FILA DESTINO 2 -- Hasta aquí -->
 
@@ -397,22 +411,30 @@
                       <th id="id_3">3</th>
                     <!-- ID -- Hasta aquí -->
 
-                  <!-- NOMBRE -->
+                    <!-- NOMBRE -->
                       <th id="nombre_3">Otros</th>
                     <!-- NOMBRE -- Hasta aquí -->
-                    <th class="text-center">
-                      <a class="btn btn-warning mt-1 mb-1" onclick="editForm(3)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                          <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-                          <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-                        </svg>
-                      </a>                      
-                      <a class="btn btn-danger" onclick="deleteDestination(3)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                          <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
-                        </svg>
-                      </a>
-                    </th>
+
+                    <!-- ACCIONES -->
+                      <th class="text-center">
+                        <!-- BOTÓN FORMULARIO DE EDICIÓN -->
+                          <a class="btn btn-warning mt-1 mb-1" onclick="editForm(3)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                            </svg>
+                          </a>
+                        <!-- BOTÓN FORMULARIO DE EDICIÓN -- Hasta aquí -->
+
+                        <!-- BOTÓN BORRAR DESTINO -->
+                          <a class="btn btn-danger" onclick="deleteDestination(3)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                              <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
+                            </svg>
+                          </a>
+                        <!-- BOTÓN BORRAR DESTINO -- Hasta aquí -->
+                      </th>
+                    <!-- ACCIONES -- Hasta aquí -->
                   </tr>
                 <!-- FILA DESTINO 3 -- Hasta aquí -->
               </tbody>
@@ -420,10 +442,19 @@
           </table>
         </div>
       <!-- TABLA DESTINOS -- Hasta aquí -->
-      <div class="text-center mb-4">
-        <a class="link-underline link-underline-opacity-0 me-5 fw-bold fs-5 titulo" href="create_destinations.html">Crear destinos</a>
-        <a class="link-underline link-underline-opacity-0 fw-bold fs-5 titulo" href="view_destinations.html">Ver destinos</a>
-      </div>
+
+      <!-- ANCLAS VISTAS DESTINOS -->
+        <div class="text-center mb-4">
+          <!-- ANCLA CREAR DESTINOS -->
+            <a class="link-underline link-underline-opacity-0 me-5 fw-bold fs-5 titulo" href="create_destinations.html">Crear destinos</a>
+          <!-- ANCLA CREAR DESTINOS -- Hasta aquí -->
+
+          <!-- ANCLA VER DESTINOS -->
+            <a class="link-underline link-underline-opacity-0 fw-bold fs-5 titulo" href="view_destinations.html">Ver destinos</a>
+          <!-- ANCLA VER DESTINOS -- Hasta aquí -->
+        </div>
+      <!-- ANCLAS VISTAS DESTINOS -- Hasta aquí -->
+
     <!-- BODY -- Hasta aquí -->
     
     <!-- FOOTER -->
