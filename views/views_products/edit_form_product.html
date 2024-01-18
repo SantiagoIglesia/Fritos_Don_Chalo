@@ -311,20 +311,20 @@
             <!-- TÍTULO -- Hasta aquí -->
             <div class="card-body border border-3 border-warning background">
               <!-- FORMULARIO -->
-                <form action="" method="post" id="edit">
+                <form action="" method="post" id="edit_form_product">
                   <!-- FILA ID Y NOMBRE -->
                     <div class="row justify-content-center align-items-center g-2 grid gap-2">
                       <!-- INPUT ID -->
                         <div class="col">
                           <div class="text-light">ID:</div>
-                          <input class="form-control form-control-sm" type="text" name="id" id="id_input">
+                          <input class="form-control form-control-sm" type="text" name="id" id="id" readonly>
                         </div>
                       <!-- INPUT ID -- Hasta aquí -->
                       
                       <!-- INPUT NOMBRE -->
                         <div class="col">
                           <div class="text-light">Nombre:</div>
-                          <input class="form-control form-control-sm" type="text" name="nombre" id="nombre_input">
+                          <input class="form-control form-control-sm" type="text" name="nombre" id="nombre">
                         </div>
                       <!-- INPUT NOMBRE -- Hasta aquí -->
                     </div>
@@ -335,14 +335,14 @@
                       <!-- INPUT PRECIO 1 -->
                         <div class="col">
                           <div class="text-light">Precio 1:</div>
-                          <input class="form-control form-control-sm" type="text" name="precio_1" id="precio_input_1">
+                          <input class="form-control form-control-sm" type="text" name="precio1" id="precio1">
                         </div>
                       <!-- INPUT PRECIO 1 -- Hasta aquí -->
                     
                       <!-- INPUT PRECIO 2 -->
                         <div class="col">
                           <div class="text-light">Precio 2:</div>
-                          <input class="form-control form-control-sm" type="text" name="precio_2" id="precio_input_2">
+                          <input class="form-control form-control-sm" type="text" name="precio2" id="precio2">
                         </div>
                       <!-- INPUT PRECIO 2 -- Hasta aquí -->
                     </div>
@@ -353,14 +353,14 @@
                       <!-- INPUT STOCK -->
                         <div class="col">
                           <div class="text-light">Stock:</div>
-                          <input class="form-control form-control-sm" type="number" name="stock" id="stock_input" value="">
+                          <input class="form-control form-control-sm" type="number" name="stock" id="stock" value="">
                         </div>
                       <!-- INPUT STOCK -- Hasta aquí -->
 
                       <!-- SELECT CATEGORÍA -->
                         <div class="col">
                           <div class="text-light">Categoria:</div>
-                          <select class="form-select form-select-sm" name="id_categoria" id="id_categoria_select" aria-label="Small select example">
+                          <select class="form-select form-select-sm" name="id_categoria" id="categoria" aria-label="Small select example">
                             <option value="0" selected>Seccione una categoría:</option>
                               <option value="1">Fritos</option>
                               <option value="2">Frutas</option>
@@ -376,7 +376,7 @@
                       <!-- SELECT DESTINO -->
                         <div class="col">
                           <div class="text-light">Destino:</div>
-                          <select class="form-select form-select-sm" name="id_destino" id="id_destino_select" aria-label="Small select example">
+                          <select class="form-select form-select-sm" name="id_destino" id="destino" aria-label="Small select example">
                             <option value="0" selected>Seccione un destino:</option>
                               <option value="1">Venta</option>
                               <option value="2">Fabricación</option>
@@ -388,7 +388,7 @@
                       <!-- SELECT PROVEEDOR -->
                         <div class="col">
                           <div class="text-light">Proveedor:</div>
-                          <select class="form-select form-select-sm" name="id_proveedor" id="id_proveedor_select" aria-label="Small select example">
+                          <select class="form-select form-select-sm" name="id_proveedor" id="proveedor" aria-label="Small select example">
                             <option value="0" selected>Seccione un proveedor:</option>
                               <option value="1">Sin proveedor</option>
                               <option value="2">Fruvecol</option>
@@ -404,7 +404,13 @@
                       <!-- IMÁGEN -->
                         <div class="col">
                           <div class="text-light">Imágen:</div>
-                            <input class="form-control form-control-sm" type="file" name="imagen" id="imagen_input">
+                          <input class="form-control form-control-sm mb-2" type="file" name="imagen" id="imagen" aria-label="Text input with checkbox">
+                          <div class="text-light d-flex flex-row">
+                            <div class="d-flex justify-content-start form-check form-switch">
+                              <input class="form-check-input me-1" type="checkbox" role="switch" id="desactivar_imagen">
+                              <label class="form-check-label" for="desactivar_imagen">¿Desea utilizar la misma imágen?</label>
+                            </div>
+                          </div>
                         </div>
                       <!-- IMÁGEN -- Hasta aquí -->
 
@@ -413,7 +419,7 @@
                           <div class="text-light">Descripción:</div>
                           <div class="input-group input-group-sm">
                             <!-- TEXTAREA DESCRIPCIÓN -- Hasta aquí -->
-                              <textarea class="form-control form-control-sm" type="text" name="descripcion" id="descripcion_input" rows="4">Sin descripción.</textarea>
+                              <textarea class="form-control form-control-sm" type="text" name="descripcion" id="descripcion" rows="4">Sin descripción.</textarea>
                             <!-- TEXTAREA DESCRIPCIÓN -- Hasta aquí -->
 
                             <!-- BOTONES -->
@@ -427,7 +433,7 @@
                               <!-- BOTÓN LIMPIAR DESCRIPCIÓN -- Hasta aquí -->
 
                               <!-- BOTÓN DEFAULT DESCRIPCIÓN -->
-                                <button type="button" class="btn btn-light fw-bold" onclick="defaultDescripcion()">
+                                <button type="button" class="btn btn-light fw-bold" onclick="undoDescripcion()">
                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
                                   </svg>
@@ -445,7 +451,7 @@
                     <div class="text-center mb-3">
                       <!-- BOTÓN EDITAR -->
                         <!--<input type="submit" value="Actualizar" class="btn btn-warning fw-bold" name="accion">-->
-                        <a class="btn btn-warning fw-bold mb-3" id="editarCategoriaBoton">Editar</a>
+                        <a class="btn btn-warning fw-bold mb-3" id="editar_categoria_boton">Editar</a>
                       <!-- BOTÓN EDITAR -- Hasta aquí -->
                       <br>
                       <!-- ANCLA LISTADO DE PRODUCTOS -->

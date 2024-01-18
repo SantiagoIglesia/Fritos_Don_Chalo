@@ -50,6 +50,6 @@ function clearDescripcion(){
   document.getElementById('descripcion').focus();
 }
 
-function defaultDescripcion(){
+function undoDescripcion(){
   document.getElementById('descripcion').value = descripcion;
 }

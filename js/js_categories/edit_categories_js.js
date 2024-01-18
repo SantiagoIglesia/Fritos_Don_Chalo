@@ -85,11 +85,11 @@ document.addEventListener("DOMContentLoaded", function() {
 var descripcion = "";
 
 function clearDescripcion(){
-  descripcion = document.getElementById('descripcion_input').value;
-  document.getElementById('descripcion_input').value = "";
-  document.getElementById('descripcion_input').focus();
+  descripcion = document.getElementById('descripcion').value;
+  document.getElementById('descripcion').value = "";
+  document.getElementById('descripcion').focus();
 }
 
-function defaultDescripcion(){
-  document.getElementById('descripcion_input').value = descripcion;
+function undoDescripcion(){
+  document.getElementById('descripcion').value = descripcion;
 }

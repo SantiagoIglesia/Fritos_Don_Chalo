@@ -1,29 +1,23 @@
 function editForm(id){
   var nombre = document.getElementById('nombre_' + id).innerText;
-  var descripcion = document.getElementById('descripcion_' + id).innerText;
-  var precio1 = document.getElementById('precio_1_' + id).innerText;
-  var precio2 = document.getElementById('precio_2_' + id).innerText;
-  var imagen = document.getElementById('imagen_' + id).innerText;
+  var precio1 = document.getElementById('precio1_' + id).innerText;
+  var precio2 = document.getElementById('precio2_' + id).innerText;
   var stock = document.getElementById('stock_' + id).innerText;
-  var id_categoria = document.getElementById('id_categoria_' + id).innerText;
-  var categoria = document.getElementById('categoria_' + id).innerText;
-  var id_destino = document.getElementById('id_destino_' + id).innerText;
-  var destino = document.getElementById('destino_' + id).innerText;
-  var id_proveedor = document.getElementById('id_proveedor_' + id).innerText;
-  var proveedor = document.getElementById('proveedor_' + id).innerText;
-  localStorage.setItem('edit_id', id);
-  localStorage.setItem('edit_nombre', nombre);
-  localStorage.setItem('edit_descripcion', descripcion);
-  localStorage.setItem('edit_precio_1', precio1);
-  localStorage.setItem('edit_precio_2', precio2);
-  localStorage.setItem('edit_imagen', imagen);
-  localStorage.setItem('edit_stock', stock);
-  localStorage.setItem('edit_id_categoria', id_categoria);
-  localStorage.setItem('edit_categoria', categoria);
-  localStorage.setItem('edit_id_destino', id_destino);
-  localStorage.setItem('edit_destino', destino);
-  localStorage.setItem('edit_id_proveedor', id_proveedor);
-  localStorage.setItem('edit_proveedor', proveedor);
+  var categoria = document.getElementById('id_categoria_' + id).innerText;
+  var destino = document.getElementById('id_destino_' + id).innerText;
+  var proveedor = document.getElementById('id_proveedor_' + id).innerText;
+  var imagen = document.getElementById('imagen_' + id).innerText;
+  var descripcion = document.getElementById('descripcion_' + id).innerText;
+  localStorage.setItem('id', id);
+  localStorage.setItem('nombre', nombre);
+  localStorage.setItem('precio1', precio1);
+  localStorage.setItem('precio2', precio2);
+  localStorage.setItem('stock', stock);
+  localStorage.setItem('categoria', categoria);
+  localStorage.setItem('destino', destino);
+  localStorage.setItem('proveedor', proveedor);
+  localStorage.setItem('descripcion', descripcion);
+  localStorage.setItem('imagen', imagen);
   window.location.href = "edit_form_product.html?id=" + id;
 };
 
@@ -32,10 +26,10 @@ function deleteProduct(id){
   var productos = document.querySelectorAll('.table tbody tr');
   if (confirm("¿Está seguro que desea borrar este producto?") == true) {
     producto.style.display = 'none';
-    var ultimaVisible = Array.from(productos).every(function (cat) {
-      return cat.style.display === 'none';
+    var ultimo_visible = Array.from(productos).every(function (pro) {
+      return pro.style.display === 'none';
     });
-    if (ultimaVisible) {
+    if (ultimo_visible) {
       window.location.href = "../views_errors/products/view_empty.html";
     }
     alert("Producto borrado con éxito.");
@@ -44,194 +38,281 @@ function deleteProduct(id){
   }
 };
 
+function validarFormulario(id, imagen_predeterminada){
+  var id_value = document.getElementById('id').value;
+  var id_input = document.getElementById('id');
+  var nombre_value = document.getElementById('nombre').value;
+  var nombre_input = document.getElementById('nombre');
+  var precio1_input = document.getElementById('precio1');
+  var precio1_value = parseFloat(precio1_input.value.replace(/[^\d.]/g, ''));
+  var precio2_input = document.getElementById('precio2');
+  var precio2_value = parseFloat(precio2_input.value.replace(/[^\d.]/g, ''));
+  var stock_value = document.getElementById('stock').value;
+  var stock_input = document.getElementById('stock');
+  var categoria_value = document.getElementById('categoria').selectedIndex;
+  var categoria_select = document.getElementById('categoria');
+  var destino_value = document.getElementById('destino').selectedIndex;
+  var destino_select = document.getElementById('destino');
+  var proveedor_value = document.getElementById('proveedor').selectedIndex;
+  var proveedor_select = document.getElementById('proveedor');
+  var descripcion_value = document.getElementById('descripcion').value;
+  var descripcion_textarea = document.getElementById('descripcion');
+  var imagen_input = document.getElementById('imagen');
+  var imagen_value;
+  if (imagen_input.disabled == true) {
+    imagen_value = imagen_predeterminada;
+  } else {
+    imagen_value = document.getElementById('imagen').value;
+  }
+  var validacion_letras = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$/;
+  var validacion_numeros = /^[$0-9]+$/;
+  var validacion_precio = /^[$0-9,]+$/;
+  var validacion_imagenes = /(.jpg|.jpeg|.png|.gif)$/i;
+  precio1_input.addEventListener("input", updateValuePrecio1);
+  function updateValuePrecio1(e) {
+    precio1_value.textContent = e.srcElement.value;
+  }
+  precio2_input.addEventListener("input", updateValuePrecio2);
+  function updateValuePrecio2(e) {
+    precio2_value.textContent = e.srcElement.value;
+  }
+  if(id_value.length == 0 || id_value != id) {
+    alert('ID inválido.');
+    id_input.focus();
+  } else if(nombre_value.length == 0) {
+    alert('Por favor, digite el nombre.');
+    nombre_input.focus();
+  } else if(nombre_value.length > 500){
+    alert('Ha superado el límite de caracteres. Por favor, digite nuevamente el nombre');
+    nombre_input.value = '';
+    nombre_input.focus();
+  } else if(!validacion_letras.test(nombre_value)){
+    alert('Por favor, digite un nombre correcto.');
+    nombre_input.focus();
+  } else if(precio1_value.length == 0) {
+    alert('Por favor, digite el precio.');
+    precio1_input.focus();
+  } else if(precio1_value > 9999999999){
+    alert('Ha superado el límite de caracteres. Por favor, digite nuevamente el precio');
+    precio1_input.value = '$0 COP';
+    precio1_input.focus();
+  } else if(precio1_value <= 0 || precio1_value < 100) {
+    alert('Precio invalido, por favor digite un precio superior.');
+    precio1_input.focus();
+  } else if(!validacion_precio.test(precio1_value)){
+    alert('Por favor, digite un precio correcto.');
+    precio1_input.focus();
+  } else if(precio2_value > 9999999999){
+    alert('Ha superado el límite de caracteres. Por favor, digite nuevamente el precio');
+    precio2_input.value = '$0 COP';
+    precio2_input.focus();
+  } else if(!validacion_precio.test(precio2_value)){
+    alert('Por favor, digite un precio correcto.');
+    precio2_input.focus();
+  } else if(stock_value.length == 0) {
+    alert('Por favor, digite el stock');
+    stock_input.focus();
+  } else if(stock_value.length > 11){
+    alert('Ha superado el límite de caracteres. Por favor, digite nuevamente el stock.');
+    stock_input.value = '';
+    stock_input.focus();
+  } else if(!validacion_numeros.test(stock_value)){
+    alert('Por favor, digite un stock correcto.');
+    stock_input.focus();
+  } else if(categoria_value == 0) {
+    alert('Categoría inválida, por favor seleccione otra.');
+    categoria_select.focus();
+  } else if (categoria_value > 3) {
+    alert('Categoría inválida.');
+    categoria_select.focus();
+  } else if(destino_value == 0) {
+    alert('Destino inválido, por favor seleccione otro.');
+    destino_select.focus();
+  } else if (destino_value > 3) {
+    alert('Destino inválido.');
+    destino_select.focus();
+  } else if(proveedor_value == 0) {
+    alert('Proveedor inválido, por favor seleccione otro.');
+    proveedor_select.focus();
+  } else if (proveedor_value > 3) {
+    alert('Proveedor inválido.');
+    proveedor_select.focus();
+  } else if(imagen_input.length == 0) {
+    alert('Por favor, digite un archivo.');
+    imagen_input.focus();
+  } else if(imagen_value.length == 0) {
+    alert('Por favor, digite un archivo.');
+    imagen_input.focus();
+  } else if(!validacion_imagenes.exec(imagen_value)) {
+    alert('Por favor, digite un archivo de imágen válido.');
+    imagen_input.value = '';
+    imagen_input.focus();
+  } else if (descripcion_value.length == 0) {
+    alert('Por favor, digite la descripción.');
+    descripcion_textarea.focus();
+  } else if(descripcion_value.length > 500){
+    alert('Ha superado el límite de caracteres. Por favor, digite nuevamente la descripción.');
+    descripcion_textarea.value = '';
+    descripcion_textarea.focus();
+  } else {
+    if (imagen_input.disabled = true) {
+      imagen_value = obtenerNombreArchivo(imagen_value);
+    } else {
+      imagen_value = obtenerNombreArchivo(document.getElementById('imagen').value);
+    }
+    var nombre_imagen = imagen_value.split('\\').pop().split('/').pop();
+    var nombre_imagen_predeterminada = imagen_predeterminada.split('\\').pop().split('/').pop();
+    if (nombre_imagen == nombre_imagen_predeterminada) {
+      alert('Producto editado satisfactoriamente.' + nombre_imagen + '\nSu imágen es la misma.');
+      window.location.href = "edit_products.html";
+    } else {
+      alert('Producto editado satisfactoriamente.\n' + nombre_imagen + '\nSu imágen cambió.');
+      window.location.href = "edit_products.html";
+    }
+  }
+}
+
+function obtenerNombreArchivo(ruta) {
+  var segmentos = ruta.split('/');
+  return segmentos.pop();
+}
+
+function obtenerNombreArchivoDesdeInput(input) {
+  var fullPath = input.value;
+  var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+  var filename = fullPath.substring(startIndex);
+  if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+    filename = filename.substring(1);
+  }
+  return filename;
+}
+
 document.addEventListener("DOMContentLoaded", function() {
-  const formatterPeso = new Intl.NumberFormat('en-US', {
+  const formato_peso = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
     minimumFractionDigits: 0
   });
-  var urlParams = new URLSearchParams(window.location.search);
-  var id = urlParams.get('id');
-  var nombre = localStorage.getItem('edit_nombre');
-  var descripcion = localStorage.getItem('edit_descripcion');
-  var precio1 = localStorage.getItem('edit_precio_1');
-  var precio2 = localStorage.getItem('edit_precio_2');
-  var stock_local = localStorage.getItem('edit_stock');
+  var url_parametro = new URLSearchParams(window.location.search);
+  var id = url_parametro.get('id');
+  var nombre = localStorage.getItem('nombre');
+  var precio1 = localStorage.getItem('precio1');
+  precio1 = parseFloat(precio1.replace(/[^\d.]/g, ''));
+  precio1 = formato_peso.format(precio1) + " COP";
+  var precio2 = localStorage.getItem('precio2');
+  precio2 = parseFloat(precio2.replace(/[^\d.]/g, ''));
+  precio2 = formato_peso.format(precio2) + " COP";
+  var stock_local = localStorage.getItem('stock');
   var stock = parseInt(stock_local);
-  var id_categoria = localStorage.getItem('edit_id_categoria');
-  var id_destino = localStorage.getItem('edit_id_destino');
-  var id_proveedor = localStorage.getItem('edit_id_proveedor');
-  precio1 = parseFloat(precio1.replace(/[^\d.]/g, ''));
-  precio1 = formatterPeso.format(precio1) + " COP";
-  precio2 = parseFloat(precio2.replace(/[^\d.]/g, ''));
-  precio2 = formatterPeso.format(precio2) + " COP";
-  localStorage.removeItem('edit_nombre');
-  localStorage.removeItem('edit_descripcion');
-  localStorage.removeItem('edit_precio_1');
-  localStorage.removeItem('edit_precio_2');
-  localStorage.removeItem('edit_stock');
-  localStorage.removeItem('edit_id_categoria');
-  localStorage.removeItem('edit_id_destino');
-  localStorage.removeItem('edit_id_proveedor');
-  document.getElementById('id_input').value = id;
-  document.getElementById('nombre_input').value = nombre;
-  document.getElementById('descripcion_input').value = descripcion;
-  document.getElementById('precio_input_1').value = precio1
-  document.getElementById('precio_input_2').value = precio2
-  document.getElementById('stock_input').value = stock;
-  document.getElementById('id_categoria_select').selectedIndex = id_categoria;
-  document.getElementById('id_destino_select').selectedIndex = id_destino;
-  document.getElementById('id_proveedor_select').selectedIndex = id_proveedor;
-  var precio1Input = document.getElementById('precio_input_1');
-  precio1 = parseFloat(precio1.replace(/[^\d.]/g, ''));
-  precio1Input.value = formatterPeso.format(precio1) + " COP";
-  precio1Input.addEventListener('input', function(event){
-    var precio1Value = event.target.value.replace(/[^\d.]/g, '');
-    precio1Value = parseFloat(precio1Value)
-    if (isNaN(precio1Value)) {
-      precio1Value = 0;
-    }
-    event.target.value = formatterPeso.format(precio1Value) + " COP";
-  });
-  var precio2Input = document.getElementById('precio_input_2');
-  precio2 = parseFloat(precio2.replace(/[^\d.]/g, ''));
-  precio2Input.value = formatterPeso.format(precio2) + " COP";
-  precio2Input.addEventListener('input', function(event){
-    var precio2Value = event.target.value.replace(/[^\d.]/g, '');
-    precio2Value = parseFloat(precio2Value)
-    if (isNaN(precio2Value)) {
-      precio2Value = 0;
-    }
-    event.target.value = formatterPeso.format(precio2Value) + " COP";
-  });
-  precio1Input.addEventListener('keydown', function(event) {
-    var cursorPosition = precio1Input.selectionStart;
-    if (event.key === 'Backspace' && cursorPosition === 0) {
-      event.preventDefault();
-    }
-    if (event.key === 'Backspace' && cursorPosition === precio1Input.value.length) {
-      event.preventDefault();
-      var precio1Value = precio1Input.value.replace(/[^\d.]/g, '');
-      precio1Value = parseFloat(precio1Value.slice(0, -1));
-      if (!isNaN(precio1Value)) {
-        precio1Input.value = formatterPeso.format(precio1Value) + " COP";
-      } else {
-        precio1Input.value = formatterPeso.format(0) + " COP";
-      }
-    }
-  });
-  precio2Input.addEventListener('keydown', function(event) {
-    var cursorPosition = precio2Input.selectionStart;
-    if (event.key === 'Backspace' && cursorPosition === 0) {
-      event.preventDefault();
-    }
-    if (event.key === 'Backspace' && cursorPosition === precio2Input.value.length) {
-      event.preventDefault();
-      var precio2Value = precio2Input.value.replace(/[^\d.]/g, '');
-      precio2Value = parseFloat(precio2Value.slice(0, -1));
-      if (!isNaN(precio2Value)) {
-        precio2Input.value = formatterPeso.format(precio2Value) + " COP";
-      } else {
-        precio2Input.value = formatterPeso.format(0) + " COP";
-      }
-    }
-  });
-  document.getElementById("editarCategoriaBoton").addEventListener('click', function(event){
-    event.preventDefault();
-    var nombreValue = document.getElementById('nombre_input').value;
-    var nombreInput = document.getElementById('nombre_input');
-    var precio1Value = parseFloat(precio1Input.value.replace(/[^\d.]/g, ''));
-    var precio2Value = parseFloat(precio2Input.value.replace(/[^\d.]/g, ''));
-    var stockValue = document.getElementById('stock_input').value;
-    var stockInput = document.getElementById('stock_input');
-    var categoriaValue = document.getElementById('id_categoria_select').selectedIndex;
-    var categoriaInput = document.getElementById('id_categoria_select');
-    var destinoValue = document.getElementById('id_destino_select').selectedIndex;
-    var destinoInput = document.getElementById('id_destino_select');
-    var proveedorValue = document.getElementById('id_proveedor_select').selectedIndex;
-    var proveedorInput = document.getElementById('id_proveedor_select');
-    var descripcionValue = document.getElementById('descripcion_input').value;
-    var descripcionInput = document.getElementById('descripcion_input');
-    var imagenValue = document.getElementById('imagen_input').value;
-    var imagenInput = document.getElementById('imagen_input');
-    var validacionLetras = /^[a-zA-Z ]+$/;
-    var validacionNumeros = /^[$0-9]+$/;
-    var validacionPrecio = /^[$0-9,]+$/;
-    var validacionImagenes = /(.jpg|.jpeg|.png|.gif)$/i;
-    precio1Input.addEventListener("input", updateValue);
-    function updateValue(e) {
-      precio1Value.textContent = e.srcElement.value;
-    }
-    precio2Input.addEventListener("input", updateValue);
-    function updateValue(e) {
-      precio2Value.textContent = e.srcElement.value;
-    }
-    if(nombreValue.length == 0) {
-      alert('Por favor, digite el nombre.');
-      nombreInput.focus();
-    } else if(nombreValue.length > 500){
-      alert('Ha superado el límite de caracteres. Por favor, digite nuevamente el nombre');
-      nombreInput.value = '';
-      nombreInput.focus();
-    } else if(!validacionLetras.test(nombreValue)){
-      alert('Por favor, digite un nombre correcto.');
-      nombreInput.focus();
-    } else if(precio1Value.length == 0) {
-      alert('Por favor, digite el precio.');
-      precio1Input.focus();
-    } else if(precio1Value > 9999999999){
-      alert('Ha superado el límite de caracteres. Por favor, digite nuevamente el precio');
-      precio1Input.value = '$0 COP';
-      precio1Input.focus();
-    } else if(precio1Value <= 0 || precio1Value < 100) {
-      alert('Precio invalido, por favor digite un precio superior.');
-      precio1Input.focus();
-    } else if(!validacionPrecio.test(precio1Value)){
-      alert('Por favor, digite un precio correcto.');
-      precio1Input.focus();
-    } else if(precio2Value > 9999999999){
-      alert('Ha superado el límite de caracteres. Por favor, digite nuevamente el precio');
-      precio2Input.value = '$0 COP';
-      precio2Input.focus();
-    } else if(!validacionPrecio.test(precio2Value)){
-      alert('Por favor, digite un precio correcto.');
-      precio2Input.focus();
-    } else if(stockValue.length == 0) {
-      alert('Por favor, digite el stock');
-      stockInput.focus();
-    } else if(stockValue.length > 11){
-      alert('Ha superado el límite de caracteres. Por favor, digite nuevamente el stock.');
-      stockInput.value = '';
-      stockInput.focus();
-    } else if(!validacionNumeros.test(stockValue)){
-      alert('Por favor, digite un stock correcto.');
-      stockInput.focus();
-    } else if(categoriaValue == 0) {
-      alert('Categoría inválida, por favor seleccione otra.');
-      categoriaInput.focus();
-    } else if(destinoValue == 0) {
-      alert('Destino inválido, por favor seleccione otro.');
-      destinoInput.focus();
-    } else if(proveedorValue == 0) {
-      alert('Proveedor inválido, por favor seleccione otro.');
-      proveedorInput.focus();
-    } else if (descripcionValue.length == 0) {
-      alert('Por favor, digite la descripción.');
-      descripcionInput.focus();
-    } else if(descripcionValue.length > 500){
-      alert('Ha superado el límite de caracteres. Por favor, digite nuevamente la descripción.');
-      descripcionInput.value = '';
-      descripcionInput.focus();
-    } else if(imagenValue.length == 0) {
-      alert('Por favor, digite un archivo.');
-      imagenInput.focus();
-    } else if(!validacionImagenes.exec(imagenValue)) {
-      alert('Por favor, digite un archivo de imágen válido.');
-      imagenInput.value = '';
-      imagenInput.focus();
+  var categoria = localStorage.getItem('categoria');
+  var destino = localStorage.getItem('destino');
+  var proveedor = localStorage.getItem('proveedor');
+  var imagen = localStorage.getItem('imagen');
+  var ruta_imagen = "../../img/productos/" + imagen;
+  var desactivar_imagen = document.getElementById('desactivar_imagen');
+  var checkbox_input = document.querySelectorAll('input[name="imagen"]');
+  var imagen_input = document.getElementById('imagen');
+  var imagen_predeterminada;
+  function deshabilitarInput() {
+    if (desactivar_imagen.checked) {
+      imagen_input.disabled = true;
+      imagen_predeterminada = ruta_imagen;
     } else {
-      alert('Producto editado satisfactoriamente');
-      window.location.href = "edit_products.html";
+      imagen_input.disabled = false;
+      imagen_predeterminada = "";
+    }
+  }
+  desactivar_imagen.addEventListener('change', deshabilitarInput);
+  deshabilitarInput();
+  checkbox_input.forEach(function (checkbox) {
+    checkbox.addEventListener('change', deshabilitarInput);
+  });
+  var descripcion = localStorage.getItem('descripcion');
+  localStorage.removeItem('nombre');
+  localStorage.removeItem('precio1');
+  localStorage.removeItem('precio2');
+  localStorage.removeItem('stock');
+  localStorage.removeItem('categoria');
+  localStorage.removeItem('destino');
+  localStorage.removeItem('proveedor');
+  localStorage.removeItem('imagen');
+  localStorage.removeItem('descripcion');
+  document.getElementById('id').value = id;
+  document.getElementById('nombre').value = nombre;
+  document.getElementById('descripcion').value = descripcion;
+  document.getElementById('precio1').value = precio1
+  document.getElementById('precio2').value = precio2
+  document.getElementById('stock').value = stock;
+  document.getElementById('categoria').selectedIndex = categoria;
+  document.getElementById('destino').selectedIndex = destino;
+  document.getElementById('proveedor').selectedIndex = proveedor;
+  var precio1_input = document.getElementById('precio1');
+  precio1 = parseFloat(precio1.replace(/[^\d.]/g, ''));
+  precio1_input.value = formato_peso.format(precio1) + " COP";
+  precio1_input.addEventListener('input', function(event){
+    var precio1_value = event.target.value.replace(/[^\d.]/g, '');
+    precio1_value = parseFloat(precio1_value)
+    if (isNaN(precio1_value)) {
+      precio1_value = 0;
+    }
+    event.target.value = formato_peso.format(precio1_value) + " COP";
+  });
+
+  var precio2_input = document.getElementById('precio2');
+  precio2 = parseFloat(precio2.replace(/[^\d.]/g, ''));
+  precio2_input.value = formato_peso.format(precio2) + " COP";
+  precio2_input.addEventListener('input', function(event){
+    var precio2_value = event.target.value.replace(/[^\d.]/g, '');
+    precio2_value = parseFloat(precio2_value)
+    if (isNaN(precio2_value)) {
+      precio2_value = 0;
+    }
+    event.target.value = formato_peso.format(precio2_value) + " COP";
+  });
+
+  precio1_input.addEventListener('keydown', function(event) {
+    var cursorPosition = precio1_input.selectionStart;
+    if (event.key === 'Backspace' && cursorPosition === 0) {
+      event.preventDefault();
+    }
+    if (event.key === 'Backspace' && cursorPosition === precio1_input.value.length) {
+      event.preventDefault();
+      var precio1_value = precio1_input.value.replace(/[^\d.]/g, '');
+      precio1_value = parseFloat(precio1_value.slice(0, -1));
+      if (!isNaN(precio1_value)) {
+        precio1_input.value = formato_peso.format(precio1_value) + " COP";
+      } else {
+        precio1_input.value = formato_peso.format(0) + " COP";
+      }
+    }
+  });
+
+  precio2_input.addEventListener('keydown', function(event) {
+    var cursorPosition = precio2_input.selectionStart;
+    if (event.key === 'Backspace' && cursorPosition === 0) {
+      event.preventDefault();
+    }
+    if (event.key === 'Backspace' && cursorPosition === precio2_input.value.length) {
+      event.preventDefault();
+      var precio2_value = precio2_input.value.replace(/[^\d.]/g, '');
+      precio2_value = parseFloat(precio2_value.slice(0, -1));
+      if (!isNaN(precio2_value)) {
+        precio2_input.value = formato_peso.format(precio2_value) + " COP";
+      } else {
+        precio2_input.value = formato_peso.format(0) + " COP";
+      }
+    }
+  });
+  
+  document.getElementById("editar_categoria_boton").addEventListener('click', function(event){
+    event.preventDefault();
+    validarFormulario(id, imagen_predeterminada);
+  });
+
+  document.addEventListener("keydown", function(event) {
+    if (event.code === 'Enter') {
+      event.preventDefault();
+      validarFormulario(id, imagen_predeterminada);
     }
   });
 });
@@ -244,6 +325,6 @@ function clearDescripcion(){
   document.getElementById('descripcion_input').focus();
 }
 
-function defaultDescripcion(){
+function undoDescripcion(){
   document.getElementById('descripcion_input').value = descripcion;
 }
