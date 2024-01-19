@@ -1,7 +1,7 @@
 function editForm(id){
   var nombre = document.getElementById('nombre_' + id).innerText;
-  localStorage.setItem('edit_id', id);
-  localStorage.setItem('edit_nombre', nombre);
+  localStorage.setItem('id', id);
+  localStorage.setItem('nombre', nombre);
   window.location.href = "edit_form_provider.html?id=" + id;
 };
 
@@ -10,10 +10,10 @@ function deleteProvider(id){
   var proveedores = document.querySelectorAll('.table tbody tr');
   if (confirm("¿Está seguro que desea borrar este proveedor?") == true) {
     proveedor.style.display = 'none';
-    var ultimaVisible = Array.from(proveedores).every(function (des) {
-      return des.style.display === 'none';
+    var ultimo_visible = Array.from(proveedores).every(function (pro) {
+      return pro.style.display === 'none';
     });
-    if (ultimaVisible) {
+    if (ultimo_visible) {
       window.location.href = "../views_errors/providers/view_empty.html";
     }
     alert("Proveedor borrado con éxito.");
@@ -22,34 +22,47 @@ function deleteProvider(id){
   }
 };
 
+function validarFormulario(id){
+  var id_value = document.getElementById('id').value;
+  var id_input = document.getElementById('id');
+  var nombre_value = document.getElementById('nombre').value;
+  var nombre_input = document.getElementById('nombre');
+  var validacion_letras = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$/;
+  if(id_value.length == 0 || id_value != id) {
+    alert('ID inválido.');
+    id_input.focus();
+  } else if(nombre_value.length == 0) {
+    alert('Por favor, digite el nombre.');
+    nombre_input.focus();
+  } else if(nombre_value.length > 500){
+    alert('Ha superado el límite de caracteres. Por favor, digite nuevamente el nombre.');
+    nombre_input.value = '';
+    nombre_input.focus();
+  } else if(!validacion_letras.test(nombre_value)){
+    alert('Por favor, digite un nombre correcto.');
+    nombre_input.focus();
+  } else {
+    alert('Proveedor editado satisfactoriamente.');
+    window.location.href = "edit_providers.html";
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
-  var urlParams = new URLSearchParams(window.location.search);
-  var id = urlParams.get('id');
-  var nombre = localStorage.getItem('edit_nombre');
-  localStorage.removeItem('edit_nombre');
-  var idInput = document.getElementById('id_input');
-  var nombreInput = document.getElementById('nombre_input');
-  var editarProveedorBoton = document.getElementById("editarProveedorBoton");
-  idInput.value = id;
-  nombreInput.value = nombre;
-  editarProveedorBoton.addEventListener('click', function(event){
+  var url_parametro = new URLSearchParams(window.location.search);
+  var id = url_parametro.get('id');
+  var nombre = localStorage.getItem('nombre');
+  document.getElementById('id').value = id;
+  document.getElementById('nombre').value = nombre;
+  localStorage.removeItem('nombre');
+  document.getElementById("editar_proveedor_boton").addEventListener('click', function(event){
     event.preventDefault();
-    var nombreValue = document.getElementById('nombre_input').value;
-    var nombreInput = document.getElementById('nombre_input');
-    var validacionLetras = /^[a-zA-Z ]+$/;
-    if(nombreValue.length == 0) {
-      alert('Por favor, digite el nombre.');
-      nombreInput.focus();
-    } else if(nombreValue.length > 500){
-      alert('Ha superado el límite de caracteres. Por favor, digite nuevamente el nombre');
-      nombreInput.value = '';
-      nombreInput.focus();
-    } else if(!validacionLetras.test(nombreValue)){
-      alert('Por favor, digite un nombre correcto.');
-      nombreInput.focus();
-    } else {
-      alert('Proveedor editado satisfactoriamente');
-      window.location.href = "edit_providers.html";
+    validarFormulario(id);
+  });
+
+  document.addEventListener("keydown", function(event) {
+    if (event.code === 'Enter') {
+      event.preventDefault();
+      validarFormulario(id);
     }
   });
 });

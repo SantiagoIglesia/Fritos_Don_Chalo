@@ -1,4 +1,4 @@
-function validarFormulario(){
+function validarFormulario(id, nombre){
   var nombre_value = document.getElementById('nombre').value;
   var nombre_input = document.getElementById('nombre');
   var precio1_input = document.getElementById('precio1');
@@ -30,7 +30,7 @@ function validarFormulario(){
   }
   precio2_input.addEventListener("input", updateValue);
   function updateValue(e) {
-    preci2_value.textContent = e.srcElement.value;
+    precio2_value.textContent = e.srcElement.value;
   }
 
   if (nombre_value.length == 0) {
@@ -107,7 +107,7 @@ function validarFormulario(){
     descripcion_textarea.focus();
   } else {
     alert('Producto creado y asociado a proveedor satisfactoriamente.');
-    localStorage.removeItem('proveedor');
+    localStorage.removeItem('nombre_proveedor');
     window.location.href = "../../views/views_users/index_admin.html";
   }
 }
@@ -177,18 +177,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var url_parametro = new URLSearchParams(window.location.search);
   var id = url_parametro.get('id_provider');
-  var nombre = localStorage.getItem('proveedor');
+  var nombre = localStorage.getItem('nombre_proveedor');
   document.getElementById('id_proveedor').value = id;
   document.getElementById('proveedor').value = nombre;
   document.getElementById("crear_producto_proveedor_boton").addEventListener('click', function(event){
     event.preventDefault();
-    validarFormulario();
+    validarFormulario(id, nombre);
   });
 
   document.addEventListener("keydown", function(event) {
     if (event.code === 'Enter') {
       event.preventDefault();
-      validarFormulario();
+      validarFormulario(id, nombre);
     }
   });
 });

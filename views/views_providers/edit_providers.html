@@ -332,9 +332,17 @@
             <!-- CABECERA -->
               <thead>
                 <tr class="text-center align-middle">
-                  <th scope="col">ID</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Acciones</th>
+                  <!-- ID -->
+                    <th scope="col">ID</th>
+                  <!-- ID -- Hasta aquí -->
+
+                  <!-- NOMBRE -->
+                    <th scope="col">Nombre</th>
+                  <!-- NOMBRE -- Hasta aquí -->
+
+                  <!-- ACCIONES -->
+                    <th scope="col">Acciones</th>
+                  <!-- ACCIONES -- Hasta aquí -->
                 </tr>
               </thead>
             <!-- CABECERA -- Hasta aquí -->
@@ -370,11 +378,13 @@
                           </a>
                         <!-- BOTÓN BORRAR PROVEEDOR -- Hasta aquí -->
 
-                        <a class="btn btn-dark" onclick="createProductWithProviderForm(1)">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                          </svg>
-                        </a>
+                        <!-- BOTÓN CREAR PRODUCTO CON PROVEEDOR -->
+                          <a class="btn btn-dark" onclick="createProductWithProviderForm(1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                            </svg>
+                          </a>
+                        <!-- BOTÓN CREAR PRODUCTO CON PROVEEDOR -- Hasta aquí -->
                       </th>
                     <!-- ACCIONES -- Hasta aquí -->
                   </tr>
@@ -409,11 +419,13 @@
                           </a>
                         <!-- BOTÓN BORRAR PRODUCTO -- Hasta aquí -->
 
-                        <a class="btn btn-dark" onclick="createProductWithProviderForm(2)">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                          </svg>
-                        </a>
+                        <!-- BOTÓN CREAR PRODUCTO CON PROVEEDOR -->
+                          <a class="btn btn-dark" onclick="createProductWithProviderForm(2)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                            </svg>
+                          </a>
+                        <!-- BOTÓN CREAR PRODUCTO CON PROVEEDOR -- Hasta aquí -->
                       </th>
                     <!-- ACCIONES -- Hasta aquí -->
                   </tr>
@@ -448,11 +460,13 @@
                           </a>
                         <!-- BOTÓN BORRAR PRODUCTO -- Hasta aquí -->
 
-                        <a class="btn btn-dark" onclick="createProductWithProviderForm(3)">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-                          </svg>
-                        </a>
+                        <!-- BOTÓN CREAR PRODUCTO CON PROVEEDOR -->
+                          <a class="btn btn-dark" onclick="createProductWithProviderForm(3)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                            </svg>
+                          </a>
+                        <!-- BOTÓN CREAR PRODUCTO CON PROVEEDOR -- Hasta aquí -->
                       </th>
                     <!-- ACCIONES -- Hasta aquí -->
                   </tr>
@@ -462,10 +476,19 @@
           </table>
         </div>
       <!-- TABLA PROVEEDORES -- Hasta aquí -->
-      <div class="text-center mb-4">
-        <a class="link-underline link-underline-opacity-0 me-5 fw-bold fs-5 titulo" href="edit_providers.html">Editar proveedores</a>
-        <a class="link-underline link-underline-opacity-0 fw-bold fs-5 titulo" href="register_providers.html">Registrar proveedores</a>
-      </div>
+
+      <!-- ANCLAS VISTAS PROVEEDORES -->
+        <div class="text-center mb-4">
+          <!-- ANCLA REGISTRAR PROVEEDORES -->
+            <a class="link-underline link-underline-opacity-0 me-5 fw-bold fs-5 titulo" href="register_providers.html">Registrar proveedores</a>
+          <!-- ANCLA REGISTRAR PROVEEDORES -- Hasta aquí -->
+
+          <!-- ANCLA VER PROVEEDORES -->
+            <a class="link-underline link-underline-opacity-0 fw-bold fs-5 titulo" href="view_providers.html">Ver proveedores</a>
+          <!-- ANCLA VER PROVEEDORES -- Hasta aquí -->
+        </div>
+      <!-- ANCLAS VISTAS PROVEEDORES -- Hasta aquí -->
+
     <!-- BODY -- Hasta aquí -->
     
     <!-- FOOTER -->
