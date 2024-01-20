@@ -14,7 +14,7 @@ function validarFormulario(){
   var contrasena_input = document.getElementById('contrasena');
   var confirmar_value = document.getElementById('confirmar').value;
   var confirmar_input = document.getElementById('confirmar');
-  var validacion_letras = /^[a-zA-Z ]+$/;
+  var validacion_letras = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1 ]+$/;
   var validacion_correo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   var validacion_telefono = /^\d{10}$/;
   var validacion_usuario = /^[a-zA-Z1-9.-_ ]+$/;
