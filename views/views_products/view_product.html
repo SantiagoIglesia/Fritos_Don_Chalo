@@ -6,7 +6,7 @@
     <title>Fritos Don Chalo</title>
     <link rel="shortcut icon" href="../../img/fritos_don_chalo_logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/css_users/index_admin_css.css">
+    <link rel="stylesheet" href="../../css/css_products/view_product_css.css">
   </head>
   <body>
     <!-- HEADER -->
@@ -15,7 +15,7 @@
         <nav class="navbar navbar-dark navbar-expand-xxl background fixed-top border-bottom border-warning border-3" id="navbar_principal">
           <div class="container-fluid">
             <!-- LOGO -->
-              <a class="navbar-brand" href="index_admin.html">
+              <a class="navbar-brand" href="../views_users/index_admin.html">
                 <img class="img-fluid" width="150" src="../../img/fritos_don_chalo_logo.png" alt="fritos_don_chalo_logo">
               </a>
             <!-- LOGO -- Hasta aquí -->
@@ -32,38 +32,9 @@
                   <ul class="navbar-nav me-auto">
                     <!-- ANCLA INICIO -->
                     <li class="nav-item text-center">
-                      <a class="btn text-light fs-5 fw-bold" href="#fritos_don_chalo">Inicio</a>
+                      <a class="btn text-light fs-5 fw-bold" href="#inicio">Inicio</a>
                     </li>
                     <!-- ANCLA INICIO -- Hasta aquí -->
-
-                    <!-- LISTA DESPLEGABLE CATEGORÍAS -->
-                      <!--<li class="nav-item dropdown text-center d-flex justify-content-center align-items-center">-->
-                        <!-- TÍTULO Y DESPLEGABLE -->
-                          <!--<a class="nav-link text-light" href="#categorias">
-                            Categorías
-                          </a>
-                          <a type="button" class="nav-link dropdown-toggle dropdown-toggle-split text-light" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="visually-hidden">Toggle Dropdown</span>
-                          </a>-->
-                        <!-- TÍTULO Y DESPLEGABLE -- Hasta aquí -->
-                        <!-- LISTA -->
-                          <!--<ul class="dropdown-menu">-->
-                            <!-- LISTA ÍTEM: ANCLA CREAR CATEGORÍA -->
-                              <!--<li><a class="dropdown-item" href="../views_categories/create_categories.html">Crear</a></li>-->
-                            <!-- LISTA ÍTEM: ANCLA CREAR CATEGORÍA -- Hasta aquí -->
-
-                            <!-- LISTA ÍTEM: ANCLA EDITAR CATEGORÍA -->
-                              <!--<li><a class="dropdown-item" href="../views_categories/edit_categories.html">Editar</a></li>-->
-                            <!-- LISTA ÍTEM: ANCLA EDITAR CATEGORÍA -- Hasta aquí -->
-
-                            <!-- LISTA ÍTEM: ANCLA VER CATEGORÍA -->
-                              <!--<li><a class="dropdown-item" href="../views_categories/view_categories.html">Ver</a></li>-->
-                            <!-- LISTA ÍTEM: ANCLA VER CATEGORÍA -- Hasta aquí -->
-                          <!--</ul>-->
-                        <!-- LISTA -- Hasta aquí -->                
-                      <!--</li>-->
-                    <!-- LISTA DESPLEGABLE CATEGORÍAS -- Hasta aquí -->
-
                     <li class="nav-item text-center my-auto text-warning">
                       <div class="btn-group">
                         <div class="d-flex">
@@ -99,7 +70,7 @@
                         <div class="btn-group">
                           <div class="d-flex">
                             <div class="nav-link-container">
-                              <a type="button" class="btn text-light btn-sm" href="#">Destinos</a>
+                              <a type="button" class="btn text-light btn-sm" href="#destinos">Destinos</a>
                             </div>
                             <div class="flex-column">
                               <button type="button" class="btn text-light dropdown-toggle dropdown-toggle-split btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
@@ -224,23 +195,7 @@
                               </div>
                             </div>
                           </div>
-                        <!-- TÍTULO Y DESPLEGABLE -- Hasta aquí -->
-
-                        <!-- LISTA -->
-                          <!--<ul class="dropdown-menu">-->
-                            <!-- LISTA ÍTEM: ANCLA CREAR PRODUCTO -->
-                              <!--<li><a class="dropdown-item" href="../views_products/create_products.html">Crear</a></li>-->
-                            <!-- LISTA ÍTEM: ANCLA CREAR PRODUCTO -- Hasta aquí -->
-
-                            <!-- LISTA ÍTEM: ANCLA EDITAR PRODUCTO -->
-                              <!--<li><a class="dropdown-item" href="../views_products/edit_products.html">Editar</a></li>-->
-                            <!-- LISTA ÍTEM: ANCLA EDITAR PRODUCTO -- Hasta aquí -->
-
-                            <!-- LISTA ÍTEM: ANCLA VER PRODUCTO -->
-                              <!--<li><a class="dropdown-item" href="../views_products/view_products.html">Ver</a></li>-->
-                            <!-- LISTA ÍTEM: ANCLA VER PRODUCTO -- Hasta aquí -->
-                          <!--</ul>-->
-                        <!-- LISTA -- Hasta aquí -->   
+                        <!-- TÍTULO Y DESPLEGABLE -- Hasta aquí --> 
                       </li>
                     <!-- LISTA DESPLEGABLE PRODUCTOS -- Hasta aquí -->
 
@@ -249,7 +204,7 @@
                         <div class="btn-group">
                           <div class="d-flex">
                             <div class="nav-link-container">
-                              <a type="button" class="btn text-light btn-sm" href="#">Proveedores</a>
+                              <a type="button" class="btn text-light btn-sm" href="#proveedores">Proveedores</a>
                             </div>
                             <div class="flex-column">
                               <button type="button" class="btn text-light dropdown-toggle dropdown-toggle-split btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
@@ -285,7 +240,7 @@
                             <div class="nav-link-container">
                             </div>
                             <div class="flex-column">
-                              <a type="button" class="btn text-light btn-sm" href="#">Usuarios</a>
+                              <a type="button" class="btn text-light btn-sm" href="#usuarios">Usuarios</a>
                             </div>
                             <button type="button" class="btn text-light dropdown-toggle dropdown-toggle-split btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
                               <span class="visually-hidden">Toggle Dropdown</span>
@@ -397,348 +352,112 @@
 
     <!-- BODY -->
       <div id="contenedor" data-bs-spy="scroll" data-bs-target="#navbar_principal" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true">
-        <!--<div class="text-center fw-bold fs-1 mb-3 administrador" id="fritos_don_chalo">
-          Bievenido, administrador(a) Engie.<br>Es un gusto tenerlo(a) por acá ;).
-        </div>-->
-        <div class="display-4 text-center fw-bold mb-4 administrador" id="fritos_don_chalo">
-          Bievenida, administradora Engie.<br>Es un gusto tenerla por acá ;).
-        </div>
-        <!-- IMAGENES AVISO -->
-          <div class="border-radient-top"></div>
-          <div class="border-adicion-top"></div>
-          <div class="text-center">
-            <div class="bg-warning">
-              <img class="img-fluid" src="../../img/aviso.png" alt="aviso">
-            </div>
-            <div class="gradient border-adicion-middle-top"></div>
-            <div class="gradient border-adicion-middle-bottom"></div>
-            <div class="background">
-              <img class="img-fluid" src="../../img/fritos_venta.png" alt="fritos_venta">
-            </div>
-            <div class="border-adicion-bottom"></div>
-            <div class="border-radient-bottom"></div>
-          </div>
-        <!-- IMAGENES AVISO -- Hasta aquí -->
-        <div id="categorias">
-          <div class="display-1 text-center fw-bold titulo mt-4">CATEGORÍAS</div>
-          <div class="text-center fw-bold fs-2 titulo mt-3">
-            <span class="text-warning">Administradora, ¿qué desea hacer?</span><br>
-            <button type="button" class="btn fs-2 fw-bold letra" data-bs-toggle="modal" data-bs-target="#modal_categorias">Ir acciones para categorías</button><br>
-            <span class="text-warning">o</span><br>
-            <button type="button" class="btn fs-2 fw-bold letra" id="boton_scroll_categoria" onclick="stayHere()">permanecer aquí
-          </div>
-        </div>
-        <!-- MODAL -->
-          <div class="modal fade" id="modal_categorias" tabindex="-1" aria-labelledby="modal_categorias_label" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header background">
-                  <h4 class="modal-title text-light fw-bold titulo" id="modal_categorias_label">Acciones para categorías</h4>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="text-center">
+          <div class="display-4 titulo fw-bold mb-3" id="nombre"></div>
+          <img src="" class="rounded-5 img-thumbnail bg-warning mb-4" width="700px" alt="empanadas" id="img"></img>
+          <h1 class="display-5 titulo fw-bold mb-4" id="producto">Detalles del Producto</h1>
+          <div class="row justify-content-center mb-5">
+            <div class="col-3">
+              <div class="card">
+                <div class="card-header bg-danger-subtle">
+                  <div class="fs-4 fw-bold subtitulo text-warning-emphasis">ID del producto</div>
                 </div>
-                <div class="modal-body text-center fw-bold titulo-modal fs-5">
-                  <div class="mb-3">
-                    <a class="text-warning link-underline link-underline-opacity-0" href="../views_categories/create_categories.html" role="button">Crear Categorías</a>
-                  </div>
-                  <div class="mb-3">
-                    <a class="link-modal link-underline link-underline-opacity-0" href="../views_categories/edit_categories.html" role="button">Editar Categorías</a>
-                  </div>
-                  <div>
-                    <a class="letra link-underline link-underline-opacity-0" href="../views_categories/view_categories.html" role="button">Ver Categorías</a>
-                  </div>
-                </div>
-                <div class="modal-footer bg-warning">
-                    <button type="button" class="btn btn-white bg-body fw-bold titulo" data-bs-dismiss="modal">Cerrar</button>
+                <div class="card-body bg-warning-subtle">
+                  <div class="fs-4 titulo fw-bold text-danger-emphasis" id="id"></div>
                 </div>
               </div>
             </div>
           </div>
-        <!-- MODAL -- Hasta aquí -->
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-2 ms-4 me-4 justify-content-center">
-          <div class="col">
-            <div class="card card-productos">
-              <div class="card-header text-center bg-warning borde-producto letra">
-                <h1 class="card-title fw-bold titulo">Fritos</h1>
-              </div>
-              <img class="card-img-top border border-3 border-dark" src="../../img/categorias/fritos.jpg" alt="categoria_fritos">
-              <div class="card-body text-center text-warning border border-3 border-warning background">
-                <p class="card-text">
-                  Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo.Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo.
-                </p>
-              </div>
-              <div class="card-footer text-center bg-warning borde-producto letra">
-                <div class="mt-2 mb-2">
-                  <a class="link-underline link-underline-opacity-0 titulo letra fw-bold fs-5" href="#">Ver productos</a>
+          <div class="row justify-content-center mb-5">
+            <div class="col-6">
+              <div class="card">
+                <div class="card-header bg-danger-subtle">
+                  <div class="fs-4 fw-bold subtitulo text-warning-emphasis">Descripción</div>
+                </div>
+                <div class="card-body bg-warning-subtle">
+                  <div class="titulo text-danger-emphasis" id="descripcion"></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card card-productos">
-              <div class="card-header text-center bg-warning borde-producto letra">
-                <h1 class="card-title fw-bold titulo">Jugos</h1>
+          <div class="row justify-content-center mb-5">
+            <div class="col-3">
+              <div class="card">
+                <div class="card-header bg-danger-subtle">
+                  <div class="fs-4 fw-bold subtitulo text-warning-emphasis">Precio</div>
+                </div>
+                <div class="card-body bg-warning-subtle">
+                  <div class="titulo text-danger-emphasis" id="precio"></div>
+                </div>
               </div>
-              <img class="card-img-top border border-3 border-dark" src="../../img/categorias/jugos.jpg" alt="categoria_jugos">
-              <div class="card-body text-center text-warning border border-3 border-warning background">
-                <p class="card-text">
-                  Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo. JugosDon Chalo. Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo.
-                </p>
-              </div>
-              <div class="card-footer text-center bg-warning borde-producto letra">
-                <div class="mt-2 mb-2">
-                  <a class="link-underline link-underline-opacity-0 titulo letra fw-bold fs-5" href="#">Ver productos</a>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <div class="card-header bg-danger-subtle">
+                  <div class="fs-4 fw-bold subtitulo text-warning-emphasis">Stock</div>
+                </div>
+                <div class="card-body bg-warning-subtle">
+                  <div class="titulo text-danger-emphasis" id="stock"></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card card-productos">
-              <div class="card-header text-center bg-warning borde-producto letra">
-                <h1 class="card-title fw-bold titulo">Gaseosas</h1>
+          <div class="row justify-content-center mb-5">
+            <div class="col-3">
+              <div class="card">
+                <div class="card-header bg-danger-subtle">
+                  <div class="fs-4 fw-bold subtitulo text-warning-emphasis">Ruta Imágen</div>
+                </div>
+                <div class="card-body bg-warning-subtle">
+                  <div class="titulo text-danger-emphasis" id="imagen"></div>
+                </div>
               </div>
-              <img class="card-img-top border border-3 border-dark" src="../../img/categorias/gaseosas.jpg"alt="categoria_gaseosas">
-              <div class="card-body text-center text-warning border border-3 border-warning background">
-                <p class="card-text">
-                  Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas.Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas.
-                </p>
-              </div>
-              <div class="card-footer text-center bg-warning borde-producto letra">
-                <div class="mt-2 mb-2">
-                  <a class="link-underline link-underline-opacity-0 titulo letra fw-bold fs-5" href="#">Ver productos</a>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <div class="card-header bg-danger-subtle">
+                  <div class="fs-4 fw-bold subtitulo text-warning-emphasis">Categoría</div>
+                </div>
+                <div class="card-body bg-warning-subtle">
+                  <div class="titulo text-danger-emphasis" id="categoria"></div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-          <!--<div class="text-center mt-4 fw-bold fs-1 titulo" id="productos">PRODUCTOS</div>-->
-          <!--<div id="productos">
-            <div class="display-1 text-center fw-bold titulo mt-4">PRODUCTOS</div>
-            <div class="text-center fw-bold fs-2 titulo mt-3">
-              <span class="text-warning">Administradora, ¿qué desea hacer?</span><br>
-              <button type="button" class="btn fs-2 fw-bold letra" data-bs-toggle="modal" data-bs-target="#modal-productos">Ir a acciones para productos</button><br>
-              <span class="text-warning">o</span><br>
-              <button type="button" class="btn fs-2 fw-bold letra" id="boton_scroll_producto" onclick="stayHere()">permanecer aquí</button>
-            </div>-->
-            <!-- MODAL -->
-              <!--<div class="modal fade" id="modal_productos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
+          <div class="row justify-content-center mb-4">
+            <div class="col-3">
+              <div class="card">
+                <div class="card-header bg-danger-subtle">
+                  <div class="fs-4 fw-bold subtitulo text-warning-emphasis">Destino</div>
                 </div>
-              </div>-->
-            <!-- MODAL -- Hasta aquí -->
-            <!-- PRODUCTOS -->
-            <div id="productos">
-              <div class="display-1 text-center fw-bold titulo mt-4">PRODUCTOS</div>
-              <div class="text-center fw-bold fs-2 titulo mt-3">
-                <span class="text-warning">Administradora, ¿qué desea hacer?</span><br>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn fs-2 fw-bold letra" data-bs-toggle="modal" data-bs-target="#modal_productos">
-                  Ir a acciones para productos
-                </button><br>
-                <span class="text-warning">o</span><br>
-                <button type="button" class="btn fs-2 fw-bold letra" id="boton_scroll_producto" onclick="stayHere()">permanecer aquí</button>
-              </div>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="modal_productos" tabindex="-1" aria-labelledby="modal_productos_label" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header background">
-                    <h4 class="modal-title text-light fw-bold titulo" id="modal_productos_label">Acciones para productos</h4>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center fw-bold titulo-modal fs-5">
-                    <div class="mb-3">
-                      <a class="text-warning link-underline link-underline-opacity-0" href="../views_products/create_products.html" role="button">Crear Productos</a>
-                    </div>
-                    <div class="mb-3">
-                      <a class="link-modal link-underline link-underline-opacity-0" href="../views_products/edit_products.html" role="button">Editar Productos</a>
-                    </div>
-                    <div>
-                      <a class="letra link-underline link-underline-opacity-0" href="../views_products/view_products.html" role="button">Ver Productos</a>
-                    </div>
-                  </div>
-                  <div class="modal-footer bg-warning">
-                    <button type="button" class="btn btn-white bg-body fw-bold titulo" data-bs-dismiss="modal">Cerrar</button>
-                  </div>
+                <div class="card-body bg-warning-subtle">
+                  <div class="titulo text-danger-emphasis" id="destino"></div>
                 </div>
               </div>
             </div>
-            <div class="row row-cols-1 row-cols-md-3 g-4 mt-2 ms-4 me-4 mb-4 justify-content-center">
-              <!-- EMPANADAS -->
-                <div class="col">
-                  <a href="javascript:viewProduct(1)" class="link-underline link-underline-opacity-0">
-                    <div class="card card-productos">
-                      <img class="card-img-top border border-3 border-dark" src="../../img/productos/empanadas.jpg" alt="empanadas" id="imagen_1">
-                      <div class="card-body text-center text-warning border border-3 border-warning background">
-                        <h4 class="card-title" id="nombre_1">Empanadas</h4>
-                        <p class="card-text" id="descripcion_1">
-                          Las empanadas de maíz amarillo con relleno de pollo o carne son una deliciosa mezcla de sabores y texturas. La masa, hecha de maíz amarillo, es suave y ligeramente crujiente. El relleno jugoso de pollo o carne, con especias auténticas, ofrece una experiencia gastronómica única. Perfectas como aperitivo o para cualquier ocasión, estas empanadas son una delicia artesanal que combina tradición y placer culinario. ¡Disfruta de esta auténtica delicia!
-                        </p>
-                      </div>
-                      <div class="card-footer text-center bg-warning borde-producto letra">
-                        <h4 class="card-title">Precio</h4>
-                        <p class="card-text" id="precio_1">$ 2000 COP / $ 0,51 USD</p>
-                      </div>
-                    </div>
-                  </a>
+            <div class="col-3">
+              <div class="card">
+                <div class="card-header bg-danger-subtle">
+                  <div class="fs-4 fw-bold subtitulo text-warning-emphasis">Proveedor</div>
                 </div>
-              <!-- EMPANADAS -- Hasta aquí -->
-
-              <!-- PALITOS DE QUESO -->
-                <div class="col">
-                  <a href="javascript:viewProduct(2)" class="link-underline link-underline-opacity-0">
-                    <div class="card card-productos">
-                      <img class="card-img-top border border-3 border-dark" src="../../img/productos/palitos_de_queso.jpg" alt="palitos_de_queso" id="imagen_2">
-                      <div class="card-body text-center text-warning border border-3 border-warning background">
-                        <h4 class="card-title" id="nombre_2">Palitos de Queso</h4>
-                        <p class="card-text" id="descripcion_2">
-                          Los palitos de queso son una deliciosa mezcla de queso mozzarella derretido y masa de harina de trigo crujiente. Con su sabor irresistible y textura perfecta, son ideales para satisfacer los antojos salados. Estos aperitivos alargados son geniales para compartir en cualquier ocasión o disfrutar en solitario. ¡Disfruta de la combinación clásica de queso y masa en cada bocado!
-                        </p>
-                      </div>
-                      <div class="card-footer text-center bg-warning borde-producto letra">
-                        <h4 class="card-title">Precio</h4>
-                        <p class="card-text" id="precio_2">$ 2500 COP / $ 0,63 USD</p>
-                      </div>
-                    </div>
-                  </a>
+                <div class="card-body bg-warning-subtle">
+                  <div class="titulo text-danger-emphasis" id="proveedor"></div>
                 </div>
-              <!-- PALITOS DE QUESO -- Hasta aquí -->
-
-              <!-- PAPAS RELLENAS -->
-                <div class="col">
-                  <div class="card card-productos">
-                    <img class="card-img-top border border-3 border-dark" src="../../img/productos/papas_rellenas.jpg" alt="papas_rellenas">
-                    <div class="card-body text-center text-warning border border-3 border-warning background">
-                      <h4 class="card-title">Papas Rellenas</h4>
-                      <p class="card-text">
-                        Las papas rellenas con carne o pollo son un placer reconfortante. Con una capa exterior de papa dorada y crujiente, el relleno jugoso de carne o pollo en su interior crea una combinación irresistible de sabores y texturas. Estas delicias son perfectas para satisfacer el hambre y son ideales como aperitivo o plato principal. ¡Disfruta de la calidez y la satisfacción de las papas rellenas en cada bocado!
-                      </p>
-                    </div>
-                    <div class="card-footer text-center bg-warning borde-producto letra">
-                      <h4 class="card-title">Precio</h4>
-                      <p class="card-text">$ 3000 COP / $ 0,76 USD</p>
-                    </div>
-                  </div>
-                </div>
-              <!-- PAPAS RELLENAS -- Hasta aquí -->
-
-              <!-- CARIMAÑOLAS -->
-                <div class="col">
-                  <div class="card card-productos">
-                    <img class="card-img-top border border-3 border-dark" src="../../img/productos/carimanolas.jpg" alt="carimanolas">
-                    <div class="card-body text-center text-warning border border-3 border-warning background">
-                      <h4 class="card-title">Carimañolas</h4>
-                      <p class="card-text">
-                        Las carimañolas son una deliciosa mezcla de masa suave de yuca con un relleno jugoso de carne, pollo y queso. Estas delicias ofrecen una experiencia única de sabores y texturas. Perfectas como bocado o aperitivo, las carimañolas son una opción satisfactoria que combina la suavidad de la masa de yuca con el sabor sabroso del relleno. ¡Disfruta de esta combinación irresistible en cada bocado!
-                      </p>
-                    </div>
-                    <div class="card-footer text-center bg-warning borde-producto letra">
-                      <h4 class="card-title">Precio</h4>
-                      <p class="card-text">$ 2000 COP / $ 0,51 USD</p>
-                    </div>
-                  </div>
-                </div>
-              <!-- CARIMAÑOLAS -- Hasta aquí -->
-
-              <!-- AREPAS DE HUEVO -->
-                <div class="col">
-                  <div class="card card-productos">
-                    <img class="card-img-top border border-3 border-dark" src="../../img/productos/arepas_de_huevo.jpg" alt="arepas_de_huevo">
-                    <div class="card-body text-center text-warning border border-3 border-warning background">
-                      <h4 class="card-title">Arepas de Huevo</h4>
-                      <p class="card-text">
-                        Las arepas de huevo son una deliciosa combinación de masa y huevo. Con una masa dorada y esponjosa que envuelve un huevo cocido, estas arepas ofrecen una experiencia sabrosa y satisfactoria. Perfectas como opción rápida y deliciosa, son ideales para disfrutar en cualquier momento. ¡Sumérgete en la mezcla irresistible de masa y huevo con cada bocado de estas arepas!
-                      </p>
-                    </div>
-                    <div class="card-footer text-center bg-warning borde-producto letra">
-                      <h4 class="card-title">Precio</h4>
-                      <p class="card-text">$ 3000 COP / $ 0,76 USD</p>
-                    </div>
-                  </div>
-                </div>
-              <!-- AREPAS DE HUEVO -- Hasta aquí -->
-
-              <!-- JUGOS NATURALES -->
-                <div class="col">
-                  <div class="card card-productos">
-                    <img class="card-img-top border border-3 border-dark" src="../../img/productos/jugos_naturales.jpg" alt="jugos_naturales">
-                    <div class="card-body text-center text-warning border border-3 border-warning background">
-                      <h4 class="card-title">Jugos Naturales</h4>
-                      <p class="card-text">
-                        Los jugos naturales ofrecen una amplia variedad de sabores refrescantes, desde la explosión tropical del maracuyá hasta la dulzura clásica de la naranja, pasando por la frescura exótica de la piña y la deliciosa combinación de fresa. Además, la opción nutritiva y reconfortante del jugo de avena proporciona una experiencia sustanciosa y llena de sabor. Estos jugos son ideales para satisfacer la sed y disfrutar de la riqueza de los sabores naturales.
-                      </p>
-                    </div>
-                    <div class="card-footer text-center bg-warning borde-producto letra">
-                      <h4 class="card-title">Precios</h4>
-                      <p class="card-text"><span class="fw-bold">Grande:</span> $ 3500 COP / $ 0,89 USD</p>
-                      <p class="card-text"><span class="fw-bold">Mediano:</span> $ 2500 COP / $ 0,63 USD</p>
-                      <!-- LISTA JUGOS NATURALES -->
-                        <a class="icon-link letra link-underline link-underline-opacity-0" data-bs-toggle="collapse" href="#lista_de_jugos" role="button" aria-expanded="false" aria-controls="lista_de_jugos">
-                          <span class="fs-5 fw-bold">Lista de jugos</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                          </svg>
-                        </a>
-                        <div class="collapse" id="lista_de_jugos">
-                          <ul class="d-flex flex-column align-items-center mt-2 mb-0">
-                            <li class="letra mb-2">Agua de arroz</li>
-                            <li class="letra mb-2">Avena</li>
-                            <li class="letra mb-2">Fresa</li>
-                            <li class="letra mb-2">Maracuyá</li>
-                            <li class="letra mb-2">Mora</li>
-                          </ul>
-                        </div>
-                      <!-- LISTA JUGOS NATURALES -- Hasta aquí -->
-
-                      <!-- SEGUNDA OPCIÓN LISTA -->
-
-                        <!--<div class="dropdown-center">
-                          <a class="btn btn-outline-dark btn-sm dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lista de jugos</a>
-                          <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><span class="dropdown-item-text">Agua de arroz</span></li>
-                            <li><span class="dropdown-item-text">Avena</span></li>
-                            <li><span class="dropdown-item-text">Fresa</span></li>
-                            <li><span class="dropdown-item-text">Maracuyá</span></li>
-                            <li><span class="dropdown-item-text">Mora</span></li>
-                          </ul>
-                        </div>-->
-
-                        <!--<div class="collapse" id="lista_de_jugos">
-                          <ul class="list-group">
-                            <li class="list-group-item bg-warning border-0 letra"><b>-</b> Agua de arroz</li>
-                            <li class="list-group-item bg-warning border-0 letra"><b>-</b> Avena</li>
-                            <li class="list-group-item bg-warning border-0 letra"><b>-</b> Fresa</li>
-                            <li class="list-group-item bg-warning border-0 letra"><b>-</b> Maracuyá</li>
-                            <li class="list-group-item bg-warning border-0 letra"><b>-</b> Mora</li>
-                          </ul>
-                        </div>-->
-
-                      <!-- SEGUNDA OPCIÓN LISTA -- Hasta aquí -->                  
-                    </div>
-                  </div>
-                </div>
-              <!-- JUGOS NATURALES -- Hasta aquí -->
+              </div>
             </div>
           </div>
-        <!-- PRODUCTOS -- Hasta aquí -->
+          <h1 class="display-5 titulo fw-bold mb-3">¿Qué desea hacer?</h1>
+          <div class="fs-1 titulo mb-4">
+            <a class="link-underline link-underline-opacity-0 link-opacity-75-hover link-warning fw-bold" href="" id="editar_producto_link">Editar producto</a>
+            <div class="fw-bold">o</div>
+            <a class="link-underline link-underline-opacity-0 link-opacity-75-hover link-warning fw-bold" href="" id="pantalla_anterior_link">Volver a la pantalla anterior</a>
+          </div>
+        </div>        
       </div>
     <!-- BODY -- Hasta aquí -->
 
     <!-- FOOTER -->
-      <div class="bg-warning">
+      <div class="bg-warning footer">
         <div class="container">
           <!-- FILA LOGO -->
             <div class="row justify-content-center align-items-center">
@@ -887,6 +606,6 @@
       </div>
     <!-- FOOTER -- Hasta aquí -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="../../js/js_users/index_admin_js.js"></script>
+    <script src="../../js/js_products/view_product_js.js"></script>
   </body>
 </html>
