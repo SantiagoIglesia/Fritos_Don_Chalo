@@ -32,7 +32,7 @@
                   <ul class="navbar-nav me-auto">
                     <!-- ANCLA INICIO -->
                     <li class="nav-item text-center">
-                      <a class="btn text-light fs-5 fw-bold" href="#fritos_don_chalo">Inicio</a>
+                      <a class="btn text-light fs-5 fw-bold" href="#inicio">Inicio</a>
                     </li>
                     <!-- ANCLA INICIO -- Hasta aquí -->
 
@@ -397,162 +397,163 @@
 
     <!-- BODY -->
       <div id="contenedor" data-bs-spy="scroll" data-bs-target="#navbar_principal" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true">
-        <!--<div class="text-center fw-bold fs-1 mb-3 administrador" id="fritos_don_chalo">
-          Bievenido, administrador(a) Engie.<br>Es un gusto tenerlo(a) por acá ;).
-        </div>-->
-        <div class="display-4 text-center fw-bold mb-4 administrador" id="fritos_don_chalo">
-          Bievenida, administradora Engie.<br>Es un gusto tenerla por acá ;).
-        </div>
-        <!-- IMAGENES AVISO -->
-          <div class="border-radient-top"></div>
-          <div class="border-adicion-top"></div>
-          <div class="text-center">
-            <div class="bg-warning">
-              <img class="img-fluid" src="../../img/aviso.png" alt="aviso">
-            </div>
-            <div class="gradient border-adicion-middle-top"></div>
-            <div class="gradient border-adicion-middle-bottom"></div>
-            <div class="background">
-              <img class="img-fluid" src="../../img/fritos_venta.png" alt="fritos_venta">
-            </div>
-            <div class="border-adicion-bottom"></div>
-            <div class="border-radient-bottom"></div>
+        <div id="inicio">
+          <!--<div class="text-center fw-bold fs-1 mb-3 administrador" id="fritos_don_chalo">
+            Bievenido, administrador(a) Engie.<br>Es un gusto tenerlo(a) por acá ;).
+          </div>-->
+          <div class="display-4 text-center fw-bold mb-4 administrador">
+            Bievenida, administradora Engie.<br>Es un gusto tenerla por acá ;).
           </div>
-        <!-- IMAGENES AVISO -- Hasta aquí -->
+          <!-- IMAGENES AVISO -->
+            <div class="border-radient-top"></div>
+            <div class="border-adicion-top"></div>
+            <div class="text-center">
+              <div class="bg-warning">
+                <img class="img-fluid" src="../../img/aviso.png" alt="aviso">
+              </div>
+              <div class="gradient border-adicion-middle-top"></div>
+              <div class="gradient border-adicion-middle-bottom"></div>
+              <div class="background">
+                <img class="img-fluid" src="../../img/fritos_venta.png" alt="fritos_venta">
+              </div>
+              <div class="border-adicion-bottom"></div>
+              <div class="border-radient-bottom"></div>
+            </div>
+          <!-- IMAGENES AVISO -- Hasta aquí -->
+        </div>
         <div id="categorias">
           <div class="display-1 text-center fw-bold titulo mt-4">CATEGORÍAS</div>
           <div class="text-center fw-bold fs-2 titulo mt-3">
             <span class="text-warning">Administradora, ¿qué desea hacer?</span><br>
-            <button type="button" class="btn fs-2 fw-bold letra" data-bs-toggle="modal" data-bs-target="#modal_categorias">Ir acciones para categorías</button><br>
+            <button type="button" class="btn fs-2 fw-bold letra" data-bs-toggle="modal" data-bs-target="#modal_categorias">Iracciones para categorías</button><br>
             <span class="text-warning">o</span><br>
             <button type="button" class="btn fs-2 fw-bold letra" id="boton_scroll_categoria" onclick="stayHere()">permanecer aquí
           </div>
+          <!-- MODAL -->
+            <div class="modal fade" id="modal_categorias" tabindex="-1" aria-labelledby="modal_categorias_label"aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header background">
+                    <h4 class="modal-title text-light fw-bold titulo" id="modal_categorias_label">Acciones para categorías</h4>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-center fw-bold titulo-modal fs-5">
+                    <div class="mb-3">
+                      <a class="text-warning link-underline link-underline-opacity-0" href="../views_categoriescreate_categories.html" role="button">Crear Categorías</a>
+                    </div>
+                    <div class="mb-3">
+                      <a class="link-modal link-underline link-underline-opacity-0" href="../views_categories/edit_categorieshtml" role="button">Editar Categorías</a>
+                    </div>
+                    <div>
+                      <a class="letra link-underline link-underline-opacity-0" href="../views_categories/view_categories.html"role="button">Ver Categorías</a>
+                    </div>
+                  </div>
+                  <div class="modal-footer bg-warning">
+                      <button type="button" class="btn btn-white bg-body fw-bold titulo" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- MODAL -- Hasta aquí -->
+          <div class="row row-cols-1 row-cols-md-3 g-4 mt-2 ms-4 me-4 justify-content-center">
+            <div class="col">
+              <div class="card card-productos">
+                <div class="card-header text-center bg-warning borde-producto letra">
+                  <h1 class="card-title fw-bold titulo">Fritos</h1>
+                </div>
+                <img class="card-img-top border border-3 border-dark" src="../../img/categorias/fritos.jpg"alt="categoria_fritos">
+                <div class="card-body text-center text-warning border border-3 border-warning background">
+                  <p class="card-text">
+                    Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo. Fritos Don ChaloFritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo.
+                  </p>
+                </div>
+                <div class="card-footer text-center bg-warning borde-producto letra">
+                  <div class="mt-2 mb-2">
+                    <a class="link-underline link-underline-opacity-0 titulo letra fw-bold fs-5" href="#">Ver productos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-productos">
+                <div class="card-header text-center bg-warning borde-producto letra">
+                  <h1 class="card-title fw-bold titulo">Jugos</h1>
+                </div>
+                <img class="card-img-top border border-3 border-dark" src="../../img/categorias/jugos.jpg" alt="categoria_jugos">
+                <div class="card-body text-center text-warning border border-3 border-warning background">
+                  <p class="card-text">
+                    Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo.JugosDon Chalo. Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo.
+                  </p>
+                </div>
+                <div class="card-footer text-center bg-warning borde-producto letra">
+                  <div class="mt-2 mb-2">
+                    <a class="link-underline link-underline-opacity-0 titulo letra fw-bold fs-5" href="#">Ver productos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card card-productos">
+                <div class="card-header text-center bg-warning borde-producto letra">
+                  <h1 class="card-title fw-bold titulo">Gaseosas</h1>
+                </div>
+                <img class="card-img-top border border-3 border-dark" src="../../img/categorias/gaseosas.jpg"alt="categoria_gaseosas">
+                <div class="card-body text-center text-warning border border-3 border-warning background">
+                  <p class="card-text">
+                    Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosasBebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas.
+                  </p>
+                </div>
+                <div class="card-footer text-center bg-warning borde-producto letra">
+                  <div class="mt-2 mb-2">
+                    <a class="link-underline link-underline-opacity-0 titulo letra fw-bold fs-5" href="#">Ver productos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- MODAL -->
-          <div class="modal fade" id="modal_categorias" tabindex="-1" aria-labelledby="modal_categorias_label" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header background">
-                  <h4 class="modal-title text-light fw-bold titulo" id="modal_categorias_label">Acciones para categorías</h4>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-center fw-bold titulo-modal fs-5">
-                  <div class="mb-3">
-                    <a class="text-warning link-underline link-underline-opacity-0" href="../views_categories/create_categories.html" role="button">Crear Categorías</a>
+        <!--<div class="text-center mt-4 fw-bold fs-1 titulo" id="productos">PRODUCTOS</div>-->
+        <!--<div id="productos">
+          <div class="display-1 text-center fw-bold titulo mt-4">PRODUCTOS</div>
+          <div class="text-center fw-bold fs-2 titulo mt-3">
+            <span class="text-warning">Administradora, ¿qué desea hacer?</span><br>
+            <button type="button" class="btn fs-2 fw-bold letra" data-bs-toggle="modal" data-bs-target="#modal-productos">Ir aacciones para productos</button><br>
+            <span class="text-warning">o</span><br>
+            <button type="button" class="btn fs-2 fw-bold letra" id="boton_scroll_producto" onclick="stayHere()">permaneceraquí</button>
+          </div>-->
+          <!-- MODAL -->
+            <!--<div class="modal fade" id="modal_productos" tabindex="-1" aria-labelledby="exampleModalLabel"aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                  <div class="mb-3">
-                    <a class="link-modal link-underline link-underline-opacity-0" href="../views_categories/edit_categories.html" role="button">Editar Categorías</a>
+                  <div class="modal-body">
+                    ...
                   </div>
-                  <div>
-                    <a class="letra link-underline link-underline-opacity-0" href="../views_categories/view_categories.html" role="button">Ver Categorías</a>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                   </div>
                 </div>
-                <div class="modal-footer bg-warning">
-                    <button type="button" class="btn btn-white bg-body fw-bold titulo" data-bs-dismiss="modal">Cerrar</button>
-                </div>
               </div>
-            </div>
-          </div>
-        <!-- MODAL -- Hasta aquí -->
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-2 ms-4 me-4 justify-content-center">
-          <div class="col">
-            <div class="card card-productos">
-              <div class="card-header text-center bg-warning borde-producto letra">
-                <h1 class="card-title fw-bold titulo">Fritos</h1>
-              </div>
-              <img class="card-img-top border border-3 border-dark" src="../../img/categorias/fritos.jpg" alt="categoria_fritos">
-              <div class="card-body text-center text-warning border border-3 border-warning background">
-                <p class="card-text">
-                  Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo.Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo. Fritos Don Chalo.
-                </p>
-              </div>
-              <div class="card-footer text-center bg-warning borde-producto letra">
-                <div class="mt-2 mb-2">
-                  <a class="link-underline link-underline-opacity-0 titulo letra fw-bold fs-5" href="#">Ver productos</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card card-productos">
-              <div class="card-header text-center bg-warning borde-producto letra">
-                <h1 class="card-title fw-bold titulo">Jugos</h1>
-              </div>
-              <img class="card-img-top border border-3 border-dark" src="../../img/categorias/jugos.jpg" alt="categoria_jugos">
-              <div class="card-body text-center text-warning border border-3 border-warning background">
-                <p class="card-text">
-                  Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo. JugosDon Chalo. Jugos Don Chalo. Jugos Don Chalo. Jugos Don Chalo.
-                </p>
-              </div>
-              <div class="card-footer text-center bg-warning borde-producto letra">
-                <div class="mt-2 mb-2">
-                  <a class="link-underline link-underline-opacity-0 titulo letra fw-bold fs-5" href="#">Ver productos</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card card-productos">
-              <div class="card-header text-center bg-warning borde-producto letra">
-                <h1 class="card-title fw-bold titulo">Gaseosas</h1>
-              </div>
-              <img class="card-img-top border border-3 border-dark" src="../../img/categorias/gaseosas.jpg"alt="categoria_gaseosas">
-              <div class="card-body text-center text-warning border border-3 border-warning background">
-                <p class="card-text">
-                  Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas.Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas. Bebidas gaseosas.
-                </p>
-              </div>
-              <div class="card-footer text-center bg-warning borde-producto letra">
-                <div class="mt-2 mb-2">
-                  <a class="link-underline link-underline-opacity-0 titulo letra fw-bold fs-5" href="#">Ver productos</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-          <!--<div class="text-center mt-4 fw-bold fs-1 titulo" id="productos">PRODUCTOS</div>-->
-          <!--<div id="productos">
+            </div>-->
+          <!-- MODAL -- Hasta aquí -->
+          <!-- PRODUCTOS -->
+          <div id="productos">
             <div class="display-1 text-center fw-bold titulo mt-4">PRODUCTOS</div>
             <div class="text-center fw-bold fs-2 titulo mt-3">
               <span class="text-warning">Administradora, ¿qué desea hacer?</span><br>
-              <button type="button" class="btn fs-2 fw-bold letra" data-bs-toggle="modal" data-bs-target="#modal-productos">Ir a acciones para productos</button><br>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn fs-2 fw-bold letra" data-bs-toggle="modal" data-bs-target="#modal_productos">
+                Ir a acciones para productos
+              </button><br>
               <span class="text-warning">o</span><br>
-              <button type="button" class="btn fs-2 fw-bold letra" id="boton_scroll_producto" onclick="stayHere()">permanecer aquí</button>
-            </div>-->
-            <!-- MODAL -->
-              <!--<div class="modal fade" id="modal_productos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>-->
-            <!-- MODAL -- Hasta aquí -->
-            <!-- PRODUCTOS -->
-            <div id="productos">
-              <div class="display-1 text-center fw-bold titulo mt-4">PRODUCTOS</div>
-              <div class="text-center fw-bold fs-2 titulo mt-3">
-                <span class="text-warning">Administradora, ¿qué desea hacer?</span><br>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn fs-2 fw-bold letra" data-bs-toggle="modal" data-bs-target="#modal_productos">
-                  Ir a acciones para productos
-                </button><br>
-                <span class="text-warning">o</span><br>
-                <button type="button" class="btn fs-2 fw-bold letra" id="boton_scroll_producto" onclick="stayHere()">permanecer aquí</button>
-              </div>
+              <button type="button" class="btn fs-2 fw-bold letra" id="boton_scroll_producto" onclick="stayHere()">permaneceraquí</button>
             </div>
             <!-- Modal -->
-            <div class="modal fade" id="modal_productos" tabindex="-1" aria-labelledby="modal_productos_label" aria-hidden="true">
+            <div class="modal fade" id="modal_productos" tabindex="-1" aria-labelledby="modal_productos_label"aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header background">
@@ -561,13 +562,13 @@
                   </div>
                   <div class="modal-body text-center fw-bold titulo-modal fs-5">
                     <div class="mb-3">
-                      <a class="text-warning link-underline link-underline-opacity-0" href="../views_products/create_products.html" role="button">Crear Productos</a>
+                      <a class="text-warning link-underline link-underline-opacity-0" href="../views_products/create_productshtml" role="button">Crear Productos</a>
                     </div>
                     <div class="mb-3">
-                      <a class="link-modal link-underline link-underline-opacity-0" href="../views_products/edit_products.html" role="button">Editar Productos</a>
+                      <a class="link-modal link-underline link-underline-opacity-0" href="../views_products/edit_products.html"role="button">Editar Productos</a>
                     </div>
                     <div>
-                      <a class="letra link-underline link-underline-opacity-0" href="../views_products/view_products.html" role="button">Ver Productos</a>
+                      <a class="letra link-underline link-underline-opacity-0" href="../views_products/view_products.html"role="button">Ver Productos</a>
                     </div>
                   </div>
                   <div class="modal-footer bg-warning">
@@ -581,11 +582,11 @@
                 <div class="col">
                   <a href="javascript:viewProduct(1)" class="link-underline link-underline-opacity-0">
                     <div class="card card-productos">
-                      <img class="card-img-top border border-3 border-dark" src="../../img/productos/empanadas.jpg" alt="empanadas" id="imagen_1">
+                      <img class="card-img-top border border-3 border-dark" src="../../img/productos/empanadas.jpg"alt="empanadas" id="imagen_1">
                       <div class="card-body text-center text-warning border border-3 border-warning background">
                         <h4 class="card-title" id="nombre_1">Empanadas</h4>
                         <p class="card-text" id="descripcion_1">
-                          Las empanadas de maíz amarillo con relleno de pollo o carne son una deliciosa mezcla de sabores y texturas. La masa, hecha de maíz amarillo, es suave y ligeramente crujiente. El relleno jugoso de pollo o carne, con especias auténticas, ofrece una experiencia gastronómica única. Perfectas como aperitivo o para cualquier ocasión, estas empanadas son una delicia artesanal que combina tradición y placer culinario. ¡Disfruta de esta auténtica delicia!
+                          Las empanadas de maíz amarillo con relleno de pollo o carne son una deliciosa mezcla de sabores ytexturas. La masa, hecha de maíz amarillo, es suave y ligeramente crujiente. El relleno jugoso depollo o carne, con especias auténticas, ofrece una experiencia gastronómica única. Perfectas comoaperitivo o para cualquier ocasión, estas empanadas son una delicia artesanal que combina tradición yplacer culinario. ¡Disfruta de esta auténtica delicia!
                         </p>
                       </div>
                       <div class="card-footer text-center bg-warning borde-producto letra">
@@ -596,16 +597,15 @@
                   </a>
                 </div>
               <!-- EMPANADAS -- Hasta aquí -->
-
               <!-- PALITOS DE QUESO -->
                 <div class="col">
                   <a href="javascript:viewProduct(2)" class="link-underline link-underline-opacity-0">
                     <div class="card card-productos">
-                      <img class="card-img-top border border-3 border-dark" src="../../img/productos/palitos_de_queso.jpg" alt="palitos_de_queso" id="imagen_2">
+                      <img class="card-img-top border border-3 border-dark" src="../../img/productos/palitos_de_queso.jpg"alt="palitos_de_queso" id="imagen_2">
                       <div class="card-body text-center text-warning border border-3 border-warning background">
                         <h4 class="card-title" id="nombre_2">Palitos de Queso</h4>
                         <p class="card-text" id="descripcion_2">
-                          Los palitos de queso son una deliciosa mezcla de queso mozzarella derretido y masa de harina de trigo crujiente. Con su sabor irresistible y textura perfecta, son ideales para satisfacer los antojos salados. Estos aperitivos alargados son geniales para compartir en cualquier ocasión o disfrutar en solitario. ¡Disfruta de la combinación clásica de queso y masa en cada bocado!
+                          Los palitos de queso son una deliciosa mezcla de queso mozzarella derretido y masa de harina de trigocrujiente. Con su sabor irresistible y textura perfecta, son ideales para satisfacer los antojossalados. Estos aperitivos alargados son geniales para compartir en cualquier ocasión o disfrutar ensolitario. ¡Disfruta de la combinación clásica de queso y masa en cada bocado!
                         </p>
                       </div>
                       <div class="card-footer text-center bg-warning borde-producto letra">
@@ -616,15 +616,14 @@
                   </a>
                 </div>
               <!-- PALITOS DE QUESO -- Hasta aquí -->
-
               <!-- PAPAS RELLENAS -->
                 <div class="col">
                   <div class="card card-productos">
-                    <img class="card-img-top border border-3 border-dark" src="../../img/productos/papas_rellenas.jpg" alt="papas_rellenas">
+                    <img class="card-img-top border border-3 border-dark" src="../../img/productos/papas_rellenas.jpg"alt="papas_rellenas">
                     <div class="card-body text-center text-warning border border-3 border-warning background">
                       <h4 class="card-title">Papas Rellenas</h4>
                       <p class="card-text">
-                        Las papas rellenas con carne o pollo son un placer reconfortante. Con una capa exterior de papa dorada y crujiente, el relleno jugoso de carne o pollo en su interior crea una combinación irresistible de sabores y texturas. Estas delicias son perfectas para satisfacer el hambre y son ideales como aperitivo o plato principal. ¡Disfruta de la calidez y la satisfacción de las papas rellenas en cada bocado!
+                        Las papas rellenas con carne o pollo son un placer reconfortante. Con una capa exterior de papa dorada ycrujiente, el relleno jugoso de carne o pollo en su interior crea una combinación irresistible desabores y texturas. Estas delicias son perfectas para satisfacer el hambre y son ideales como aperitivoo plato principal. ¡Disfruta de la calidez y la satisfacción de las papas rellenas en cada bocado!
                       </p>
                     </div>
                     <div class="card-footer text-center bg-warning borde-producto letra">
@@ -634,15 +633,14 @@
                   </div>
                 </div>
               <!-- PAPAS RELLENAS -- Hasta aquí -->
-
               <!-- CARIMAÑOLAS -->
                 <div class="col">
                   <div class="card card-productos">
-                    <img class="card-img-top border border-3 border-dark" src="../../img/productos/carimanolas.jpg" alt="carimanolas">
+                    <img class="card-img-top border border-3 border-dark" src="../../img/productos/carimanolas.jpg"alt="carimanolas">
                     <div class="card-body text-center text-warning border border-3 border-warning background">
                       <h4 class="card-title">Carimañolas</h4>
                       <p class="card-text">
-                        Las carimañolas son una deliciosa mezcla de masa suave de yuca con un relleno jugoso de carne, pollo y queso. Estas delicias ofrecen una experiencia única de sabores y texturas. Perfectas como bocado o aperitivo, las carimañolas son una opción satisfactoria que combina la suavidad de la masa de yuca con el sabor sabroso del relleno. ¡Disfruta de esta combinación irresistible en cada bocado!
+                        Las carimañolas son una deliciosa mezcla de masa suave de yuca con un relleno jugoso de carne, pollo yqueso. Estas delicias ofrecen una experiencia única de sabores y texturas. Perfectas como bocado oaperitivo, las carimañolas son una opción satisfactoria que combina la suavidad de la masa de yuca conel sabor sabroso del relleno. ¡Disfruta de esta combinación irresistible en cada bocado!
                       </p>
                     </div>
                     <div class="card-footer text-center bg-warning borde-producto letra">
@@ -652,15 +650,14 @@
                   </div>
                 </div>
               <!-- CARIMAÑOLAS -- Hasta aquí -->
-
               <!-- AREPAS DE HUEVO -->
                 <div class="col">
                   <div class="card card-productos">
-                    <img class="card-img-top border border-3 border-dark" src="../../img/productos/arepas_de_huevo.jpg" alt="arepas_de_huevo">
+                    <img class="card-img-top border border-3 border-dark" src="../../img/productos/arepas_de_huevo.jpg"alt="arepas_de_huevo">
                     <div class="card-body text-center text-warning border border-3 border-warning background">
                       <h4 class="card-title">Arepas de Huevo</h4>
                       <p class="card-text">
-                        Las arepas de huevo son una deliciosa combinación de masa y huevo. Con una masa dorada y esponjosa que envuelve un huevo cocido, estas arepas ofrecen una experiencia sabrosa y satisfactoria. Perfectas como opción rápida y deliciosa, son ideales para disfrutar en cualquier momento. ¡Sumérgete en la mezcla irresistible de masa y huevo con cada bocado de estas arepas!
+                        Las arepas de huevo son una deliciosa combinación de masa y huevo. Con una masa dorada y esponjosa queenvuelve un huevo cocido, estas arepas ofrecen una experiencia sabrosa y satisfactoria. Perfectas comoopción rápida y deliciosa, son ideales para disfrutar en cualquier momento. ¡Sumérgete en la mezclairresistible de masa y huevo con cada bocado de estas arepas!
                       </p>
                     </div>
                     <div class="card-footer text-center bg-warning borde-producto letra">
@@ -670,15 +667,14 @@
                   </div>
                 </div>
               <!-- AREPAS DE HUEVO -- Hasta aquí -->
-
               <!-- JUGOS NATURALES -->
                 <div class="col">
                   <div class="card card-productos">
-                    <img class="card-img-top border border-3 border-dark" src="../../img/productos/jugos_naturales.jpg" alt="jugos_naturales">
+                    <img class="card-img-top border border-3 border-dark" src="../../img/productos/jugos_naturales.jpg"alt="jugos_naturales">
                     <div class="card-body text-center text-warning border border-3 border-warning background">
                       <h4 class="card-title">Jugos Naturales</h4>
                       <p class="card-text">
-                        Los jugos naturales ofrecen una amplia variedad de sabores refrescantes, desde la explosión tropical del maracuyá hasta la dulzura clásica de la naranja, pasando por la frescura exótica de la piña y la deliciosa combinación de fresa. Además, la opción nutritiva y reconfortante del jugo de avena proporciona una experiencia sustanciosa y llena de sabor. Estos jugos son ideales para satisfacer la sed y disfrutar de la riqueza de los sabores naturales.
+                        Los jugos naturales ofrecen una amplia variedad de sabores refrescantes, desde la explosión tropical delmaracuyá hasta la dulzura clásica de la naranja, pasando por la frescura exótica de la piña y ladeliciosa combinación de fresa. Además, la opción nutritiva y reconfortante del jugo de avenaproporciona una experiencia sustanciosa y llena de sabor. Estos jugos son ideales para satisfacer la sedy disfrutar de la riqueza de los sabores naturales.
                       </p>
                     </div>
                     <div class="card-footer text-center bg-warning borde-producto letra">
@@ -686,10 +682,10 @@
                       <p class="card-text"><span class="fw-bold">Grande:</span> $ 3500 COP / $ 0,89 USD</p>
                       <p class="card-text"><span class="fw-bold">Mediano:</span> $ 2500 COP / $ 0,63 USD</p>
                       <!-- LISTA JUGOS NATURALES -->
-                        <a class="icon-link letra link-underline link-underline-opacity-0" data-bs-toggle="collapse" href="#lista_de_jugos" role="button" aria-expanded="false" aria-controls="lista_de_jugos">
+                        <a class="icon-link letra link-underline link-underline-opacity-0" data-bs-toggle="collapse"href="#lista_de_jugos" role="button" aria-expanded="false" aria-controls="lista_de_jugos">
                           <span class="fs-5 fw-bold">Lista de jugos</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bibi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 548a1 1 0 0 1-1.506 0z"/>
                           </svg>
                         </a>
                         <div class="collapse" id="lista_de_jugos">
@@ -702,11 +698,9 @@
                           </ul>
                         </div>
                       <!-- LISTA JUGOS NATURALES -- Hasta aquí -->
-
                       <!-- SEGUNDA OPCIÓN LISTA -->
-
                         <!--<div class="dropdown-center">
-                          <a class="btn btn-outline-dark btn-sm dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lista de jugos</a>
+                          <a class="btn btn-outline-dark btn-sm dropdown-toggle" href="#" role="button"data-bs-toggle="dropdown" aria-expanded="false">Lista de jugos</a>
                           <ul class="dropdown-menu dropdown-menu-dark">
                             <li><span class="dropdown-item-text">Agua de arroz</span></li>
                             <li><span class="dropdown-item-text">Avena</span></li>
@@ -715,7 +709,6 @@
                             <li><span class="dropdown-item-text">Mora</span></li>
                           </ul>
                         </div>-->
-
                         <!--<div class="collapse" id="lista_de_jugos">
                           <ul class="list-group">
                             <li class="list-group-item bg-warning border-0 letra"><b>-</b> Agua de arroz</li>
@@ -725,7 +718,6 @@
                             <li class="list-group-item bg-warning border-0 letra"><b>-</b> Mora</li>
                           </ul>
                         </div>-->
-
                       <!-- SEGUNDA OPCIÓN LISTA -- Hasta aquí -->                  
                     </div>
                   </div>
@@ -733,7 +725,7 @@
               <!-- JUGOS NATURALES -- Hasta aquí -->
             </div>
           </div>
-        <!-- PRODUCTOS -- Hasta aquí -->
+        </div>
       </div>
     <!-- BODY -- Hasta aquí -->
 
